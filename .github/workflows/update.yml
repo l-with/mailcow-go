@@ -1,9 +1,9 @@
 name: update
 
-# on:
-#   workflow_dispatch:
-#   schedule:
-#     - cron: "*/15 * * * *"
+on:
+  workflow_dispatch:
+  # schedule:
+  #   - cron: "*/15 * * * *"
 
 jobs:
   schema:
