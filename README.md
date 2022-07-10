@@ -16,12 +16,6 @@ Install the following dependencies:
 go get gomailcow.io/api/v1
 ```
 
-To use a proxy, set the environment variable `HTTP_PROXY`:
-
-```golang
-os.Setenv("HTTP_PROXY", "http://proxy_name:proxy_port")
-```
-
 ## Documentation for API Endpoints
 
 All URIs are relative to *http://localhost*
