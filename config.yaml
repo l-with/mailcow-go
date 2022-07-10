@@ -3,7 +3,7 @@ additionalProperties:
   packageName: api
   enumClassPrefix: true
   useOneOfDiscriminatorLookup: true
-# files:
-#   README.mustache:
-#     templateType: SupportingFiles
-#     destinationFilename: README.md
+files:
+  README.mustache:
+    templateType: SupportingFiles
+    destinationFilename: README.md
