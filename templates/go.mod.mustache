@@ -1,4 +1,4 @@
-module github.com/l.with/mailcow-go
+module github.com/l-with/mailcow-go
 
 go 1.15
 
