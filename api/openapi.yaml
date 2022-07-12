@@ -1,4 +1,4 @@
-openapi: 3.0.0
+openapi: 3.0.3
 info:
   description: "mailcow is complete e-mailing solution with advanced antispam, antivirus,\
     \ nice UI and API.\n\nIn order to use this API you have to create a API key and\

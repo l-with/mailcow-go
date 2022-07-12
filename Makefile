@@ -10,11 +10,11 @@ clean:
 	rm -rf docs/
 
 build:
-	wget -O openapi.yml https://raw.githubusercontent.com/l-with/mailcow-dockerized/openapi-go/data/web/api/openapi.yaml
+	wget -O openapi.yml https://raw.githubusercontent.com/l-with/mailcow-dockerized/openapi-3.0.3/data/web/api/openapi.yaml
 	docker run \
 		--rm -v ${PWD}:/local \
 		--user ${UID}:${GID} \
-		openapitools/openapi-generator-cli:v6.0.0 generate \
+		openapitools/openapi-generator-cli:v6.0.1 generate \
 		-i /local/openapi.yml \
 		-g go \
 		-o /local \
