@@ -17,6 +17,7 @@ Name | Type | Description | Notes
 **RelayAllRecipients** | Pointer to **bool** | if not, them you have to create \&quot;dummy\&quot; mailbox for each address to relay | [optional] 
 **RlFrame** | Pointer to **string** |  | [optional] 
 **RlValue** | Pointer to **float32** | rate limit value | [optional] 
+**Tags** | Pointer to **[]string** | tags for this Domain | [optional] 
 
 ## Methods
 
@@ -361,6 +362,31 @@ SetRlValue sets RlValue field to given value.
 `func (o *CreateDomainRequest) HasRlValue() bool`
 
 HasRlValue returns a boolean if a field has been set.
+
+### GetTags
+
+`func (o *CreateDomainRequest) GetTags() []string`
+
+GetTags returns the Tags field if non-nil, zero value otherwise.
+
+### GetTagsOk
+
+`func (o *CreateDomainRequest) GetTagsOk() (*[]string, bool)`
+
+GetTagsOk returns a tuple with the Tags field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetTags
+
+`func (o *CreateDomainRequest) SetTags(v []string)`
+
+SetTags sets Tags field to given value.
+
+### HasTags
+
+`func (o *CreateDomainRequest) HasTags() bool`
+
+HasTags returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

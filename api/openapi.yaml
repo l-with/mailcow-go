@@ -4674,6 +4674,11 @@ components:
         rl_value:
           description: rate limit value
           type: number
+        tags:
+          description: tags for this Domain
+          items:
+            type: string
+          type: array
       type: object
     Update_sync_job_request_attr:
       properties:
