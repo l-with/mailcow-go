@@ -14,7 +14,7 @@ Method | HTTP request | Description
 
 ## CreateDomain
 
-> CreateAlias200Response CreateDomain(ctx).CreateDomainRequest(createDomainRequest).Execute()
+> []CreateAlias200Response CreateDomain(ctx).CreateDomainRequest(createDomainRequest).Execute()
 
 Create domain
 
@@ -42,7 +42,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DomainsApi.CreateDomain``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `CreateDomain`: CreateAlias200Response
+    // response from `CreateDomain`: []CreateAlias200Response
     fmt.Fprintf(os.Stdout, "Response from `DomainsApi.CreateDomain`: %v\n", resp)
 }
 ```
@@ -62,7 +62,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CreateAlias200Response**](CreateAlias200Response.md)
+[**[]CreateAlias200Response**](CreateAlias200Response.md)
 
 ### Authorization
 

@@ -33,7 +33,7 @@ func (r ApiCreateDomainRequest) CreateDomainRequest(createDomainRequest CreateDo
 	return r
 }
 
-func (r ApiCreateDomainRequest) Execute() (*CreateAlias200Response, *http.Response, error) {
+func (r ApiCreateDomainRequest) Execute() ([]CreateAlias200Response, *http.Response, error) {
 	return r.ApiService.CreateDomainExecute(r)
 }
 
@@ -53,13 +53,13 @@ func (a *DomainsApiService) CreateDomain(ctx context.Context) ApiCreateDomainReq
 }
 
 // Execute executes the request
-//  @return CreateAlias200Response
-func (a *DomainsApiService) CreateDomainExecute(r ApiCreateDomainRequest) (*CreateAlias200Response, *http.Response, error) {
+//  @return []CreateAlias200Response
+func (a *DomainsApiService) CreateDomainExecute(r ApiCreateDomainRequest) ([]CreateAlias200Response, *http.Response, error) {
 	var (
 		localVarHTTPMethod  = http.MethodPost
 		localVarPostBody    interface{}
 		formFiles           []formFile
-		localVarReturnValue *CreateAlias200Response
+		localVarReturnValue []CreateAlias200Response
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DomainsApiService.CreateDomain")
