@@ -1852,9 +1852,11 @@ paths:
           description: Unauthorized
         "200":
           content:
-            '*/*':
+            application/json:
               schema:
-                $ref: '#/components/schemas/Create_alias_200_response'
+                items:
+                  $ref: '#/components/schemas/Create_alias_200_response'
+                type: array
           description: OK
       summary: Update domain
       tags:

@@ -290,7 +290,7 @@ Name | Type | Description  | Notes
 
 ## UpdateDomain
 
-> CreateAlias200Response UpdateDomain(ctx).UpdateDomainRequest(updateDomainRequest).Execute()
+> []CreateAlias200Response UpdateDomain(ctx).UpdateDomainRequest(updateDomainRequest).Execute()
 
 Update domain
 
@@ -318,7 +318,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DomainsApi.UpdateDomain``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateDomain`: CreateAlias200Response
+    // response from `UpdateDomain`: []CreateAlias200Response
     fmt.Fprintf(os.Stdout, "Response from `DomainsApi.UpdateDomain`: %v\n", resp)
 }
 ```
@@ -338,7 +338,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CreateAlias200Response**](CreateAlias200Response.md)
+[**[]CreateAlias200Response**](CreateAlias200Response.md)
 
 ### Authorization
 
@@ -347,7 +347,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: application/json
-- **Accept**: application/json, */*
+- **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
 [[Back to Model list]](../README.md#documentation-for-models)
