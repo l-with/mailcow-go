@@ -28,6 +28,8 @@ type CreateDomainRequest struct {
 	Description *string `json:"description,omitempty"`
 	// Fully qualified domain name
 	Domain *string `json:"domain,omitempty"`
+	// global address book or not
+	Gal *bool `json:"gal,omitempty"`
 	// limit count of mailboxes associated with this domain
 	Mailboxes *float32 `json:"mailboxes,omitempty"`
 	// maximum quota per mailbox
@@ -252,6 +254,38 @@ func (o *CreateDomainRequest) HasDomain() bool {
 // SetDomain gets a reference to the given string and assigns it to the Domain field.
 func (o *CreateDomainRequest) SetDomain(v string) {
 	o.Domain = &v
+}
+
+// GetGal returns the Gal field value if set, zero value otherwise.
+func (o *CreateDomainRequest) GetGal() bool {
+	if o == nil || o.Gal == nil {
+		var ret bool
+		return ret
+	}
+	return *o.Gal
+}
+
+// GetGalOk returns a tuple with the Gal field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *CreateDomainRequest) GetGalOk() (*bool, bool) {
+	if o == nil || o.Gal == nil {
+		return nil, false
+	}
+	return o.Gal, true
+}
+
+// HasGal returns a boolean if a field has been set.
+func (o *CreateDomainRequest) HasGal() bool {
+	if o != nil && o.Gal != nil {
+		return true
+	}
+
+	return false
+}
+
+// SetGal gets a reference to the given bool and assigns it to the Gal field.
+func (o *CreateDomainRequest) SetGal(v bool) {
+	o.Gal = &v
 }
 
 // GetMailboxes returns the Mailboxes field value if set, zero value otherwise.
@@ -529,6 +563,9 @@ func (o CreateDomainRequest) MarshalJSON() ([]byte, error) {
 	}
 	if o.Domain != nil {
 		toSerialize["domain"] = o.Domain
+	}
+	if o.Gal != nil {
+		toSerialize["gal"] = o.Gal
 	}
 	if o.Mailboxes != nil {
 		toSerialize["mailboxes"] = o.Mailboxes

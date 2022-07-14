@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 **Defquota** | Pointer to **float32** | predefined mailbox quota in &#x60;add mailbox&#x60; form | [optional] 
 **Description** | Pointer to **string** | Description of domain | [optional] 
 **Domain** | Pointer to **string** | Fully qualified domain name | [optional] 
+**Gal** | Pointer to **bool** | global address book or not | [optional] 
 **Mailboxes** | Pointer to **float32** | limit count of mailboxes associated with this domain | [optional] 
 **Maxquota** | Pointer to **float32** | maximum quota per mailbox | [optional] 
 **Quota** | Pointer to **float32** | maximum quota for this domain (for all mailboxes in sum) | [optional] 
@@ -187,6 +188,31 @@ SetDomain sets Domain field to given value.
 `func (o *CreateDomainRequest) HasDomain() bool`
 
 HasDomain returns a boolean if a field has been set.
+
+### GetGal
+
+`func (o *CreateDomainRequest) GetGal() bool`
+
+GetGal returns the Gal field if non-nil, zero value otherwise.
+
+### GetGalOk
+
+`func (o *CreateDomainRequest) GetGalOk() (*bool, bool)`
+
+GetGalOk returns a tuple with the Gal field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetGal
+
+`func (o *CreateDomainRequest) SetGal(v bool)`
+
+SetGal sets Gal field to given value.
+
+### HasGal
+
+`func (o *CreateDomainRequest) HasGal() bool`
+
+HasGal returns a boolean if a field has been set.
 
 ### GetMailboxes
 
