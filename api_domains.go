@@ -566,7 +566,7 @@ func (r ApiUpdateDomainRequest) UpdateDomainRequest(updateDomainRequest UpdateDo
 	return r
 }
 
-func (r ApiUpdateDomainRequest) Execute() (*CreateAlias200Response, *http.Response, error) {
+func (r ApiUpdateDomainRequest) Execute() (*UpdateDomain200Response, *http.Response, error) {
 	return r.ApiService.UpdateDomainExecute(r)
 }
 
@@ -587,13 +587,13 @@ func (a *DomainsApiService) UpdateDomain(ctx context.Context) ApiUpdateDomainReq
 }
 
 // Execute executes the request
-//  @return CreateAlias200Response
-func (a *DomainsApiService) UpdateDomainExecute(r ApiUpdateDomainRequest) (*CreateAlias200Response, *http.Response, error) {
+//  @return UpdateDomain200Response
+func (a *DomainsApiService) UpdateDomainExecute(r ApiUpdateDomainRequest) (*UpdateDomain200Response, *http.Response, error) {
 	var (
 		localVarHTTPMethod  = http.MethodPost
 		localVarPostBody    interface{}
 		formFiles           []formFile
-		localVarReturnValue *CreateAlias200Response
+		localVarReturnValue *UpdateDomain200Response
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DomainsApiService.UpdateDomain")

@@ -1854,7 +1854,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Create_alias_200_response'
+                $ref: '#/components/schemas/Update_domain_200_response'
           description: OK
       summary: Update domain
       tags:
@@ -4096,6 +4096,20 @@ components:
         items:
           description: contains list of aliases you want to delete
           type: object
+      type: object
+    Update_domain_200_response:
+      example:
+        msg: msg
+        type: success
+      properties:
+        msg:
+          type: string
+        type:
+          enum:
+          - success
+          - danger
+          - error
+          type: string
       type: object
     Edit_mailbox_ratelimits_request:
       example:
