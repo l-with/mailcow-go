@@ -16,6 +16,8 @@ Name | Type | Description | Notes
 **RelayAllRecipients** | Pointer to **bool** | if not, them you have to create \&quot;dummy\&quot; mailbox for each address to relay | [optional] 
 **RelayUnknownOnly** | Pointer to **bool** | Relay non-existing mailboxes only. Existing mailboxes will be delivered locally. | [optional] 
 **Relayhost** | Pointer to **float32** | id of relayhost | [optional] 
+**RlFrame** | Pointer to **string** |  | [optional] 
+**RlValue** | Pointer to **float32** | rate limit value | [optional] 
 
 ## Methods
 
@@ -335,6 +337,56 @@ SetRelayhost sets Relayhost field to given value.
 `func (o *UpdateDomainRequestAttr) HasRelayhost() bool`
 
 HasRelayhost returns a boolean if a field has been set.
+
+### GetRlFrame
+
+`func (o *UpdateDomainRequestAttr) GetRlFrame() string`
+
+GetRlFrame returns the RlFrame field if non-nil, zero value otherwise.
+
+### GetRlFrameOk
+
+`func (o *UpdateDomainRequestAttr) GetRlFrameOk() (*string, bool)`
+
+GetRlFrameOk returns a tuple with the RlFrame field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetRlFrame
+
+`func (o *UpdateDomainRequestAttr) SetRlFrame(v string)`
+
+SetRlFrame sets RlFrame field to given value.
+
+### HasRlFrame
+
+`func (o *UpdateDomainRequestAttr) HasRlFrame() bool`
+
+HasRlFrame returns a boolean if a field has been set.
+
+### GetRlValue
+
+`func (o *UpdateDomainRequestAttr) GetRlValue() float32`
+
+GetRlValue returns the RlValue field if non-nil, zero value otherwise.
+
+### GetRlValueOk
+
+`func (o *UpdateDomainRequestAttr) GetRlValueOk() (*float32, bool)`
+
+GetRlValueOk returns a tuple with the RlValue field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetRlValue
+
+`func (o *UpdateDomainRequestAttr) SetRlValue(v float32)`
+
+SetRlValue sets RlValue field to given value.
+
+### HasRlValue
+
+`func (o *UpdateDomainRequestAttr) HasRlValue() bool`
+
+HasRlValue returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -40,6 +40,9 @@ type UpdateDomainRequestAttr struct {
 	RelayUnknownOnly *bool `json:"relay_unknown_only,omitempty"`
 	// id of relayhost
 	Relayhost *float32 `json:"relayhost,omitempty"`
+	RlFrame   *string  `json:"rl_frame,omitempty"`
+	// rate limit value
+	RlValue *float32 `json:"rl_value,omitempty"`
 }
 
 // NewUpdateDomainRequestAttr instantiates a new UpdateDomainRequestAttr object
@@ -443,6 +446,70 @@ func (o *UpdateDomainRequestAttr) SetRelayhost(v float32) {
 	o.Relayhost = &v
 }
 
+// GetRlFrame returns the RlFrame field value if set, zero value otherwise.
+func (o *UpdateDomainRequestAttr) GetRlFrame() string {
+	if o == nil || o.RlFrame == nil {
+		var ret string
+		return ret
+	}
+	return *o.RlFrame
+}
+
+// GetRlFrameOk returns a tuple with the RlFrame field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *UpdateDomainRequestAttr) GetRlFrameOk() (*string, bool) {
+	if o == nil || o.RlFrame == nil {
+		return nil, false
+	}
+	return o.RlFrame, true
+}
+
+// HasRlFrame returns a boolean if a field has been set.
+func (o *UpdateDomainRequestAttr) HasRlFrame() bool {
+	if o != nil && o.RlFrame != nil {
+		return true
+	}
+
+	return false
+}
+
+// SetRlFrame gets a reference to the given string and assigns it to the RlFrame field.
+func (o *UpdateDomainRequestAttr) SetRlFrame(v string) {
+	o.RlFrame = &v
+}
+
+// GetRlValue returns the RlValue field value if set, zero value otherwise.
+func (o *UpdateDomainRequestAttr) GetRlValue() float32 {
+	if o == nil || o.RlValue == nil {
+		var ret float32
+		return ret
+	}
+	return *o.RlValue
+}
+
+// GetRlValueOk returns a tuple with the RlValue field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *UpdateDomainRequestAttr) GetRlValueOk() (*float32, bool) {
+	if o == nil || o.RlValue == nil {
+		return nil, false
+	}
+	return o.RlValue, true
+}
+
+// HasRlValue returns a boolean if a field has been set.
+func (o *UpdateDomainRequestAttr) HasRlValue() bool {
+	if o != nil && o.RlValue != nil {
+		return true
+	}
+
+	return false
+}
+
+// SetRlValue gets a reference to the given float32 and assigns it to the RlValue field.
+func (o *UpdateDomainRequestAttr) SetRlValue(v float32) {
+	o.RlValue = &v
+}
+
 func (o UpdateDomainRequestAttr) MarshalJSON() ([]byte, error) {
 	toSerialize := map[string]interface{}{}
 	if o.Active != nil {
@@ -480,6 +547,12 @@ func (o UpdateDomainRequestAttr) MarshalJSON() ([]byte, error) {
 	}
 	if o.Relayhost != nil {
 		toSerialize["relayhost"] = o.Relayhost
+	}
+	if o.RlFrame != nil {
+		toSerialize["rl_frame"] = o.RlFrame
+	}
+	if o.RlValue != nil {
+		toSerialize["rl_value"] = o.RlValue
 	}
 	return json.Marshal(toSerialize)
 }

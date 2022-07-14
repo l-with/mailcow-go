@@ -4893,6 +4893,16 @@ components:
         relayhost:
           description: id of relayhost
           type: number
+        rl_frame:
+          enum:
+          - s
+          - m
+          - h
+          - d
+          type: string
+        rl_value:
+          description: rate limit value
+          type: number
       type: object
     Create_alias_200_response:
       example:
