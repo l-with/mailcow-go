@@ -4903,6 +4903,11 @@ components:
         rl_value:
           description: rate limit value
           type: number
+        tags:
+          description: tags for this Domain
+          items:
+            type: string
+          type: array
       type: object
     Create_alias_200_response:
       example:

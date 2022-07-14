@@ -18,6 +18,7 @@ Name | Type | Description | Notes
 **Relayhost** | Pointer to **float32** | id of relayhost | [optional] 
 **RlFrame** | Pointer to **string** |  | [optional] 
 **RlValue** | Pointer to **float32** | rate limit value | [optional] 
+**Tags** | Pointer to **[]string** | tags for this Domain | [optional] 
 
 ## Methods
 
@@ -387,6 +388,31 @@ SetRlValue sets RlValue field to given value.
 `func (o *UpdateDomainRequestAttr) HasRlValue() bool`
 
 HasRlValue returns a boolean if a field has been set.
+
+### GetTags
+
+`func (o *UpdateDomainRequestAttr) GetTags() []string`
+
+GetTags returns the Tags field if non-nil, zero value otherwise.
+
+### GetTagsOk
+
+`func (o *UpdateDomainRequestAttr) GetTagsOk() (*[]string, bool)`
+
+GetTagsOk returns a tuple with the Tags field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetTags
+
+`func (o *UpdateDomainRequestAttr) SetTags(v []string)`
+
+SetTags sets Tags field to given value.
+
+### HasTags
+
+`func (o *UpdateDomainRequestAttr) HasTags() bool`
+
+HasTags returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
