@@ -16,6 +16,7 @@ Name | Type | Description | Notes
 **Quota** | Pointer to **float32** | maximum quota for this domain (for all mailboxes in sum) | [optional] 
 **RestartSogo** | Pointer to **float32** | restart SOGo to activate the domain in SOGo | [optional] 
 **RelayAllRecipients** | Pointer to **bool** | if not, them you have to create \&quot;dummy\&quot; mailbox for each address to relay | [optional] 
+**RelayUnknownOnly** | Pointer to **bool** | Relay non-existing mailboxes only. Existing mailboxes will be delivered locally. | [optional] 
 **RlFrame** | Pointer to **string** |  | [optional] 
 **RlValue** | Pointer to **float32** | rate limit value | [optional] 
 **Tags** | Pointer to **[]string** | tags for this Domain | [optional] 
@@ -338,6 +339,31 @@ SetRelayAllRecipients sets RelayAllRecipients field to given value.
 `func (o *CreateDomainRequest) HasRelayAllRecipients() bool`
 
 HasRelayAllRecipients returns a boolean if a field has been set.
+
+### GetRelayUnknownOnly
+
+`func (o *CreateDomainRequest) GetRelayUnknownOnly() bool`
+
+GetRelayUnknownOnly returns the RelayUnknownOnly field if non-nil, zero value otherwise.
+
+### GetRelayUnknownOnlyOk
+
+`func (o *CreateDomainRequest) GetRelayUnknownOnlyOk() (*bool, bool)`
+
+GetRelayUnknownOnlyOk returns a tuple with the RelayUnknownOnly field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetRelayUnknownOnly
+
+`func (o *CreateDomainRequest) SetRelayUnknownOnly(v bool)`
+
+SetRelayUnknownOnly sets RelayUnknownOnly field to given value.
+
+### HasRelayUnknownOnly
+
+`func (o *CreateDomainRequest) HasRelayUnknownOnly() bool`
+
+HasRelayUnknownOnly returns a boolean if a field has been set.
 
 ### GetRlFrame
 

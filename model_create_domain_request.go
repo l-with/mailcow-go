@@ -39,8 +39,10 @@ type CreateDomainRequest struct {
 	// restart SOGo to activate the domain in SOGo
 	RestartSogo *float32 `json:"restart_sogo,omitempty"`
 	// if not, them you have to create \"dummy\" mailbox for each address to relay
-	RelayAllRecipients *bool   `json:"relay_all_recipients,omitempty"`
-	RlFrame            *string `json:"rl_frame,omitempty"`
+	RelayAllRecipients *bool `json:"relay_all_recipients,omitempty"`
+	// Relay non-existing mailboxes only. Existing mailboxes will be delivered locally.
+	RelayUnknownOnly *bool   `json:"relay_unknown_only,omitempty"`
+	RlFrame          *string `json:"rl_frame,omitempty"`
 	// rate limit value
 	RlValue *float32 `json:"rl_value,omitempty"`
 	// tags for this Domain
@@ -448,6 +450,38 @@ func (o *CreateDomainRequest) SetRelayAllRecipients(v bool) {
 	o.RelayAllRecipients = &v
 }
 
+// GetRelayUnknownOnly returns the RelayUnknownOnly field value if set, zero value otherwise.
+func (o *CreateDomainRequest) GetRelayUnknownOnly() bool {
+	if o == nil || o.RelayUnknownOnly == nil {
+		var ret bool
+		return ret
+	}
+	return *o.RelayUnknownOnly
+}
+
+// GetRelayUnknownOnlyOk returns a tuple with the RelayUnknownOnly field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *CreateDomainRequest) GetRelayUnknownOnlyOk() (*bool, bool) {
+	if o == nil || o.RelayUnknownOnly == nil {
+		return nil, false
+	}
+	return o.RelayUnknownOnly, true
+}
+
+// HasRelayUnknownOnly returns a boolean if a field has been set.
+func (o *CreateDomainRequest) HasRelayUnknownOnly() bool {
+	if o != nil && o.RelayUnknownOnly != nil {
+		return true
+	}
+
+	return false
+}
+
+// SetRelayUnknownOnly gets a reference to the given bool and assigns it to the RelayUnknownOnly field.
+func (o *CreateDomainRequest) SetRelayUnknownOnly(v bool) {
+	o.RelayUnknownOnly = &v
+}
+
 // GetRlFrame returns the RlFrame field value if set, zero value otherwise.
 func (o *CreateDomainRequest) GetRlFrame() string {
 	if o == nil || o.RlFrame == nil {
@@ -581,6 +615,9 @@ func (o CreateDomainRequest) MarshalJSON() ([]byte, error) {
 	}
 	if o.RelayAllRecipients != nil {
 		toSerialize["relay_all_recipients"] = o.RelayAllRecipients
+	}
+	if o.RelayUnknownOnly != nil {
+		toSerialize["relay_unknown_only"] = o.RelayUnknownOnly
 	}
 	if o.RlFrame != nil {
 		toSerialize["rl_frame"] = o.RlFrame
