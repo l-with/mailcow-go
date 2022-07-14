@@ -80,7 +80,7 @@ Name | Type | Description  | Notes
 
 ## DeleteDomain
 
-> CreateAlias200Response DeleteDomain(ctx).DeleteDomainRequest(deleteDomainRequest).Execute()
+> CreateAlias200Response DeleteDomain(ctx).RequestBody(requestBody).Execute()
 
 Delete domain
 
@@ -99,11 +99,11 @@ import (
 )
 
 func main() {
-    deleteDomainRequest := *openapiclient.NewDeleteDomainRequest() // DeleteDomainRequest |  (optional)
+    requestBody := []string{"Property_example"} // []string |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
-    resp, r, err := apiClient.DomainsApi.DeleteDomain(context.Background()).DeleteDomainRequest(deleteDomainRequest).Execute()
+    resp, r, err := apiClient.DomainsApi.DeleteDomain(context.Background()).RequestBody(requestBody).Execute()
     if err != nil {
         fmt.Fprintf(os.Stderr, "Error when calling `DomainsApi.DeleteDomain``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -124,7 +124,7 @@ Other parameters are passed through a pointer to a apiDeleteDomainRequest struct
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **deleteDomainRequest** | [**DeleteDomainRequest**](DeleteDomainRequest.md) |  | 
+ **requestBody** | **[]string** |  | 
 
 ### Return type
 

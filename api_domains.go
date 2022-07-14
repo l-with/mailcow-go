@@ -154,13 +154,13 @@ func (a *DomainsApiService) CreateDomainExecute(r ApiCreateDomainRequest) ([]Cre
 }
 
 type ApiDeleteDomainRequest struct {
-	ctx                 context.Context
-	ApiService          *DomainsApiService
-	deleteDomainRequest *DeleteDomainRequest
+	ctx         context.Context
+	ApiService  *DomainsApiService
+	requestBody *[]string
 }
 
-func (r ApiDeleteDomainRequest) DeleteDomainRequest(deleteDomainRequest DeleteDomainRequest) ApiDeleteDomainRequest {
-	r.deleteDomainRequest = &deleteDomainRequest
+func (r ApiDeleteDomainRequest) RequestBody(requestBody []string) ApiDeleteDomainRequest {
+	r.requestBody = &requestBody
 	return r
 }
 
@@ -222,7 +222,7 @@ func (a *DomainsApiService) DeleteDomainExecute(r ApiDeleteDomainRequest) (*Crea
 		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
 	}
 	// body params
-	localVarPostBody = r.deleteDomainRequest
+	localVarPostBody = r.requestBody
 	if r.ctx != nil {
 		// API Key Authentication
 		if auth, ok := r.ctx.Value(ContextAPIKeys).(map[string]APIKey); ok {

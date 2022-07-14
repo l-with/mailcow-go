@@ -50,7 +50,6 @@ docs/DeleteAppPasswordRequest.md
 docs/DeleteBCCMapRequest.md
 docs/DeleteDomainAdminRequest.md
 docs/DeleteDomainPolicyRequest.md
-docs/DeleteDomainRequest.md
 docs/DeleteDomainTagsRequest.md
 docs/DeleteForwardHostRequest.md
 docs/DeleteMailboxRequest.md
@@ -132,7 +131,6 @@ model_delete_app_password_request.go
 model_delete_bcc_map_request.go
 model_delete_domain_admin_request.go
 model_delete_domain_policy_request.go
-model_delete_domain_request.go
 model_delete_domain_tags_request.go
 model_delete_forward_host_request.go
 model_delete_mailbox_request.go

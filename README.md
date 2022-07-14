@@ -137,7 +137,6 @@ Class | Method | HTTP request | Description
  - [DeleteBCCMapRequest](docs/DeleteBCCMapRequest.md)
  - [DeleteDomainAdminRequest](docs/DeleteDomainAdminRequest.md)
  - [DeleteDomainPolicyRequest](docs/DeleteDomainPolicyRequest.md)
- - [DeleteDomainRequest](docs/DeleteDomainRequest.md)
  - [DeleteDomainTagsRequest](docs/DeleteDomainTagsRequest.md)
  - [DeleteForwardHostRequest](docs/DeleteForwardHostRequest.md)
  - [DeleteMailboxRequest](docs/DeleteMailboxRequest.md)
