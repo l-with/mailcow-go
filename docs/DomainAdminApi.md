@@ -212,7 +212,7 @@ Name | Type | Description  | Notes
 
 ## EditDomainAdminUser
 
-> []map[string]interface{} EditDomainAdminUser(ctx).EditDomainAdminUserRequest(editDomainAdminUserRequest).Execute()
+> []CreateAlias200Response EditDomainAdminUser(ctx).EditDomainAdminUserRequest(editDomainAdminUserRequest).Execute()
 
 Edit Domain Admin user
 
@@ -240,7 +240,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DomainAdminApi.EditDomainAdminUser``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `EditDomainAdminUser`: []map[string]interface{}
+    // response from `EditDomainAdminUser`: []CreateAlias200Response
     fmt.Fprintf(os.Stdout, "Response from `DomainAdminApi.EditDomainAdminUser`: %v\n", resp)
 }
 ```
@@ -260,7 +260,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**[]map[string]interface{}**
+[**[]CreateAlias200Response**](CreateAlias200Response.md)
 
 ### Authorization
 
