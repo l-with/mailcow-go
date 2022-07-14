@@ -425,7 +425,7 @@ func (r ApiEditDomainAdminUserRequest) EditDomainAdminUserRequest(editDomainAdmi
 	return r
 }
 
-func (r ApiEditDomainAdminUserRequest) Execute() ([]CreateAlias200Response, *http.Response, error) {
+func (r ApiEditDomainAdminUserRequest) Execute() (*EditDomainAdminUser200Response, *http.Response, error) {
 	return r.ApiService.EditDomainAdminUserExecute(r)
 }
 
@@ -445,13 +445,13 @@ func (a *DomainAdminApiService) EditDomainAdminUser(ctx context.Context) ApiEdit
 }
 
 // Execute executes the request
-//  @return []CreateAlias200Response
-func (a *DomainAdminApiService) EditDomainAdminUserExecute(r ApiEditDomainAdminUserRequest) ([]CreateAlias200Response, *http.Response, error) {
+//  @return EditDomainAdminUser200Response
+func (a *DomainAdminApiService) EditDomainAdminUserExecute(r ApiEditDomainAdminUserRequest) (*EditDomainAdminUser200Response, *http.Response, error) {
 	var (
 		localVarHTTPMethod  = http.MethodPost
 		localVarPostBody    interface{}
 		formFiles           []formFile
-		localVarReturnValue []CreateAlias200Response
+		localVarReturnValue *EditDomainAdminUser200Response
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DomainAdminApiService.EditDomainAdminUser")

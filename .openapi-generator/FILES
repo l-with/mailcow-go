@@ -70,6 +70,7 @@ docs/DomainsApi.md
 docs/DuplicateDKIMKeyRequest.md
 docs/EditDomainAdminACLRequest.md
 docs/EditDomainAdminACLRequestAttr.md
+docs/EditDomainAdminUser200Response.md
 docs/EditDomainAdminUserRequest.md
 docs/EditDomainAdminUserRequestAttr.md
 docs/EditDomainRatelimitsRequest.md
@@ -96,7 +97,7 @@ docs/StatusApi.md
 docs/SyncJobsApi.md
 docs/UpdateAliasRequest.md
 docs/UpdateAliasRequestAttr.md
-docs/UpdateDomain200Response.md
+docs/UpdateDomain200ResponseInner.md
 docs/UpdateDomainRequest.md
 docs/UpdateDomainRequestAttr.md
 docs/UpdateMailboxACLRequest.md
@@ -149,6 +150,7 @@ model_delete_transport_maps_request.go
 model_duplicate_dkim_key_request.go
 model_edit_domain_admin_acl_request.go
 model_edit_domain_admin_acl_request_attr.go
+model_edit_domain_admin_user_200_response.go
 model_edit_domain_admin_user_request.go
 model_edit_domain_admin_user_request_attr.go
 model_edit_domain_ratelimits_request.go
@@ -162,7 +164,7 @@ model_quarantine_notifications_request.go
 model_quarantine_notifications_request_attr.go
 model_update_alias_request.go
 model_update_alias_request_attr.go
-model_update_domain_200_response.go
+model_update_domain_200_response_inner.go
 model_update_domain_request.go
 model_update_domain_request_attr.go
 model_update_mailbox_acl_request.go

@@ -506,9 +506,7 @@ paths:
                     - domain_admin_modified
                     - testadmin
               schema:
-                items:
-                  $ref: '#/components/schemas/Create_alias_200_response'
-                type: array
+                $ref: '#/components/schemas/Edit_Domain_Admin_user_200_response'
           description: OK
       summary: Edit Domain Admin user
       tags:
@@ -1856,7 +1854,9 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Update_domain_200_response'
+                items:
+                  $ref: '#/components/schemas/Update_domain_200_response_inner'
+                type: array
           description: OK
       summary: Update domain
       tags:
@@ -4099,20 +4099,6 @@ components:
           description: contains list of aliases you want to delete
           type: object
       type: object
-    Update_domain_200_response:
-      example:
-        msg: msg
-        type: success
-      properties:
-        msg:
-          type: string
-        type:
-          enum:
-          - success
-          - danger
-          - error
-          type: string
-      type: object
     Edit_mailbox_ratelimits_request:
       example:
         attr:
@@ -4126,6 +4112,27 @@ components:
         items:
           description: contains list of mailboxes you want to edit the ratelimit of
           type: object
+      type: object
+    Update_domain_200_response_inner:
+      example:
+        msg: msg
+        log:
+        - ""
+        - ""
+        type: success
+      properties:
+        log:
+          description: contains request object
+          items: {}
+          type: array
+        msg:
+          type: string
+        type:
+          enum:
+          - success
+          - danger
+          - error
+          type: string
       type: object
     Create_time_limited_alias_request:
       example:
@@ -5080,6 +5087,30 @@ components:
         items:
           description: contains list of aliases you want update
           type: object
+      type: object
+    Edit_Domain_Admin_user_200_response:
+      example:
+        msg:
+        - ""
+        - ""
+        log:
+        - ""
+        - ""
+        type: success
+      properties:
+        type:
+          enum:
+          - success
+          - danger
+          - error
+          type: string
+        log:
+          description: contains request object
+          items: {}
+          type: array
+        msg:
+          items: {}
+          type: array
       type: object
     Create_Resources_request:
       example:
