@@ -4506,7 +4506,9 @@ components:
           $ref: '#/components/schemas/Update_domain_request_attr'
         items:
           description: contains list of domain names you want update
-          type: object
+          items:
+            type: string
+          type: array
       type: object
     Flush_Queue_request:
       example:

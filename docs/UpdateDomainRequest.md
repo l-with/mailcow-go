@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Attr** | Pointer to [**UpdateDomainRequestAttr**](UpdateDomainRequestAttr.md) |  | [optional] 
-**Items** | Pointer to **map[string]interface{}** | contains list of domain names you want update | [optional] 
+**Items** | Pointer to **[]string** | contains list of domain names you want update | [optional] 
 
 ## Methods
 
@@ -53,20 +53,20 @@ HasAttr returns a boolean if a field has been set.
 
 ### GetItems
 
-`func (o *UpdateDomainRequest) GetItems() map[string]interface{}`
+`func (o *UpdateDomainRequest) GetItems() []string`
 
 GetItems returns the Items field if non-nil, zero value otherwise.
 
 ### GetItemsOk
 
-`func (o *UpdateDomainRequest) GetItemsOk() (*map[string]interface{}, bool)`
+`func (o *UpdateDomainRequest) GetItemsOk() (*[]string, bool)`
 
 GetItemsOk returns a tuple with the Items field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetItems
 
-`func (o *UpdateDomainRequest) SetItems(v map[string]interface{})`
+`func (o *UpdateDomainRequest) SetItems(v []string)`
 
 SetItems sets Items field to given value.
 
