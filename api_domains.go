@@ -647,6 +647,7 @@ func (a *DomainsApiService) UpdateDomainExecute(r ApiUpdateDomainRequest) ([]Cre
 	if err != nil {
 		return localVarReturnValue, nil, err
 	}
+	log.Print("req.Body: ", req.Body)
 	localVarHTTPResponse, err := a.client.callAPI(req)
 	if err != nil || localVarHTTPResponse == nil {
 		return localVarReturnValue, localVarHTTPResponse, err
