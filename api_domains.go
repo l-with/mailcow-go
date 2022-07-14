@@ -14,6 +14,7 @@ import (
 	"bytes"
 	"context"
 	"io/ioutil"
+	"log"
 	"net/http"
 	"net/url"
 	"strings"
@@ -626,6 +627,7 @@ func (a *DomainsApiService) UpdateDomainExecute(r ApiUpdateDomainRequest) ([]Cre
 	}
 	// body params
 	localVarPostBody = r.updateDomainRequest
+	log.Print("localVarPostBody: ", localVarPostBody)
 	if r.ctx != nil {
 		// API Key Authentication
 		if auth, ok := r.ctx.Value(ContextAPIKeys).(map[string]APIKey); ok {
@@ -644,7 +646,6 @@ func (a *DomainsApiService) UpdateDomainExecute(r ApiUpdateDomainRequest) ([]Cre
 	if err != nil {
 		return localVarReturnValue, nil, err
 	}
-
 	localVarHTTPResponse, err := a.client.callAPI(req)
 	if err != nil || localVarHTTPResponse == nil {
 		return localVarReturnValue, localVarHTTPResponse, err
