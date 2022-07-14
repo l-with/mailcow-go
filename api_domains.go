@@ -627,7 +627,8 @@ func (a *DomainsApiService) UpdateDomainExecute(r ApiUpdateDomainRequest) ([]Cre
 	}
 	// body params
 	localVarPostBody = r.updateDomainRequest
-	log.Print("*r.updateDomainRequest: ", *r.updateDomainRequest)
+	log.Print("r.updateDomainRequest.Items: ", r.updateDomainRequest.Items)
+	log.Print("*r.updateDomainRequest.Attr: ", *r.updateDomainRequest.Attr)
 	if r.ctx != nil {
 		// API Key Authentication
 		if auth, ok := r.ctx.Value(ContextAPIKeys).(map[string]APIKey); ok {
