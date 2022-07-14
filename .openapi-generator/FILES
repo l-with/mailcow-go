@@ -70,7 +70,6 @@ docs/DomainsApi.md
 docs/DuplicateDKIMKeyRequest.md
 docs/EditDomainAdminACLRequest.md
 docs/EditDomainAdminACLRequestAttr.md
-docs/EditDomainAdminUser200Response.md
 docs/EditDomainAdminUserRequest.md
 docs/EditDomainAdminUserRequestAttr.md
 docs/EditDomainRatelimitsRequest.md
@@ -150,7 +149,6 @@ model_delete_transport_maps_request.go
 model_duplicate_dkim_key_request.go
 model_edit_domain_admin_acl_request.go
 model_edit_domain_admin_acl_request_attr.go
-model_edit_domain_admin_user_200_response.go
 model_edit_domain_admin_user_request.go
 model_edit_domain_admin_user_request_attr.go
 model_edit_domain_ratelimits_request.go

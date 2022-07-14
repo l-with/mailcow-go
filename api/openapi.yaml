@@ -506,7 +506,23 @@ paths:
                     - domain_admin_modified
                     - testadmin
               schema:
-                $ref: '#/components/schemas/Edit_Domain_Admin_user_200_response'
+                items:
+                  type: object
+                properties:
+                  log:
+                    description: contains request object
+                    items: {}
+                    type: array
+                  msg:
+                    items: {}
+                    type: array
+                  type:
+                    enum:
+                    - success
+                    - danger
+                    - error
+                    type: string
+                type: array
           description: OK
       summary: Edit Domain Admin user
       tags:
@@ -5078,30 +5094,6 @@ components:
         items:
           description: contains list of aliases you want update
           type: object
-      type: object
-    Edit_Domain_Admin_user_200_response:
-      example:
-        msg:
-        - ""
-        - ""
-        log:
-        - ""
-        - ""
-        type: success
-      properties:
-        type:
-          enum:
-          - success
-          - danger
-          - error
-          type: string
-        log:
-          description: contains request object
-          items: {}
-          type: array
-        msg:
-          items: {}
-          type: array
       type: object
     Create_Resources_request:
       example:

@@ -154,7 +154,6 @@ Class | Method | HTTP request | Description
  - [DuplicateDKIMKeyRequest](docs/DuplicateDKIMKeyRequest.md)
  - [EditDomainAdminACLRequest](docs/EditDomainAdminACLRequest.md)
  - [EditDomainAdminACLRequestAttr](docs/EditDomainAdminACLRequestAttr.md)
- - [EditDomainAdminUser200Response](docs/EditDomainAdminUser200Response.md)
  - [EditDomainAdminUserRequest](docs/EditDomainAdminUserRequest.md)
  - [EditDomainAdminUserRequestAttr](docs/EditDomainAdminUserRequestAttr.md)
  - [EditDomainRatelimitsRequest](docs/EditDomainRatelimitsRequest.md)
