@@ -36,6 +36,8 @@ type UpdateDomainRequestAttr struct {
 	Quota *float32 `json:"quota,omitempty"`
 	// if not, them you have to create \"dummy\" mailbox for each address to relay
 	RelayAllRecipients *bool `json:"relay_all_recipients,omitempty"`
+	// Relay non-existing mailboxes only. Existing mailboxes will be delivered locally.
+	RelayUnknownOnly *bool `json:"relay_unknown_only,omitempty"`
 	// id of relayhost
 	Relayhost *float32 `json:"relayhost,omitempty"`
 }
@@ -377,6 +379,38 @@ func (o *UpdateDomainRequestAttr) SetRelayAllRecipients(v bool) {
 	o.RelayAllRecipients = &v
 }
 
+// GetRelayUnknownOnly returns the RelayUnknownOnly field value if set, zero value otherwise.
+func (o *UpdateDomainRequestAttr) GetRelayUnknownOnly() bool {
+	if o == nil || o.RelayUnknownOnly == nil {
+		var ret bool
+		return ret
+	}
+	return *o.RelayUnknownOnly
+}
+
+// GetRelayUnknownOnlyOk returns a tuple with the RelayUnknownOnly field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *UpdateDomainRequestAttr) GetRelayUnknownOnlyOk() (*bool, bool) {
+	if o == nil || o.RelayUnknownOnly == nil {
+		return nil, false
+	}
+	return o.RelayUnknownOnly, true
+}
+
+// HasRelayUnknownOnly returns a boolean if a field has been set.
+func (o *UpdateDomainRequestAttr) HasRelayUnknownOnly() bool {
+	if o != nil && o.RelayUnknownOnly != nil {
+		return true
+	}
+
+	return false
+}
+
+// SetRelayUnknownOnly gets a reference to the given bool and assigns it to the RelayUnknownOnly field.
+func (o *UpdateDomainRequestAttr) SetRelayUnknownOnly(v bool) {
+	o.RelayUnknownOnly = &v
+}
+
 // GetRelayhost returns the Relayhost field value if set, zero value otherwise.
 func (o *UpdateDomainRequestAttr) GetRelayhost() float32 {
 	if o == nil || o.Relayhost == nil {
@@ -440,6 +474,9 @@ func (o UpdateDomainRequestAttr) MarshalJSON() ([]byte, error) {
 	}
 	if o.RelayAllRecipients != nil {
 		toSerialize["relay_all_recipients"] = o.RelayAllRecipients
+	}
+	if o.RelayUnknownOnly != nil {
+		toSerialize["relay_unknown_only"] = o.RelayUnknownOnly
 	}
 	if o.Relayhost != nil {
 		toSerialize["relayhost"] = o.Relayhost

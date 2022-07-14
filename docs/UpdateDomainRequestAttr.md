@@ -14,6 +14,7 @@ Name | Type | Description | Notes
 **Maxquota** | Pointer to **float32** | maximum quota per mailbox | [optional] 
 **Quota** | Pointer to **float32** | maximum quota for this domain (for all mailboxes in sum) | [optional] 
 **RelayAllRecipients** | Pointer to **bool** | if not, them you have to create \&quot;dummy\&quot; mailbox for each address to relay | [optional] 
+**RelayUnknownOnly** | Pointer to **bool** | Relay non-existing mailboxes only. Existing mailboxes will be delivered locally. | [optional] 
 **Relayhost** | Pointer to **float32** | id of relayhost | [optional] 
 
 ## Methods
@@ -284,6 +285,31 @@ SetRelayAllRecipients sets RelayAllRecipients field to given value.
 `func (o *UpdateDomainRequestAttr) HasRelayAllRecipients() bool`
 
 HasRelayAllRecipients returns a boolean if a field has been set.
+
+### GetRelayUnknownOnly
+
+`func (o *UpdateDomainRequestAttr) GetRelayUnknownOnly() bool`
+
+GetRelayUnknownOnly returns the RelayUnknownOnly field if non-nil, zero value otherwise.
+
+### GetRelayUnknownOnlyOk
+
+`func (o *UpdateDomainRequestAttr) GetRelayUnknownOnlyOk() (*bool, bool)`
+
+GetRelayUnknownOnlyOk returns a tuple with the RelayUnknownOnly field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetRelayUnknownOnly
+
+`func (o *UpdateDomainRequestAttr) SetRelayUnknownOnly(v bool)`
+
+SetRelayUnknownOnly sets RelayUnknownOnly field to given value.
+
+### HasRelayUnknownOnly
+
+`func (o *UpdateDomainRequestAttr) HasRelayUnknownOnly() bool`
+
+HasRelayUnknownOnly returns a boolean if a field has been set.
 
 ### GetRelayhost
 

@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 **Defquota** | Pointer to **float32** | predefined mailbox quota in &#x60;add mailbox&#x60; form | [optional] 
 **Description** | Pointer to **string** | Description of domain | [optional] 
 **Domain** | Pointer to **string** | Fully qualified domain name | [optional] 
-**Gal** | Pointer to **bool** | global address book or not | [optional] 
+**Gal** | Pointer to **bool** | is domain global address list active or not, it enables shared contacts accross domain in SOGo webmail | [optional] 
 **Mailboxes** | Pointer to **float32** | limit count of mailboxes associated with this domain | [optional] 
 **Maxquota** | Pointer to **float32** | maximum quota per mailbox | [optional] 
 **Quota** | Pointer to **float32** | maximum quota for this domain (for all mailboxes in sum) | [optional] 

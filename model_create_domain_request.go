@@ -28,7 +28,7 @@ type CreateDomainRequest struct {
 	Description *string `json:"description,omitempty"`
 	// Fully qualified domain name
 	Domain *string `json:"domain,omitempty"`
-	// global address book or not
+	// is domain global address list active or not, it enables shared contacts accross domain in SOGo webmail
 	Gal *bool `json:"gal,omitempty"`
 	// limit count of mailboxes associated with this domain
 	Mailboxes *float32 `json:"mailboxes,omitempty"`
