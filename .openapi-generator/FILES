@@ -97,7 +97,6 @@ docs/StatusApi.md
 docs/SyncJobsApi.md
 docs/UpdateAliasRequest.md
 docs/UpdateAliasRequestAttr.md
-docs/UpdateDomain200ResponseInner.md
 docs/UpdateDomainRequest.md
 docs/UpdateDomainRequestAttr.md
 docs/UpdateMailboxACLRequest.md
@@ -164,7 +163,6 @@ model_quarantine_notifications_request.go
 model_quarantine_notifications_request_attr.go
 model_update_alias_request.go
 model_update_alias_request_attr.go
-model_update_domain_200_response_inner.go
 model_update_domain_request.go
 model_update_domain_request_attr.go
 model_update_mailbox_acl_request.go

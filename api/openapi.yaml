@@ -1855,7 +1855,7 @@ paths:
             application/json:
               schema:
                 items:
-                  $ref: '#/components/schemas/Update_domain_200_response_inner'
+                  $ref: '#/components/schemas/Create_alias_200_response'
                 type: array
           description: OK
       summary: Update domain
@@ -4112,27 +4112,6 @@ components:
         items:
           description: contains list of mailboxes you want to edit the ratelimit of
           type: object
-      type: object
-    Update_domain_200_response_inner:
-      example:
-        msg: msg
-        log:
-        - ""
-        - ""
-        type: success
-      properties:
-        log:
-          description: contains request object
-          items: {}
-          type: array
-        msg:
-          type: string
-        type:
-          enum:
-          - success
-          - danger
-          - error
-          type: string
       type: object
     Create_time_limited_alias_request:
       example:

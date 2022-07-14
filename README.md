@@ -168,7 +168,6 @@ Class | Method | HTTP request | Description
  - [QuarantineNotificationsRequestAttr](docs/QuarantineNotificationsRequestAttr.md)
  - [UpdateAliasRequest](docs/UpdateAliasRequest.md)
  - [UpdateAliasRequestAttr](docs/UpdateAliasRequestAttr.md)
- - [UpdateDomain200ResponseInner](docs/UpdateDomain200ResponseInner.md)
  - [UpdateDomainRequest](docs/UpdateDomainRequest.md)
  - [UpdateDomainRequestAttr](docs/UpdateDomainRequestAttr.md)
  - [UpdateMailboxACLRequest](docs/UpdateMailboxACLRequest.md)
