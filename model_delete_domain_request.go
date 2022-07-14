@@ -17,7 +17,7 @@ import (
 // DeleteDomainRequest struct for DeleteDomainRequest
 type DeleteDomainRequest struct {
 	// contains list of domains you want to delete
-	Items map[string]interface{} `json:"items,omitempty"`
+	Items []string `json:"items,omitempty"`
 }
 
 // NewDeleteDomainRequest instantiates a new DeleteDomainRequest object
@@ -38,9 +38,9 @@ func NewDeleteDomainRequestWithDefaults() *DeleteDomainRequest {
 }
 
 // GetItems returns the Items field value if set, zero value otherwise.
-func (o *DeleteDomainRequest) GetItems() map[string]interface{} {
+func (o *DeleteDomainRequest) GetItems() []string {
 	if o == nil || o.Items == nil {
-		var ret map[string]interface{}
+		var ret []string
 		return ret
 	}
 	return o.Items
@@ -48,7 +48,7 @@ func (o *DeleteDomainRequest) GetItems() map[string]interface{} {
 
 // GetItemsOk returns a tuple with the Items field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *DeleteDomainRequest) GetItemsOk() (map[string]interface{}, bool) {
+func (o *DeleteDomainRequest) GetItemsOk() ([]string, bool) {
 	if o == nil || o.Items == nil {
 		return nil, false
 	}
@@ -64,8 +64,8 @@ func (o *DeleteDomainRequest) HasItems() bool {
 	return false
 }
 
-// SetItems gets a reference to the given map[string]interface{} and assigns it to the Items field.
-func (o *DeleteDomainRequest) SetItems(v map[string]interface{}) {
+// SetItems gets a reference to the given []string and assigns it to the Items field.
+func (o *DeleteDomainRequest) SetItems(v []string) {
 	o.Items = v
 }
 
