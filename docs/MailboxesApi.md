@@ -18,7 +18,7 @@ Method | HTTP request | Description
 
 ## CreateMailbox
 
-> CreateAlias200Response CreateMailbox(ctx).CreateMailboxRequest(createMailboxRequest).Execute()
+> []CreateAlias200Response CreateMailbox(ctx).CreateMailboxRequest(createMailboxRequest).Execute()
 
 Create mailbox
 
@@ -46,7 +46,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `MailboxesApi.CreateMailbox``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `CreateMailbox`: CreateAlias200Response
+    // response from `CreateMailbox`: []CreateAlias200Response
     fmt.Fprintf(os.Stdout, "Response from `MailboxesApi.CreateMailbox`: %v\n", resp)
 }
 ```
@@ -66,7 +66,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CreateAlias200Response**](CreateAlias200Response.md)
+[**[]CreateAlias200Response**](CreateAlias200Response.md)
 
 ### Authorization
 

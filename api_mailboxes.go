@@ -33,7 +33,7 @@ func (r ApiCreateMailboxRequest) CreateMailboxRequest(createMailboxRequest Creat
 	return r
 }
 
-func (r ApiCreateMailboxRequest) Execute() (*CreateAlias200Response, *http.Response, error) {
+func (r ApiCreateMailboxRequest) Execute() ([]CreateAlias200Response, *http.Response, error) {
 	return r.ApiService.CreateMailboxExecute(r)
 }
 
@@ -53,13 +53,13 @@ func (a *MailboxesApiService) CreateMailbox(ctx context.Context) ApiCreateMailbo
 }
 
 // Execute executes the request
-//  @return CreateAlias200Response
-func (a *MailboxesApiService) CreateMailboxExecute(r ApiCreateMailboxRequest) (*CreateAlias200Response, *http.Response, error) {
+//  @return []CreateAlias200Response
+func (a *MailboxesApiService) CreateMailboxExecute(r ApiCreateMailboxRequest) ([]CreateAlias200Response, *http.Response, error) {
 	var (
 		localVarHTTPMethod  = http.MethodPost
 		localVarPostBody    interface{}
 		formFiles           []formFile
-		localVarReturnValue *CreateAlias200Response
+		localVarReturnValue []CreateAlias200Response
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "MailboxesApiService.CreateMailbox")
