@@ -278,6 +278,8 @@ func (c *APIClient) prepareRequest(
 			log.Print("path: ", path)
 			log.Print("postBody: ", postBody)
 			log.Printf("type of postBody: %T", postBody)
+			log.Print("*postBody: ", *postBody)
+			log.Printf("type of *postBody: %T", *postBody)
 		}
 		body, err = setBody(postBody, contentType)
 		if err != nil {
