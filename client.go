@@ -275,6 +275,7 @@ func (c *APIClient) prepareRequest(
 		// xyzzy
 		// special for DeleteDomain
 		if strings.HasSuffix(path, "/api/v1/delete/domain") {
+			var deleteDomainRequest *DeleteDomainRequest = postBody.(*DeleteDomainRequest)
 			postBody = *&deleteDomainRequest.Items
 		}
 		body, err = setBody(postBody, contentType)
