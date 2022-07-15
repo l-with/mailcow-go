@@ -80,7 +80,7 @@ Name | Type | Description  | Notes
 
 ## DeleteDomain
 
-> CreateAlias200Response DeleteDomain(ctx).DeleteDomainRequest(deleteDomainRequest).Execute()
+> []CreateAlias200Response DeleteDomain(ctx).DeleteDomainRequest(deleteDomainRequest).Execute()
 
 Delete domain
 
@@ -108,7 +108,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DomainsApi.DeleteDomain``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `DeleteDomain`: CreateAlias200Response
+    // response from `DeleteDomain`: []CreateAlias200Response
     fmt.Fprintf(os.Stdout, "Response from `DomainsApi.DeleteDomain`: %v\n", resp)
 }
 ```
@@ -128,7 +128,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CreateAlias200Response**](CreateAlias200Response.md)
+[**[]CreateAlias200Response**](CreateAlias200Response.md)
 
 ### Authorization
 

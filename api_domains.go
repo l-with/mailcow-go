@@ -164,7 +164,7 @@ func (r ApiDeleteDomainRequest) DeleteDomainRequest(deleteDomainRequest DeleteDo
 	return r
 }
 
-func (r ApiDeleteDomainRequest) Execute() (*CreateAlias200Response, *http.Response, error) {
+func (r ApiDeleteDomainRequest) Execute() ([]CreateAlias200Response, *http.Response, error) {
 	return r.ApiService.DeleteDomainExecute(r)
 }
 
@@ -184,13 +184,13 @@ func (a *DomainsApiService) DeleteDomain(ctx context.Context) ApiDeleteDomainReq
 }
 
 // Execute executes the request
-//  @return CreateAlias200Response
-func (a *DomainsApiService) DeleteDomainExecute(r ApiDeleteDomainRequest) (*CreateAlias200Response, *http.Response, error) {
+//  @return []CreateAlias200Response
+func (a *DomainsApiService) DeleteDomainExecute(r ApiDeleteDomainRequest) ([]CreateAlias200Response, *http.Response, error) {
 	var (
 		localVarHTTPMethod  = http.MethodPost
 		localVarPostBody    interface{}
 		formFiles           []formFile
-		localVarReturnValue *CreateAlias200Response
+		localVarReturnValue []CreateAlias200Response
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DomainsApiService.DeleteDomain")

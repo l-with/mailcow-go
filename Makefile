@@ -3,15 +3,17 @@ PWD = $(shell pwd)
 UID = $(shell id -u)
 GID = $(shell id -g)
 
-all: api/openapi.yaml
+all: wget api/openapi.yaml
 
 clean:
 	rm -f *.go
 	rm -rf docs/
 
-openapi.yaml:
+wget:
 	wget -N https://raw.githubusercontent.com/l-with/mailcow-dockerized/improve-domain-api-schema/data/web/api/openapi.yaml
 
+openapi.yml:
+	
 api/openapi.yaml: openapi.yaml
 	rm -f *.go
 	rm -rf docs/
