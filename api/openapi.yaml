@@ -1116,12 +1116,7 @@ paths:
         content:
           application/json:
             schema:
-              example:
-              - domain.tld
-              - domain2.tld
-              items:
-                type: string
-              type: array
+              $ref: '#/components/schemas/Delete_domain_request'
       responses:
         "401":
           content:
@@ -5179,6 +5174,15 @@ components:
         whitelist:
           description: whitelisted ips or hostnames sepereated by comma
           type: string
+      type: object
+    Delete_domain_request:
+      example:
+      - domain.tld
+      - domain2.tld
+      properties:
+        items:
+          description: contains list of domains you want to delete
+          type: object
       type: object
     Quarantine_Notifications_request:
       example:

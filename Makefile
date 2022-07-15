@@ -10,7 +10,7 @@ clean:
 	rm -rf docs/
 
 build:
-	wget -O schema.yml https://raw.githubusercontent.com/l-with/mailcow-dockerized/improve-domain-api-schema/data/web/api/openapi.yaml
+	# wget -O schema.yml https://raw.githubusercontent.com/l-with/mailcow-dockerized/improve-domain-api-schema/data/web/api/openapi.yaml
 	docker run \
 		--rm -v ${PWD}:/local \
 		--user ${UID}:${GID} \

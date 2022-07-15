@@ -1995,9 +1995,11 @@ paths:
               example:
                 - domain.tld
                 - domain2.tld
-              type: array
-              items:
-                type: string
+              properties:
+                items:
+                  description: contains list of domains you want to delete
+                  type: object
+              type: object
       summary: Delete domain
   /api/v1/delete/domain-admin:
     post:
