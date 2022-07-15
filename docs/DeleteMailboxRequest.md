@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Items** | Pointer to **map[string]interface{}** | contains list of mailboxes you want to delete | [optional] 
+**Items** | Pointer to **[]string** | contains list of mailboxes you want to delete | [optional] 
 
 ## Methods
 
@@ -27,20 +27,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetItems
 
-`func (o *DeleteMailboxRequest) GetItems() map[string]interface{}`
+`func (o *DeleteMailboxRequest) GetItems() []string`
 
 GetItems returns the Items field if non-nil, zero value otherwise.
 
 ### GetItemsOk
 
-`func (o *DeleteMailboxRequest) GetItemsOk() (*map[string]interface{}, bool)`
+`func (o *DeleteMailboxRequest) GetItemsOk() (*[]string, bool)`
 
 GetItemsOk returns a tuple with the Items field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetItems
 
-`func (o *DeleteMailboxRequest) SetItems(v map[string]interface{})`
+`func (o *DeleteMailboxRequest) SetItems(v []string)`
 
 SetItems sets Items field to given value.
 

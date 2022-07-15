@@ -18,7 +18,7 @@ import (
 type UpdateMailboxRequest struct {
 	Attr *UpdateMailboxRequestAttr `json:"attr,omitempty"`
 	// contains list of mailboxes you want update
-	Items map[string]interface{} `json:"items,omitempty"`
+	Items []string `json:"items,omitempty"`
 }
 
 // NewUpdateMailboxRequest instantiates a new UpdateMailboxRequest object
@@ -71,9 +71,9 @@ func (o *UpdateMailboxRequest) SetAttr(v UpdateMailboxRequestAttr) {
 }
 
 // GetItems returns the Items field value if set, zero value otherwise.
-func (o *UpdateMailboxRequest) GetItems() map[string]interface{} {
+func (o *UpdateMailboxRequest) GetItems() []string {
 	if o == nil || o.Items == nil {
-		var ret map[string]interface{}
+		var ret []string
 		return ret
 	}
 	return o.Items
@@ -81,7 +81,7 @@ func (o *UpdateMailboxRequest) GetItems() map[string]interface{} {
 
 // GetItemsOk returns a tuple with the Items field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *UpdateMailboxRequest) GetItemsOk() (map[string]interface{}, bool) {
+func (o *UpdateMailboxRequest) GetItemsOk() ([]string, bool) {
 	if o == nil || o.Items == nil {
 		return nil, false
 	}
@@ -97,8 +97,8 @@ func (o *UpdateMailboxRequest) HasItems() bool {
 	return false
 }
 
-// SetItems gets a reference to the given map[string]interface{} and assigns it to the Items field.
-func (o *UpdateMailboxRequest) SetItems(v map[string]interface{}) {
+// SetItems gets a reference to the given []string and assigns it to the Items field.
+func (o *UpdateMailboxRequest) SetItems(v []string) {
 	o.Items = v
 }
 

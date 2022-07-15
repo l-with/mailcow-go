@@ -15,6 +15,10 @@ Name | Type | Description | Notes
 **TlsEnforceIn** | Pointer to **bool** | force inbound email tls encryption | [optional] 
 **TlsEnforceOut** | Pointer to **bool** | force oubound tmail tls encryption | [optional] 
 **SogoAccess** | Pointer to **bool** | grant direct login access to SOGo | [optional] 
+**ImapAccess** | Pointer to **bool** | if &#39;IMAP&#39; is an allowed protocol | [optional] 
+**Pop3Access** | Pointer to **bool** | if &#39;POP3&#39; is an allowed protocol | [optional] 
+**SmtpAccess** | Pointer to **bool** | if &#39;SMTP&#39; is an allowed protocol | [optional] 
+**SieveAccess** | Pointer to **bool** | if &#39;Sieve&#39; is an allowed protocol | [optional] 
 
 ## Methods
 
@@ -309,6 +313,106 @@ SetSogoAccess sets SogoAccess field to given value.
 `func (o *CreateMailboxRequest) HasSogoAccess() bool`
 
 HasSogoAccess returns a boolean if a field has been set.
+
+### GetImapAccess
+
+`func (o *CreateMailboxRequest) GetImapAccess() bool`
+
+GetImapAccess returns the ImapAccess field if non-nil, zero value otherwise.
+
+### GetImapAccessOk
+
+`func (o *CreateMailboxRequest) GetImapAccessOk() (*bool, bool)`
+
+GetImapAccessOk returns a tuple with the ImapAccess field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetImapAccess
+
+`func (o *CreateMailboxRequest) SetImapAccess(v bool)`
+
+SetImapAccess sets ImapAccess field to given value.
+
+### HasImapAccess
+
+`func (o *CreateMailboxRequest) HasImapAccess() bool`
+
+HasImapAccess returns a boolean if a field has been set.
+
+### GetPop3Access
+
+`func (o *CreateMailboxRequest) GetPop3Access() bool`
+
+GetPop3Access returns the Pop3Access field if non-nil, zero value otherwise.
+
+### GetPop3AccessOk
+
+`func (o *CreateMailboxRequest) GetPop3AccessOk() (*bool, bool)`
+
+GetPop3AccessOk returns a tuple with the Pop3Access field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetPop3Access
+
+`func (o *CreateMailboxRequest) SetPop3Access(v bool)`
+
+SetPop3Access sets Pop3Access field to given value.
+
+### HasPop3Access
+
+`func (o *CreateMailboxRequest) HasPop3Access() bool`
+
+HasPop3Access returns a boolean if a field has been set.
+
+### GetSmtpAccess
+
+`func (o *CreateMailboxRequest) GetSmtpAccess() bool`
+
+GetSmtpAccess returns the SmtpAccess field if non-nil, zero value otherwise.
+
+### GetSmtpAccessOk
+
+`func (o *CreateMailboxRequest) GetSmtpAccessOk() (*bool, bool)`
+
+GetSmtpAccessOk returns a tuple with the SmtpAccess field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSmtpAccess
+
+`func (o *CreateMailboxRequest) SetSmtpAccess(v bool)`
+
+SetSmtpAccess sets SmtpAccess field to given value.
+
+### HasSmtpAccess
+
+`func (o *CreateMailboxRequest) HasSmtpAccess() bool`
+
+HasSmtpAccess returns a boolean if a field has been set.
+
+### GetSieveAccess
+
+`func (o *CreateMailboxRequest) GetSieveAccess() bool`
+
+GetSieveAccess returns the SieveAccess field if non-nil, zero value otherwise.
+
+### GetSieveAccessOk
+
+`func (o *CreateMailboxRequest) GetSieveAccessOk() (*bool, bool)`
+
+GetSieveAccessOk returns a tuple with the SieveAccess field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSieveAccess
+
+`func (o *CreateMailboxRequest) SetSieveAccess(v bool)`
+
+SetSieveAccess sets SieveAccess field to given value.
+
+### HasSieveAccess
+
+`func (o *CreateMailboxRequest) HasSieveAccess() bool`
+
+HasSieveAccess returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

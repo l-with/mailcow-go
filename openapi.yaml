@@ -1087,7 +1087,6 @@ paths:
                 force_pw_update: "1"
                 tls_enforce_in: "1"
                 tls_enforce_out: "1"
-                sogo_access: "1"
                 tags: ["tag1", "tag2"]
               properties:
                 active:
@@ -1122,6 +1121,18 @@ paths:
                   type: boolean
                 sogo_access:
                   description: grant direct login access to SOGo
+                  type: boolean
+                imap_access:
+                  description: "if 'IMAP' is an allowed protocol"
+                  type: boolean
+                pop3_access:
+                  description: "if 'POP3' is an allowed protocol"
+                  type: boolean
+                smtp_access:
+                  description: "if 'SMTP' is an allowed protocol"
+                  type: boolean
+                sieve_access:
+                  description: "if 'Sieve' is an allowed protocol"
                   type: boolean
               type: object
       summary: Create mailbox
@@ -2266,7 +2277,9 @@ paths:
               properties:
                 items:
                   description: contains list of mailboxes you want to delete
-                  type: object
+                  type: array
+                  items:
+                    type: string
               type: object
       summary: Delete mailbox
   /api/v1/delete/mailq:
@@ -3298,7 +3311,9 @@ paths:
                   type: object
                 items:
                   description: contains list of mailboxes you want update
-                  type: object
+                  type: array
+                  items:
+                    type: string
               type: object
       summary: Update mailbox
   /api/v1/edit/mailq:

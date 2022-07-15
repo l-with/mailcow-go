@@ -17,7 +17,7 @@ import (
 // DeleteMailboxRequest struct for DeleteMailboxRequest
 type DeleteMailboxRequest struct {
 	// contains list of mailboxes you want to delete
-	Items map[string]interface{} `json:"items,omitempty"`
+	Items []string `json:"items,omitempty"`
 }
 
 // NewDeleteMailboxRequest instantiates a new DeleteMailboxRequest object
@@ -38,9 +38,9 @@ func NewDeleteMailboxRequestWithDefaults() *DeleteMailboxRequest {
 }
 
 // GetItems returns the Items field value if set, zero value otherwise.
-func (o *DeleteMailboxRequest) GetItems() map[string]interface{} {
+func (o *DeleteMailboxRequest) GetItems() []string {
 	if o == nil || o.Items == nil {
-		var ret map[string]interface{}
+		var ret []string
 		return ret
 	}
 	return o.Items
@@ -48,7 +48,7 @@ func (o *DeleteMailboxRequest) GetItems() map[string]interface{} {
 
 // GetItemsOk returns a tuple with the Items field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *DeleteMailboxRequest) GetItemsOk() (map[string]interface{}, bool) {
+func (o *DeleteMailboxRequest) GetItemsOk() ([]string, bool) {
 	if o == nil || o.Items == nil {
 		return nil, false
 	}
@@ -64,8 +64,8 @@ func (o *DeleteMailboxRequest) HasItems() bool {
 	return false
 }
 
-// SetItems gets a reference to the given map[string]interface{} and assigns it to the Items field.
-func (o *DeleteMailboxRequest) SetItems(v map[string]interface{}) {
+// SetItems gets a reference to the given []string and assigns it to the Items field.
+func (o *DeleteMailboxRequest) SetItems(v []string) {
 	o.Items = v
 }
 

@@ -38,6 +38,14 @@ type CreateMailboxRequest struct {
 	TlsEnforceOut *bool `json:"tls_enforce_out,omitempty"`
 	// grant direct login access to SOGo
 	SogoAccess *bool `json:"sogo_access,omitempty"`
+	// if 'IMAP' is an allowed protocol
+	ImapAccess *bool `json:"imap_access,omitempty"`
+	// if 'POP3' is an allowed protocol
+	Pop3Access *bool `json:"pop3_access,omitempty"`
+	// if 'SMTP' is an allowed protocol
+	SmtpAccess *bool `json:"smtp_access,omitempty"`
+	// if 'Sieve' is an allowed protocol
+	SieveAccess *bool `json:"sieve_access,omitempty"`
 }
 
 // NewCreateMailboxRequest instantiates a new CreateMailboxRequest object
@@ -409,6 +417,134 @@ func (o *CreateMailboxRequest) SetSogoAccess(v bool) {
 	o.SogoAccess = &v
 }
 
+// GetImapAccess returns the ImapAccess field value if set, zero value otherwise.
+func (o *CreateMailboxRequest) GetImapAccess() bool {
+	if o == nil || o.ImapAccess == nil {
+		var ret bool
+		return ret
+	}
+	return *o.ImapAccess
+}
+
+// GetImapAccessOk returns a tuple with the ImapAccess field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *CreateMailboxRequest) GetImapAccessOk() (*bool, bool) {
+	if o == nil || o.ImapAccess == nil {
+		return nil, false
+	}
+	return o.ImapAccess, true
+}
+
+// HasImapAccess returns a boolean if a field has been set.
+func (o *CreateMailboxRequest) HasImapAccess() bool {
+	if o != nil && o.ImapAccess != nil {
+		return true
+	}
+
+	return false
+}
+
+// SetImapAccess gets a reference to the given bool and assigns it to the ImapAccess field.
+func (o *CreateMailboxRequest) SetImapAccess(v bool) {
+	o.ImapAccess = &v
+}
+
+// GetPop3Access returns the Pop3Access field value if set, zero value otherwise.
+func (o *CreateMailboxRequest) GetPop3Access() bool {
+	if o == nil || o.Pop3Access == nil {
+		var ret bool
+		return ret
+	}
+	return *o.Pop3Access
+}
+
+// GetPop3AccessOk returns a tuple with the Pop3Access field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *CreateMailboxRequest) GetPop3AccessOk() (*bool, bool) {
+	if o == nil || o.Pop3Access == nil {
+		return nil, false
+	}
+	return o.Pop3Access, true
+}
+
+// HasPop3Access returns a boolean if a field has been set.
+func (o *CreateMailboxRequest) HasPop3Access() bool {
+	if o != nil && o.Pop3Access != nil {
+		return true
+	}
+
+	return false
+}
+
+// SetPop3Access gets a reference to the given bool and assigns it to the Pop3Access field.
+func (o *CreateMailboxRequest) SetPop3Access(v bool) {
+	o.Pop3Access = &v
+}
+
+// GetSmtpAccess returns the SmtpAccess field value if set, zero value otherwise.
+func (o *CreateMailboxRequest) GetSmtpAccess() bool {
+	if o == nil || o.SmtpAccess == nil {
+		var ret bool
+		return ret
+	}
+	return *o.SmtpAccess
+}
+
+// GetSmtpAccessOk returns a tuple with the SmtpAccess field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *CreateMailboxRequest) GetSmtpAccessOk() (*bool, bool) {
+	if o == nil || o.SmtpAccess == nil {
+		return nil, false
+	}
+	return o.SmtpAccess, true
+}
+
+// HasSmtpAccess returns a boolean if a field has been set.
+func (o *CreateMailboxRequest) HasSmtpAccess() bool {
+	if o != nil && o.SmtpAccess != nil {
+		return true
+	}
+
+	return false
+}
+
+// SetSmtpAccess gets a reference to the given bool and assigns it to the SmtpAccess field.
+func (o *CreateMailboxRequest) SetSmtpAccess(v bool) {
+	o.SmtpAccess = &v
+}
+
+// GetSieveAccess returns the SieveAccess field value if set, zero value otherwise.
+func (o *CreateMailboxRequest) GetSieveAccess() bool {
+	if o == nil || o.SieveAccess == nil {
+		var ret bool
+		return ret
+	}
+	return *o.SieveAccess
+}
+
+// GetSieveAccessOk returns a tuple with the SieveAccess field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *CreateMailboxRequest) GetSieveAccessOk() (*bool, bool) {
+	if o == nil || o.SieveAccess == nil {
+		return nil, false
+	}
+	return o.SieveAccess, true
+}
+
+// HasSieveAccess returns a boolean if a field has been set.
+func (o *CreateMailboxRequest) HasSieveAccess() bool {
+	if o != nil && o.SieveAccess != nil {
+		return true
+	}
+
+	return false
+}
+
+// SetSieveAccess gets a reference to the given bool and assigns it to the SieveAccess field.
+func (o *CreateMailboxRequest) SetSieveAccess(v bool) {
+	o.SieveAccess = &v
+}
+
 func (o CreateMailboxRequest) MarshalJSON() ([]byte, error) {
 	toSerialize := map[string]interface{}{}
 	if o.Active != nil {
@@ -443,6 +579,18 @@ func (o CreateMailboxRequest) MarshalJSON() ([]byte, error) {
 	}
 	if o.SogoAccess != nil {
 		toSerialize["sogo_access"] = o.SogoAccess
+	}
+	if o.ImapAccess != nil {
+		toSerialize["imap_access"] = o.ImapAccess
+	}
+	if o.Pop3Access != nil {
+		toSerialize["pop3_access"] = o.Pop3Access
+	}
+	if o.SmtpAccess != nil {
+		toSerialize["smtp_access"] = o.SmtpAccess
+	}
+	if o.SieveAccess != nil {
+		toSerialize["sieve_access"] = o.SieveAccess
 	}
 	return json.Marshal(toSerialize)
 }

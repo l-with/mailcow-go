@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Attr** | Pointer to [**UpdateMailboxRequestAttr**](UpdateMailboxRequestAttr.md) |  | [optional] 
-**Items** | Pointer to **map[string]interface{}** | contains list of mailboxes you want update | [optional] 
+**Items** | Pointer to **[]string** | contains list of mailboxes you want update | [optional] 
 
 ## Methods
 
@@ -53,20 +53,20 @@ HasAttr returns a boolean if a field has been set.
 
 ### GetItems
 
-`func (o *UpdateMailboxRequest) GetItems() map[string]interface{}`
+`func (o *UpdateMailboxRequest) GetItems() []string`
 
 GetItems returns the Items field if non-nil, zero value otherwise.
 
 ### GetItemsOk
 
-`func (o *UpdateMailboxRequest) GetItemsOk() (*map[string]interface{}, bool)`
+`func (o *UpdateMailboxRequest) GetItemsOk() (*[]string, bool)`
 
 GetItemsOk returns a tuple with the Items field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetItems
 
-`func (o *UpdateMailboxRequest) SetItems(v map[string]interface{})`
+`func (o *UpdateMailboxRequest) SetItems(v []string)`
 
 SetItems sets Items field to given value.
 
