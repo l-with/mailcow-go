@@ -14,6 +14,7 @@ import (
 	"bytes"
 	"context"
 	"io/ioutil"
+	"log"
 	"net/http"
 	"net/url"
 	"strings"
@@ -223,6 +224,7 @@ func (a *DomainsApiService) DeleteDomainExecute(r ApiDeleteDomainRequest) (*Crea
 	}
 	// body params
 	localVarPostBody = r.deleteDomainRequest
+	log.Print("r.deleteDomainRequest.Items: ", r.deleteDomainRequest.Items)
 	if r.ctx != nil {
 		// API Key Authentication
 		if auth, ok := r.ctx.Value(ContextAPIKeys).(map[string]APIKey); ok {
