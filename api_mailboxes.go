@@ -817,7 +817,7 @@ func (r ApiUpdateMailboxRequest) UpdateMailboxRequest(updateMailboxRequest Updat
 	return r
 }
 
-func (r ApiUpdateMailboxRequest) Execute() (*CreateAlias200Response, *http.Response, error) {
+func (r ApiUpdateMailboxRequest) Execute() ([]CreateAlias200Response, *http.Response, error) {
 	return r.ApiService.UpdateMailboxExecute(r)
 }
 
@@ -837,13 +837,13 @@ func (a *MailboxesApiService) UpdateMailbox(ctx context.Context) ApiUpdateMailbo
 }
 
 // Execute executes the request
-//  @return CreateAlias200Response
-func (a *MailboxesApiService) UpdateMailboxExecute(r ApiUpdateMailboxRequest) (*CreateAlias200Response, *http.Response, error) {
+//  @return []CreateAlias200Response
+func (a *MailboxesApiService) UpdateMailboxExecute(r ApiUpdateMailboxRequest) ([]CreateAlias200Response, *http.Response, error) {
 	var (
 		localVarHTTPMethod  = http.MethodPost
 		localVarPostBody    interface{}
 		formFiles           []formFile
-		localVarReturnValue *CreateAlias200Response
+		localVarReturnValue []CreateAlias200Response
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "MailboxesApiService.UpdateMailbox")

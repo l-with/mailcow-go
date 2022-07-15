@@ -424,7 +424,7 @@ Name | Type | Description  | Notes
 
 ## UpdateMailbox
 
-> CreateAlias200Response UpdateMailbox(ctx).UpdateMailboxRequest(updateMailboxRequest).Execute()
+> []CreateAlias200Response UpdateMailbox(ctx).UpdateMailboxRequest(updateMailboxRequest).Execute()
 
 Update mailbox
 
@@ -452,7 +452,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `MailboxesApi.UpdateMailbox``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateMailbox`: CreateAlias200Response
+    // response from `UpdateMailbox`: []CreateAlias200Response
     fmt.Fprintf(os.Stdout, "Response from `MailboxesApi.UpdateMailbox`: %v\n", resp)
 }
 ```
@@ -472,7 +472,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CreateAlias200Response**](CreateAlias200Response.md)
+[**[]CreateAlias200Response**](CreateAlias200Response.md)
 
 ### Authorization
 

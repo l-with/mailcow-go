@@ -1944,7 +1944,9 @@ paths:
                     - info@domain.tld
                     type: success
               schema:
-                $ref: '#/components/schemas/Create_alias_200_response'
+                items:
+                  $ref: '#/components/schemas/Create_alias_200_response'
+                type: array
           description: OK
       summary: Update mailbox
       tags:
