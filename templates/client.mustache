@@ -226,6 +226,7 @@ func (c *APIClient) prepareRequest(
 		// special for DeleteDomain
 		if strings.HasSuffix(path, "/api/v1/delete/domain") {
 			log.Print("path: ", path)
+			log.Print("postBody: ", postBody)
 		}
 		body, err = setBody(postBody, contentType)
 		if err != nil {
