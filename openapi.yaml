@@ -1041,6 +1041,7 @@ paths:
                           force_pw_update: "1"
                           tls_enforce_in: "1"
                           tls_enforce_out: "1"
+                          sogo_access: "1"
                           tags: ["tag1", "tag2"]
                         - null
                       msg:
@@ -1086,6 +1087,7 @@ paths:
                 force_pw_update: "1"
                 tls_enforce_in: "1"
                 tls_enforce_out: "1"
+                sogo_access: "1"
                 tags: ["tag1", "tag2"]
               properties:
                 active:
@@ -1117,6 +1119,9 @@ paths:
                   type: boolean
                 tls_enforce_out:
                   description: force oubound tmail tls encryption
+                  type: boolean
+                sogo_access:
+                  description: grant direct login access to SOGo
                   type: boolean
               type: object
       summary: Create mailbox

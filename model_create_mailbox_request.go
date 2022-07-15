@@ -36,6 +36,8 @@ type CreateMailboxRequest struct {
 	TlsEnforceIn *bool `json:"tls_enforce_in,omitempty"`
 	// force oubound tmail tls encryption
 	TlsEnforceOut *bool `json:"tls_enforce_out,omitempty"`
+	// grant direct login access to SOGo
+	SogoAccess *bool `json:"sogo_access,omitempty"`
 }
 
 // NewCreateMailboxRequest instantiates a new CreateMailboxRequest object
@@ -375,6 +377,38 @@ func (o *CreateMailboxRequest) SetTlsEnforceOut(v bool) {
 	o.TlsEnforceOut = &v
 }
 
+// GetSogoAccess returns the SogoAccess field value if set, zero value otherwise.
+func (o *CreateMailboxRequest) GetSogoAccess() bool {
+	if o == nil || o.SogoAccess == nil {
+		var ret bool
+		return ret
+	}
+	return *o.SogoAccess
+}
+
+// GetSogoAccessOk returns a tuple with the SogoAccess field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *CreateMailboxRequest) GetSogoAccessOk() (*bool, bool) {
+	if o == nil || o.SogoAccess == nil {
+		return nil, false
+	}
+	return o.SogoAccess, true
+}
+
+// HasSogoAccess returns a boolean if a field has been set.
+func (o *CreateMailboxRequest) HasSogoAccess() bool {
+	if o != nil && o.SogoAccess != nil {
+		return true
+	}
+
+	return false
+}
+
+// SetSogoAccess gets a reference to the given bool and assigns it to the SogoAccess field.
+func (o *CreateMailboxRequest) SetSogoAccess(v bool) {
+	o.SogoAccess = &v
+}
+
 func (o CreateMailboxRequest) MarshalJSON() ([]byte, error) {
 	toSerialize := map[string]interface{}{}
 	if o.Active != nil {
@@ -406,6 +440,9 @@ func (o CreateMailboxRequest) MarshalJSON() ([]byte, error) {
 	}
 	if o.TlsEnforceOut != nil {
 		toSerialize["tls_enforce_out"] = o.TlsEnforceOut
+	}
+	if o.SogoAccess != nil {
+		toSerialize["sogo_access"] = o.SogoAccess
 	}
 	return json.Marshal(toSerialize)
 }
