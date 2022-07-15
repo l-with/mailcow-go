@@ -5181,8 +5181,9 @@ components:
       - domain2.tld
       properties:
         items:
-          description: contains list of domains you want to delete
-          type: object
+          items:
+            type: string
+          type: array
       type: object
     Quarantine_Notifications_request:
       example:
