@@ -84,7 +84,7 @@ Name | Type | Description  | Notes
 
 ## DeleteMailbox
 
-> CreateAlias200Response DeleteMailbox(ctx).DeleteMailboxRequest(deleteMailboxRequest).Execute()
+> []CreateAlias200Response DeleteMailbox(ctx).DeleteMailboxRequest(deleteMailboxRequest).Execute()
 
 Delete mailbox
 
@@ -112,7 +112,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `MailboxesApi.DeleteMailbox``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `DeleteMailbox`: CreateAlias200Response
+    // response from `DeleteMailbox`: []CreateAlias200Response
     fmt.Fprintf(os.Stdout, "Response from `MailboxesApi.DeleteMailbox`: %v\n", resp)
 }
 ```
@@ -132,7 +132,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CreateAlias200Response**](CreateAlias200Response.md)
+[**[]CreateAlias200Response**](CreateAlias200Response.md)
 
 ### Authorization
 
