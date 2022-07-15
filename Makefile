@@ -29,6 +29,8 @@ api/openapi.yaml: openapi.yaml
 	rm -f .travis.yml
 
 build-internal:
+	rm -f *.go
+	rm -rf docs/
 	docker run \
 		--rm -v ${PWD}:/local \
 		--user ${UID}:${GID} \
