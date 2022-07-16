@@ -278,6 +278,11 @@ func (c *APIClient) prepareRequest(
 			var deleteDomainRequest *DeleteDomainRequest = postBody.(*DeleteDomainRequest)
 			postBody = *&deleteDomainRequest.Items
 		}
+		// special for DeleteMailbox
+		if strings.HasSuffix(path, "/api/v1/delete/mailbox") {
+			var deleteMailboxRequest *DeleteMailboxRequest = postBody.(*DeleteMailboxRequest)
+			postBody = *&deleteMailboxRequest.Items
+		}
 		body, err = setBody(postBody, contentType)
 		if err != nil {
 			return nil, err
