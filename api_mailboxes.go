@@ -164,7 +164,7 @@ func (r ApiDeleteMailboxRequest) DeleteMailboxRequest(deleteMailboxRequest Delet
 	return r
 }
 
-func (r ApiDeleteMailboxRequest) Execute() ([]CreateAlias200Response, *http.Response, error) {
+func (r ApiDeleteMailboxRequest) Execute() ([]map[string]interface{}, *http.Response, error) {
 	return r.ApiService.DeleteMailboxExecute(r)
 }
 
@@ -184,13 +184,13 @@ func (a *MailboxesApiService) DeleteMailbox(ctx context.Context) ApiDeleteMailbo
 }
 
 // Execute executes the request
-//  @return []CreateAlias200Response
-func (a *MailboxesApiService) DeleteMailboxExecute(r ApiDeleteMailboxRequest) ([]CreateAlias200Response, *http.Response, error) {
+//  @return []map[string]interface{}
+func (a *MailboxesApiService) DeleteMailboxExecute(r ApiDeleteMailboxRequest) ([]map[string]interface{}, *http.Response, error) {
 	var (
 		localVarHTTPMethod  = http.MethodPost
 		localVarPostBody    interface{}
 		formFiles           []formFile
-		localVarReturnValue []CreateAlias200Response
+		localVarReturnValue []map[string]interface{}
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "MailboxesApiService.DeleteMailbox")
