@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 ## CreateSyncJob
 
-> CreateAlias200Response CreateSyncJob(ctx).CreateSyncJobRequest(createSyncJobRequest).Execute()
+> CreateAlias200ResponseInner CreateSyncJob(ctx).CreateSyncJobRequest(createSyncJobRequest).Execute()
 
 Create sync job
 
@@ -41,7 +41,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `SyncJobsApi.CreateSyncJob``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `CreateSyncJob`: CreateAlias200Response
+    // response from `CreateSyncJob`: CreateAlias200ResponseInner
     fmt.Fprintf(os.Stdout, "Response from `SyncJobsApi.CreateSyncJob`: %v\n", resp)
 }
 ```
@@ -61,7 +61,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CreateAlias200Response**](CreateAlias200Response.md)
+[**CreateAlias200ResponseInner**](CreateAlias200ResponseInner.md)
 
 ### Authorization
 
@@ -79,7 +79,7 @@ Name | Type | Description  | Notes
 
 ## DeleteSyncJob
 
-> CreateAlias200Response DeleteSyncJob(ctx).DeleteSyncJobRequest(deleteSyncJobRequest).Execute()
+> CreateAlias200ResponseInner DeleteSyncJob(ctx).DeleteSyncJobRequest(deleteSyncJobRequest).Execute()
 
 Delete sync job
 
@@ -107,7 +107,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `SyncJobsApi.DeleteSyncJob``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `DeleteSyncJob`: CreateAlias200Response
+    // response from `DeleteSyncJob`: CreateAlias200ResponseInner
     fmt.Fprintf(os.Stdout, "Response from `SyncJobsApi.DeleteSyncJob`: %v\n", resp)
 }
 ```
@@ -127,7 +127,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CreateAlias200Response**](CreateAlias200Response.md)
+[**CreateAlias200ResponseInner**](CreateAlias200ResponseInner.md)
 
 ### Authorization
 
@@ -204,7 +204,7 @@ Other parameters are passed through a pointer to a apiGetSyncJobsRequest struct 
 
 ## UpdateSyncJob
 
-> CreateAlias200Response UpdateSyncJob(ctx).UpdateSyncJobRequest(updateSyncJobRequest).Execute()
+> CreateAlias200ResponseInner UpdateSyncJob(ctx).UpdateSyncJobRequest(updateSyncJobRequest).Execute()
 
 Update sync job
 
@@ -232,7 +232,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `SyncJobsApi.UpdateSyncJob``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateSyncJob`: CreateAlias200Response
+    // response from `UpdateSyncJob`: CreateAlias200ResponseInner
     fmt.Fprintf(os.Stdout, "Response from `SyncJobsApi.UpdateSyncJob`: %v\n", resp)
 }
 ```
@@ -252,7 +252,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CreateAlias200Response**](CreateAlias200Response.md)
+[**CreateAlias200ResponseInner**](CreateAlias200ResponseInner.md)
 
 ### Authorization
 

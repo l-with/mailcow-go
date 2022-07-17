@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 ## CreateAppPassword
 
-> CreateAlias200Response CreateAppPassword(ctx).CreateAppPasswordRequest(createAppPasswordRequest).Execute()
+> CreateAlias200ResponseInner CreateAppPassword(ctx).CreateAppPasswordRequest(createAppPasswordRequest).Execute()
 
 Create App Password
 
@@ -40,7 +40,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `AppPasswordsApi.CreateAppPassword``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `CreateAppPassword`: CreateAlias200Response
+    // response from `CreateAppPassword`: CreateAlias200ResponseInner
     fmt.Fprintf(os.Stdout, "Response from `AppPasswordsApi.CreateAppPassword`: %v\n", resp)
 }
 ```
@@ -60,7 +60,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CreateAlias200Response**](CreateAlias200Response.md)
+[**CreateAlias200ResponseInner**](CreateAlias200ResponseInner.md)
 
 ### Authorization
 
@@ -78,7 +78,7 @@ Name | Type | Description  | Notes
 
 ## DeleteAppPassword
 
-> CreateAlias200Response DeleteAppPassword(ctx).DeleteAppPasswordRequest(deleteAppPasswordRequest).Execute()
+> CreateAlias200ResponseInner DeleteAppPassword(ctx).DeleteAppPasswordRequest(deleteAppPasswordRequest).Execute()
 
 Delete App Password
 
@@ -106,7 +106,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `AppPasswordsApi.DeleteAppPassword``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `DeleteAppPassword`: CreateAlias200Response
+    // response from `DeleteAppPassword`: CreateAlias200ResponseInner
     fmt.Fprintf(os.Stdout, "Response from `AppPasswordsApi.DeleteAppPassword`: %v\n", resp)
 }
 ```
@@ -126,7 +126,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CreateAlias200Response**](CreateAlias200Response.md)
+[**CreateAlias200ResponseInner**](CreateAlias200ResponseInner.md)
 
 ### Authorization
 

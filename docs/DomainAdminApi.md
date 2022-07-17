@@ -14,7 +14,7 @@ Method | HTTP request | Description
 
 ## CreateDomainAdminUser
 
-> CreateAlias200Response CreateDomainAdminUser(ctx).CreateDomainAdminUserRequest(createDomainAdminUserRequest).Execute()
+> CreateAlias200ResponseInner CreateDomainAdminUser(ctx).CreateDomainAdminUserRequest(createDomainAdminUserRequest).Execute()
 
 Create Domain Admin user
 
@@ -42,7 +42,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DomainAdminApi.CreateDomainAdminUser``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `CreateDomainAdminUser`: CreateAlias200Response
+    // response from `CreateDomainAdminUser`: CreateAlias200ResponseInner
     fmt.Fprintf(os.Stdout, "Response from `DomainAdminApi.CreateDomainAdminUser`: %v\n", resp)
 }
 ```
@@ -62,7 +62,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CreateAlias200Response**](CreateAlias200Response.md)
+[**CreateAlias200ResponseInner**](CreateAlias200ResponseInner.md)
 
 ### Authorization
 
@@ -80,7 +80,7 @@ Name | Type | Description  | Notes
 
 ## DeleteDomainAdmin
 
-> CreateAlias200Response DeleteDomainAdmin(ctx).DeleteDomainAdminRequest(deleteDomainAdminRequest).Execute()
+> CreateAlias200ResponseInner DeleteDomainAdmin(ctx).DeleteDomainAdminRequest(deleteDomainAdminRequest).Execute()
 
 Delete Domain Admin
 
@@ -108,7 +108,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DomainAdminApi.DeleteDomainAdmin``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `DeleteDomainAdmin`: CreateAlias200Response
+    // response from `DeleteDomainAdmin`: CreateAlias200ResponseInner
     fmt.Fprintf(os.Stdout, "Response from `DomainAdminApi.DeleteDomainAdmin`: %v\n", resp)
 }
 ```
@@ -128,7 +128,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CreateAlias200Response**](CreateAlias200Response.md)
+[**CreateAlias200ResponseInner**](CreateAlias200ResponseInner.md)
 
 ### Authorization
 
@@ -146,7 +146,7 @@ Name | Type | Description  | Notes
 
 ## EditDomainAdminACL
 
-> CreateAlias200Response EditDomainAdminACL(ctx).EditDomainAdminACLRequest(editDomainAdminACLRequest).Execute()
+> CreateAlias200ResponseInner EditDomainAdminACL(ctx).EditDomainAdminACLRequest(editDomainAdminACLRequest).Execute()
 
 Edit Domain Admin ACL
 
@@ -174,7 +174,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DomainAdminApi.EditDomainAdminACL``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `EditDomainAdminACL`: CreateAlias200Response
+    // response from `EditDomainAdminACL`: CreateAlias200ResponseInner
     fmt.Fprintf(os.Stdout, "Response from `DomainAdminApi.EditDomainAdminACL`: %v\n", resp)
 }
 ```
@@ -194,7 +194,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CreateAlias200Response**](CreateAlias200Response.md)
+[**CreateAlias200ResponseInner**](CreateAlias200ResponseInner.md)
 
 ### Authorization
 

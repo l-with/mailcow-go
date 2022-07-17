@@ -73,21 +73,23 @@ paths:
                         - alias@domain.tld
                       type: success
               schema:
-                properties:
-                  log:
-                    description: contains request object
-                    items: {}
-                    type: array
-                  msg:
-                    items: {}
-                    type: array
-                  type:
-                    enum:
-                      - success
-                      - danger
-                      - error
-                    type: string
-                type: object
+                type: array
+                items:
+                  type: object
+                  properties:
+                    log:
+                      description: contains request object
+                      items: {}
+                      type: array
+                    msg:
+                      items: {}
+                      type: array
+                    type:
+                      enum:
+                        - success
+                        - danger
+                        - error
+                      type: string
           description: OK
           headers: {}
       tags:
@@ -1781,10 +1783,16 @@ paths:
         content:
           application/json:
             schema:
-              items:
-                example: "6"
-                type: string
-              type: array
+              example:
+                - "6"
+                - "9"
+              properties:
+                items:
+                  description: contains list of ids of aliases you want to delete
+                  type: array
+                  items:
+                    type: string
+              type: object
       summary: Delete alias
   /api/v1/delete/app-passwd:
     post:
@@ -2258,7 +2266,7 @@ paths:
                   #     type: array
                   #   msg:
                   #     items: {}
-                  #     type: array
+                  #     type: array # this is not an array, when the mailbox is not found
                   #   type:
                   #     enum:
                   #       - success
@@ -2936,21 +2944,23 @@ paths:
                         - alias@domain.tld
                       type: success
               schema:
-                properties:
-                  log:
-                    description: contains request object
-                    items: {}
-                    type: array
-                  msg:
-                    items: {}
-                    type: array
-                  type:
-                    enum:
-                      - success
-                      - danger
-                      - error
-                    type: string
-                type: object
+                type: array
+                items:
+                  type: object
+                  properties:
+                    log:
+                      description: contains request object
+                      items: {}
+                      type: array
+                    msg:
+                      items: {}
+                      type: array
+                    type:
+                      enum:
+                        - success
+                        - danger
+                        - error
+                      type: string
           description: OK
           headers: {}
       tags:
@@ -3001,8 +3011,10 @@ paths:
                       type: boolean
                   type: object
                 items:
-                  description: contains list of aliases you want update
-                  type: object
+                  description: contains list of ids of aliases you want update
+                  type: array
+                  items:
+                    type: string
               type: object
       summary: Update alias
   /api/v1/edit/domain:

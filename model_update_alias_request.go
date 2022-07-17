@@ -17,8 +17,8 @@ import (
 // UpdateAliasRequest struct for UpdateAliasRequest
 type UpdateAliasRequest struct {
 	Attr *UpdateAliasRequestAttr `json:"attr,omitempty"`
-	// contains list of aliases you want update
-	Items map[string]interface{} `json:"items,omitempty"`
+	// contains list of ids of aliases you want update
+	Items []string `json:"items,omitempty"`
 }
 
 // NewUpdateAliasRequest instantiates a new UpdateAliasRequest object
@@ -71,9 +71,9 @@ func (o *UpdateAliasRequest) SetAttr(v UpdateAliasRequestAttr) {
 }
 
 // GetItems returns the Items field value if set, zero value otherwise.
-func (o *UpdateAliasRequest) GetItems() map[string]interface{} {
+func (o *UpdateAliasRequest) GetItems() []string {
 	if o == nil || o.Items == nil {
-		var ret map[string]interface{}
+		var ret []string
 		return ret
 	}
 	return o.Items
@@ -81,7 +81,7 @@ func (o *UpdateAliasRequest) GetItems() map[string]interface{} {
 
 // GetItemsOk returns a tuple with the Items field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *UpdateAliasRequest) GetItemsOk() (map[string]interface{}, bool) {
+func (o *UpdateAliasRequest) GetItemsOk() ([]string, bool) {
 	if o == nil || o.Items == nil {
 		return nil, false
 	}
@@ -97,8 +97,8 @@ func (o *UpdateAliasRequest) HasItems() bool {
 	return false
 }
 
-// SetItems gets a reference to the given map[string]interface{} and assigns it to the Items field.
-func (o *UpdateAliasRequest) SetItems(v map[string]interface{}) {
+// SetItems gets a reference to the given []string and assigns it to the Items field.
+func (o *UpdateAliasRequest) SetItems(v []string) {
 	o.Items = v
 }
 

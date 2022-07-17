@@ -33,7 +33,7 @@ func (r ApiCreateSenderDependentTransportsRequest) CreateSenderDependentTranspor
 	return r
 }
 
-func (r ApiCreateSenderDependentTransportsRequest) Execute() (*CreateAlias200Response, *http.Response, error) {
+func (r ApiCreateSenderDependentTransportsRequest) Execute() (*CreateAlias200ResponseInner, *http.Response, error) {
 	return r.ApiService.CreateSenderDependentTransportsExecute(r)
 }
 
@@ -53,13 +53,13 @@ func (a *RoutingApiService) CreateSenderDependentTransports(ctx context.Context)
 }
 
 // Execute executes the request
-//  @return CreateAlias200Response
-func (a *RoutingApiService) CreateSenderDependentTransportsExecute(r ApiCreateSenderDependentTransportsRequest) (*CreateAlias200Response, *http.Response, error) {
+//  @return CreateAlias200ResponseInner
+func (a *RoutingApiService) CreateSenderDependentTransportsExecute(r ApiCreateSenderDependentTransportsRequest) (*CreateAlias200ResponseInner, *http.Response, error) {
 	var (
 		localVarHTTPMethod  = http.MethodPost
 		localVarPostBody    interface{}
 		formFiles           []formFile
-		localVarReturnValue *CreateAlias200Response
+		localVarReturnValue *CreateAlias200ResponseInner
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "RoutingApiService.CreateSenderDependentTransports")
@@ -164,7 +164,7 @@ func (r ApiCreateTransportMapsRequest) CreateTransportMapsRequest(createTranspor
 	return r
 }
 
-func (r ApiCreateTransportMapsRequest) Execute() (*CreateAlias200Response, *http.Response, error) {
+func (r ApiCreateTransportMapsRequest) Execute() (*CreateAlias200ResponseInner, *http.Response, error) {
 	return r.ApiService.CreateTransportMapsExecute(r)
 }
 
@@ -184,13 +184,13 @@ func (a *RoutingApiService) CreateTransportMaps(ctx context.Context) ApiCreateTr
 }
 
 // Execute executes the request
-//  @return CreateAlias200Response
-func (a *RoutingApiService) CreateTransportMapsExecute(r ApiCreateTransportMapsRequest) (*CreateAlias200Response, *http.Response, error) {
+//  @return CreateAlias200ResponseInner
+func (a *RoutingApiService) CreateTransportMapsExecute(r ApiCreateTransportMapsRequest) (*CreateAlias200ResponseInner, *http.Response, error) {
 	var (
 		localVarHTTPMethod  = http.MethodPost
 		localVarPostBody    interface{}
 		formFiles           []formFile
-		localVarReturnValue *CreateAlias200Response
+		localVarReturnValue *CreateAlias200ResponseInner
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "RoutingApiService.CreateTransportMaps")
@@ -295,7 +295,7 @@ func (r ApiDeleteSenderDependentTransportsRequest) DeleteSenderDependentTranspor
 	return r
 }
 
-func (r ApiDeleteSenderDependentTransportsRequest) Execute() (*CreateAlias200Response, *http.Response, error) {
+func (r ApiDeleteSenderDependentTransportsRequest) Execute() (*CreateAlias200ResponseInner, *http.Response, error) {
 	return r.ApiService.DeleteSenderDependentTransportsExecute(r)
 }
 
@@ -315,13 +315,13 @@ func (a *RoutingApiService) DeleteSenderDependentTransports(ctx context.Context)
 }
 
 // Execute executes the request
-//  @return CreateAlias200Response
-func (a *RoutingApiService) DeleteSenderDependentTransportsExecute(r ApiDeleteSenderDependentTransportsRequest) (*CreateAlias200Response, *http.Response, error) {
+//  @return CreateAlias200ResponseInner
+func (a *RoutingApiService) DeleteSenderDependentTransportsExecute(r ApiDeleteSenderDependentTransportsRequest) (*CreateAlias200ResponseInner, *http.Response, error) {
 	var (
 		localVarHTTPMethod  = http.MethodPost
 		localVarPostBody    interface{}
 		formFiles           []formFile
-		localVarReturnValue *CreateAlias200Response
+		localVarReturnValue *CreateAlias200ResponseInner
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "RoutingApiService.DeleteSenderDependentTransports")
@@ -426,7 +426,7 @@ func (r ApiDeleteTransportMapsRequest) DeleteTransportMapsRequest(deleteTranspor
 	return r
 }
 
-func (r ApiDeleteTransportMapsRequest) Execute() (*CreateAlias200Response, *http.Response, error) {
+func (r ApiDeleteTransportMapsRequest) Execute() (*CreateAlias200ResponseInner, *http.Response, error) {
 	return r.ApiService.DeleteTransportMapsExecute(r)
 }
 
@@ -446,13 +446,13 @@ func (a *RoutingApiService) DeleteTransportMaps(ctx context.Context) ApiDeleteTr
 }
 
 // Execute executes the request
-//  @return CreateAlias200Response
-func (a *RoutingApiService) DeleteTransportMapsExecute(r ApiDeleteTransportMapsRequest) (*CreateAlias200Response, *http.Response, error) {
+//  @return CreateAlias200ResponseInner
+func (a *RoutingApiService) DeleteTransportMapsExecute(r ApiDeleteTransportMapsRequest) (*CreateAlias200ResponseInner, *http.Response, error) {
 	var (
 		localVarHTTPMethod  = http.MethodPost
 		localVarPostBody    interface{}
 		formFiles           []formFile
-		localVarReturnValue *CreateAlias200Response
+		localVarReturnValue *CreateAlias200ResponseInner
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "RoutingApiService.DeleteTransportMaps")

@@ -33,7 +33,7 @@ func (r ApiCreateAliasRequest) CreateAliasRequest(createAliasRequest CreateAlias
 	return r
 }
 
-func (r ApiCreateAliasRequest) Execute() (*CreateAlias200Response, *http.Response, error) {
+func (r ApiCreateAliasRequest) Execute() ([]CreateAlias200ResponseInner, *http.Response, error) {
 	return r.ApiService.CreateAliasExecute(r)
 }
 
@@ -54,13 +54,13 @@ func (a *AliasesApiService) CreateAlias(ctx context.Context) ApiCreateAliasReque
 }
 
 // Execute executes the request
-//  @return CreateAlias200Response
-func (a *AliasesApiService) CreateAliasExecute(r ApiCreateAliasRequest) (*CreateAlias200Response, *http.Response, error) {
+//  @return []CreateAlias200ResponseInner
+func (a *AliasesApiService) CreateAliasExecute(r ApiCreateAliasRequest) ([]CreateAlias200ResponseInner, *http.Response, error) {
 	var (
 		localVarHTTPMethod  = http.MethodPost
 		localVarPostBody    interface{}
 		formFiles           []formFile
-		localVarReturnValue *CreateAlias200Response
+		localVarReturnValue []CreateAlias200ResponseInner
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "AliasesApiService.CreateAlias")
@@ -165,7 +165,7 @@ func (r ApiCreateTimeLimitedAliasRequest) CreateTimeLimitedAliasRequest(createTi
 	return r
 }
 
-func (r ApiCreateTimeLimitedAliasRequest) Execute() (*CreateAlias200Response, *http.Response, error) {
+func (r ApiCreateTimeLimitedAliasRequest) Execute() (*CreateAlias200ResponseInner, *http.Response, error) {
 	return r.ApiService.CreateTimeLimitedAliasExecute(r)
 }
 
@@ -185,13 +185,13 @@ func (a *AliasesApiService) CreateTimeLimitedAlias(ctx context.Context) ApiCreat
 }
 
 // Execute executes the request
-//  @return CreateAlias200Response
-func (a *AliasesApiService) CreateTimeLimitedAliasExecute(r ApiCreateTimeLimitedAliasRequest) (*CreateAlias200Response, *http.Response, error) {
+//  @return CreateAlias200ResponseInner
+func (a *AliasesApiService) CreateTimeLimitedAliasExecute(r ApiCreateTimeLimitedAliasRequest) (*CreateAlias200ResponseInner, *http.Response, error) {
 	var (
 		localVarHTTPMethod  = http.MethodPost
 		localVarPostBody    interface{}
 		formFiles           []formFile
-		localVarReturnValue *CreateAlias200Response
+		localVarReturnValue *CreateAlias200ResponseInner
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "AliasesApiService.CreateTimeLimitedAlias")
@@ -286,17 +286,17 @@ func (a *AliasesApiService) CreateTimeLimitedAliasExecute(r ApiCreateTimeLimited
 }
 
 type ApiDeleteAliasRequest struct {
-	ctx         context.Context
-	ApiService  *AliasesApiService
-	requestBody *[]string
+	ctx                context.Context
+	ApiService         *AliasesApiService
+	deleteAliasRequest *DeleteAliasRequest
 }
 
-func (r ApiDeleteAliasRequest) RequestBody(requestBody []string) ApiDeleteAliasRequest {
-	r.requestBody = &requestBody
+func (r ApiDeleteAliasRequest) DeleteAliasRequest(deleteAliasRequest DeleteAliasRequest) ApiDeleteAliasRequest {
+	r.deleteAliasRequest = &deleteAliasRequest
 	return r
 }
 
-func (r ApiDeleteAliasRequest) Execute() (*CreateAlias200Response, *http.Response, error) {
+func (r ApiDeleteAliasRequest) Execute() (*CreateAlias200ResponseInner, *http.Response, error) {
 	return r.ApiService.DeleteAliasExecute(r)
 }
 
@@ -316,13 +316,13 @@ func (a *AliasesApiService) DeleteAlias(ctx context.Context) ApiDeleteAliasReque
 }
 
 // Execute executes the request
-//  @return CreateAlias200Response
-func (a *AliasesApiService) DeleteAliasExecute(r ApiDeleteAliasRequest) (*CreateAlias200Response, *http.Response, error) {
+//  @return CreateAlias200ResponseInner
+func (a *AliasesApiService) DeleteAliasExecute(r ApiDeleteAliasRequest) (*CreateAlias200ResponseInner, *http.Response, error) {
 	var (
 		localVarHTTPMethod  = http.MethodPost
 		localVarPostBody    interface{}
 		formFiles           []formFile
-		localVarReturnValue *CreateAlias200Response
+		localVarReturnValue *CreateAlias200ResponseInner
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "AliasesApiService.DeleteAlias")
@@ -354,7 +354,7 @@ func (a *AliasesApiService) DeleteAliasExecute(r ApiDeleteAliasRequest) (*Create
 		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
 	}
 	// body params
-	localVarPostBody = r.requestBody
+	localVarPostBody = r.deleteAliasRequest
 	if r.ctx != nil {
 		// API Key Authentication
 		if auth, ok := r.ctx.Value(ContextAPIKeys).(map[string]APIKey); ok {
@@ -679,7 +679,7 @@ func (r ApiUpdateAliasRequest) UpdateAliasRequest(updateAliasRequest UpdateAlias
 	return r
 }
 
-func (r ApiUpdateAliasRequest) Execute() (*CreateAlias200Response, *http.Response, error) {
+func (r ApiUpdateAliasRequest) Execute() ([]CreateAlias200ResponseInner, *http.Response, error) {
 	return r.ApiService.UpdateAliasExecute(r)
 }
 
@@ -699,13 +699,13 @@ func (a *AliasesApiService) UpdateAlias(ctx context.Context) ApiUpdateAliasReque
 }
 
 // Execute executes the request
-//  @return CreateAlias200Response
-func (a *AliasesApiService) UpdateAliasExecute(r ApiUpdateAliasRequest) (*CreateAlias200Response, *http.Response, error) {
+//  @return []CreateAlias200ResponseInner
+func (a *AliasesApiService) UpdateAliasExecute(r ApiUpdateAliasRequest) ([]CreateAlias200ResponseInner, *http.Response, error) {
 	var (
 		localVarHTTPMethod  = http.MethodPost
 		localVarPostBody    interface{}
 		formFiles           []formFile
-		localVarReturnValue *CreateAlias200Response
+		localVarReturnValue []CreateAlias200ResponseInner
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "AliasesApiService.UpdateAlias")

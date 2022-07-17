@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 ## CreateOAuthClient
 
-> CreateAlias200Response CreateOAuthClient(ctx).CreateOAuthClientRequest(createOAuthClientRequest).Execute()
+> CreateAlias200ResponseInner CreateOAuthClient(ctx).CreateOAuthClientRequest(createOAuthClientRequest).Execute()
 
 Create oAuth Client
 
@@ -40,7 +40,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `OAuthClientsApi.CreateOAuthClient``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `CreateOAuthClient`: CreateAlias200Response
+    // response from `CreateOAuthClient`: CreateAlias200ResponseInner
     fmt.Fprintf(os.Stdout, "Response from `OAuthClientsApi.CreateOAuthClient`: %v\n", resp)
 }
 ```
@@ -60,7 +60,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CreateAlias200Response**](CreateAlias200Response.md)
+[**CreateAlias200ResponseInner**](CreateAlias200ResponseInner.md)
 
 ### Authorization
 
@@ -78,7 +78,7 @@ Name | Type | Description  | Notes
 
 ## DeleteOAuthClient
 
-> CreateAlias200Response DeleteOAuthClient(ctx).DeleteOAuthClientRequest(deleteOAuthClientRequest).Execute()
+> CreateAlias200ResponseInner DeleteOAuthClient(ctx).DeleteOAuthClientRequest(deleteOAuthClientRequest).Execute()
 
 Delete oAuth Client
 
@@ -106,7 +106,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `OAuthClientsApi.DeleteOAuthClient``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `DeleteOAuthClient`: CreateAlias200Response
+    // response from `DeleteOAuthClient`: CreateAlias200ResponseInner
     fmt.Fprintf(os.Stdout, "Response from `OAuthClientsApi.DeleteOAuthClient`: %v\n", resp)
 }
 ```
@@ -126,7 +126,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CreateAlias200Response**](CreateAlias200Response.md)
+[**CreateAlias200ResponseInner**](CreateAlias200ResponseInner.md)
 
 ### Authorization
 

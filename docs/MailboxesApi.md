@@ -18,7 +18,7 @@ Method | HTTP request | Description
 
 ## CreateMailbox
 
-> []CreateAlias200Response CreateMailbox(ctx).CreateMailboxRequest(createMailboxRequest).Execute()
+> []CreateAlias200ResponseInner CreateMailbox(ctx).CreateMailboxRequest(createMailboxRequest).Execute()
 
 Create mailbox
 
@@ -46,7 +46,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `MailboxesApi.CreateMailbox``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `CreateMailbox`: []CreateAlias200Response
+    // response from `CreateMailbox`: []CreateAlias200ResponseInner
     fmt.Fprintf(os.Stdout, "Response from `MailboxesApi.CreateMailbox`: %v\n", resp)
 }
 ```
@@ -66,7 +66,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]CreateAlias200Response**](CreateAlias200Response.md)
+[**[]CreateAlias200ResponseInner**](CreateAlias200ResponseInner.md)
 
 ### Authorization
 
@@ -150,7 +150,7 @@ Name | Type | Description  | Notes
 
 ## DeleteMailboxTags
 
-> CreateAlias200Response DeleteMailboxTags(ctx, mailbox).DeleteMailboxTagsRequest(deleteMailboxTagsRequest).Execute()
+> CreateAlias200ResponseInner DeleteMailboxTags(ctx, mailbox).DeleteMailboxTagsRequest(deleteMailboxTagsRequest).Execute()
 
 Delete mailbox tags
 
@@ -179,7 +179,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `MailboxesApi.DeleteMailboxTags``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `DeleteMailboxTags`: CreateAlias200Response
+    // response from `DeleteMailboxTags`: CreateAlias200ResponseInner
     fmt.Fprintf(os.Stdout, "Response from `MailboxesApi.DeleteMailboxTags`: %v\n", resp)
 }
 ```
@@ -204,7 +204,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CreateAlias200Response**](CreateAlias200Response.md)
+[**CreateAlias200ResponseInner**](CreateAlias200ResponseInner.md)
 
 ### Authorization
 
@@ -222,7 +222,7 @@ Name | Type | Description  | Notes
 
 ## EditMailboxSpamFilterScore
 
-> CreateAlias200Response EditMailboxSpamFilterScore(ctx).Body(body).Execute()
+> CreateAlias200ResponseInner EditMailboxSpamFilterScore(ctx).Body(body).Execute()
 
 Edit mailbox spam filter score
 
@@ -250,7 +250,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `MailboxesApi.EditMailboxSpamFilterScore``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `EditMailboxSpamFilterScore`: CreateAlias200Response
+    // response from `EditMailboxSpamFilterScore`: CreateAlias200ResponseInner
     fmt.Fprintf(os.Stdout, "Response from `MailboxesApi.EditMailboxSpamFilterScore`: %v\n", resp)
 }
 ```
@@ -270,7 +270,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CreateAlias200Response**](CreateAlias200Response.md)
+[**CreateAlias200ResponseInner**](CreateAlias200ResponseInner.md)
 
 ### Authorization
 
@@ -424,7 +424,7 @@ Name | Type | Description  | Notes
 
 ## UpdateMailbox
 
-> []CreateAlias200Response UpdateMailbox(ctx).UpdateMailboxRequest(updateMailboxRequest).Execute()
+> []CreateAlias200ResponseInner UpdateMailbox(ctx).UpdateMailboxRequest(updateMailboxRequest).Execute()
 
 Update mailbox
 
@@ -452,7 +452,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `MailboxesApi.UpdateMailbox``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateMailbox`: []CreateAlias200Response
+    // response from `UpdateMailbox`: []CreateAlias200ResponseInner
     fmt.Fprintf(os.Stdout, "Response from `MailboxesApi.UpdateMailbox`: %v\n", resp)
 }
 ```
@@ -472,7 +472,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]CreateAlias200Response**](CreateAlias200Response.md)
+[**[]CreateAlias200ResponseInner**](CreateAlias200ResponseInner.md)
 
 ### Authorization
 
@@ -490,7 +490,7 @@ Name | Type | Description  | Notes
 
 ## UpdateMailboxACL
 
-> CreateAlias200Response UpdateMailboxACL(ctx).UpdateMailboxACLRequest(updateMailboxACLRequest).Execute()
+> CreateAlias200ResponseInner UpdateMailboxACL(ctx).UpdateMailboxACLRequest(updateMailboxACLRequest).Execute()
 
 Update mailbox ACL
 
@@ -518,7 +518,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `MailboxesApi.UpdateMailboxACL``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateMailboxACL`: CreateAlias200Response
+    // response from `UpdateMailboxACL`: CreateAlias200ResponseInner
     fmt.Fprintf(os.Stdout, "Response from `MailboxesApi.UpdateMailboxACL`: %v\n", resp)
 }
 ```
@@ -538,7 +538,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CreateAlias200Response**](CreateAlias200Response.md)
+[**CreateAlias200ResponseInner**](CreateAlias200ResponseInner.md)
 
 ### Authorization
 
@@ -556,7 +556,7 @@ Name | Type | Description  | Notes
 
 ## UpdatePushoverSettings
 
-> CreateAlias200Response UpdatePushoverSettings(ctx).UpdatePushoverSettingsRequest(updatePushoverSettingsRequest).Execute()
+> CreateAlias200ResponseInner UpdatePushoverSettings(ctx).UpdatePushoverSettingsRequest(updatePushoverSettingsRequest).Execute()
 
 Update Pushover settings
 
@@ -584,7 +584,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `MailboxesApi.UpdatePushoverSettings``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdatePushoverSettings`: CreateAlias200Response
+    // response from `UpdatePushoverSettings`: CreateAlias200ResponseInner
     fmt.Fprintf(os.Stdout, "Response from `MailboxesApi.UpdatePushoverSettings`: %v\n", resp)
 }
 ```
@@ -604,7 +604,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CreateAlias200Response**](CreateAlias200Response.md)
+[**CreateAlias200ResponseInner**](CreateAlias200ResponseInner.md)
 
 ### Authorization
 

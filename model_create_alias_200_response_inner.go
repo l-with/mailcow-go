@@ -14,33 +14,33 @@ import (
 	"encoding/json"
 )
 
-// CreateAlias200Response struct for CreateAlias200Response
-type CreateAlias200Response struct {
+// CreateAlias200ResponseInner struct for CreateAlias200ResponseInner
+type CreateAlias200ResponseInner struct {
 	// contains request object
 	Log  []interface{} `json:"log,omitempty"`
 	Msg  []interface{} `json:"msg,omitempty"`
 	Type *string       `json:"type,omitempty"`
 }
 
-// NewCreateAlias200Response instantiates a new CreateAlias200Response object
+// NewCreateAlias200ResponseInner instantiates a new CreateAlias200ResponseInner object
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewCreateAlias200Response() *CreateAlias200Response {
-	this := CreateAlias200Response{}
+func NewCreateAlias200ResponseInner() *CreateAlias200ResponseInner {
+	this := CreateAlias200ResponseInner{}
 	return &this
 }
 
-// NewCreateAlias200ResponseWithDefaults instantiates a new CreateAlias200Response object
+// NewCreateAlias200ResponseInnerWithDefaults instantiates a new CreateAlias200ResponseInner object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
-func NewCreateAlias200ResponseWithDefaults() *CreateAlias200Response {
-	this := CreateAlias200Response{}
+func NewCreateAlias200ResponseInnerWithDefaults() *CreateAlias200ResponseInner {
+	this := CreateAlias200ResponseInner{}
 	return &this
 }
 
 // GetLog returns the Log field value if set, zero value otherwise.
-func (o *CreateAlias200Response) GetLog() []interface{} {
+func (o *CreateAlias200ResponseInner) GetLog() []interface{} {
 	if o == nil || o.Log == nil {
 		var ret []interface{}
 		return ret
@@ -50,7 +50,7 @@ func (o *CreateAlias200Response) GetLog() []interface{} {
 
 // GetLogOk returns a tuple with the Log field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *CreateAlias200Response) GetLogOk() ([]interface{}, bool) {
+func (o *CreateAlias200ResponseInner) GetLogOk() ([]interface{}, bool) {
 	if o == nil || o.Log == nil {
 		return nil, false
 	}
@@ -58,7 +58,7 @@ func (o *CreateAlias200Response) GetLogOk() ([]interface{}, bool) {
 }
 
 // HasLog returns a boolean if a field has been set.
-func (o *CreateAlias200Response) HasLog() bool {
+func (o *CreateAlias200ResponseInner) HasLog() bool {
 	if o != nil && o.Log != nil {
 		return true
 	}
@@ -67,12 +67,12 @@ func (o *CreateAlias200Response) HasLog() bool {
 }
 
 // SetLog gets a reference to the given []interface{} and assigns it to the Log field.
-func (o *CreateAlias200Response) SetLog(v []interface{}) {
+func (o *CreateAlias200ResponseInner) SetLog(v []interface{}) {
 	o.Log = v
 }
 
 // GetMsg returns the Msg field value if set, zero value otherwise.
-func (o *CreateAlias200Response) GetMsg() []interface{} {
+func (o *CreateAlias200ResponseInner) GetMsg() []interface{} {
 	if o == nil || o.Msg == nil {
 		var ret []interface{}
 		return ret
@@ -82,7 +82,7 @@ func (o *CreateAlias200Response) GetMsg() []interface{} {
 
 // GetMsgOk returns a tuple with the Msg field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *CreateAlias200Response) GetMsgOk() ([]interface{}, bool) {
+func (o *CreateAlias200ResponseInner) GetMsgOk() ([]interface{}, bool) {
 	if o == nil || o.Msg == nil {
 		return nil, false
 	}
@@ -90,7 +90,7 @@ func (o *CreateAlias200Response) GetMsgOk() ([]interface{}, bool) {
 }
 
 // HasMsg returns a boolean if a field has been set.
-func (o *CreateAlias200Response) HasMsg() bool {
+func (o *CreateAlias200ResponseInner) HasMsg() bool {
 	if o != nil && o.Msg != nil {
 		return true
 	}
@@ -99,12 +99,12 @@ func (o *CreateAlias200Response) HasMsg() bool {
 }
 
 // SetMsg gets a reference to the given []interface{} and assigns it to the Msg field.
-func (o *CreateAlias200Response) SetMsg(v []interface{}) {
+func (o *CreateAlias200ResponseInner) SetMsg(v []interface{}) {
 	o.Msg = v
 }
 
 // GetType returns the Type field value if set, zero value otherwise.
-func (o *CreateAlias200Response) GetType() string {
+func (o *CreateAlias200ResponseInner) GetType() string {
 	if o == nil || o.Type == nil {
 		var ret string
 		return ret
@@ -114,7 +114,7 @@ func (o *CreateAlias200Response) GetType() string {
 
 // GetTypeOk returns a tuple with the Type field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *CreateAlias200Response) GetTypeOk() (*string, bool) {
+func (o *CreateAlias200ResponseInner) GetTypeOk() (*string, bool) {
 	if o == nil || o.Type == nil {
 		return nil, false
 	}
@@ -122,7 +122,7 @@ func (o *CreateAlias200Response) GetTypeOk() (*string, bool) {
 }
 
 // HasType returns a boolean if a field has been set.
-func (o *CreateAlias200Response) HasType() bool {
+func (o *CreateAlias200ResponseInner) HasType() bool {
 	if o != nil && o.Type != nil {
 		return true
 	}
@@ -131,11 +131,11 @@ func (o *CreateAlias200Response) HasType() bool {
 }
 
 // SetType gets a reference to the given string and assigns it to the Type field.
-func (o *CreateAlias200Response) SetType(v string) {
+func (o *CreateAlias200ResponseInner) SetType(v string) {
 	o.Type = &v
 }
 
-func (o CreateAlias200Response) MarshalJSON() ([]byte, error) {
+func (o CreateAlias200ResponseInner) MarshalJSON() ([]byte, error) {
 	toSerialize := map[string]interface{}{}
 	if o.Log != nil {
 		toSerialize["log"] = o.Log
@@ -149,38 +149,38 @@ func (o CreateAlias200Response) MarshalJSON() ([]byte, error) {
 	return json.Marshal(toSerialize)
 }
 
-type NullableCreateAlias200Response struct {
-	value *CreateAlias200Response
+type NullableCreateAlias200ResponseInner struct {
+	value *CreateAlias200ResponseInner
 	isSet bool
 }
 
-func (v NullableCreateAlias200Response) Get() *CreateAlias200Response {
+func (v NullableCreateAlias200ResponseInner) Get() *CreateAlias200ResponseInner {
 	return v.value
 }
 
-func (v *NullableCreateAlias200Response) Set(val *CreateAlias200Response) {
+func (v *NullableCreateAlias200ResponseInner) Set(val *CreateAlias200ResponseInner) {
 	v.value = val
 	v.isSet = true
 }
 
-func (v NullableCreateAlias200Response) IsSet() bool {
+func (v NullableCreateAlias200ResponseInner) IsSet() bool {
 	return v.isSet
 }
 
-func (v *NullableCreateAlias200Response) Unset() {
+func (v *NullableCreateAlias200ResponseInner) Unset() {
 	v.value = nil
 	v.isSet = false
 }
 
-func NewNullableCreateAlias200Response(val *CreateAlias200Response) *NullableCreateAlias200Response {
-	return &NullableCreateAlias200Response{value: val, isSet: true}
+func NewNullableCreateAlias200ResponseInner(val *CreateAlias200ResponseInner) *NullableCreateAlias200ResponseInner {
+	return &NullableCreateAlias200ResponseInner{value: val, isSet: true}
 }
 
-func (v NullableCreateAlias200Response) MarshalJSON() ([]byte, error) {
+func (v NullableCreateAlias200ResponseInner) MarshalJSON() ([]byte, error) {
 	return json.Marshal(v.value)
 }
 
-func (v *NullableCreateAlias200Response) UnmarshalJSON(src []byte) error {
+func (v *NullableCreateAlias200ResponseInner) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }

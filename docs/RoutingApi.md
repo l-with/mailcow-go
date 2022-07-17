@@ -15,7 +15,7 @@ Method | HTTP request | Description
 
 ## CreateSenderDependentTransports
 
-> CreateAlias200Response CreateSenderDependentTransports(ctx).CreateSenderDependentTransportsRequest(createSenderDependentTransportsRequest).Execute()
+> CreateAlias200ResponseInner CreateSenderDependentTransports(ctx).CreateSenderDependentTransportsRequest(createSenderDependentTransportsRequest).Execute()
 
 Create Sender-Dependent Transports
 
@@ -43,7 +43,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `RoutingApi.CreateSenderDependentTransports``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `CreateSenderDependentTransports`: CreateAlias200Response
+    // response from `CreateSenderDependentTransports`: CreateAlias200ResponseInner
     fmt.Fprintf(os.Stdout, "Response from `RoutingApi.CreateSenderDependentTransports`: %v\n", resp)
 }
 ```
@@ -63,7 +63,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CreateAlias200Response**](CreateAlias200Response.md)
+[**CreateAlias200ResponseInner**](CreateAlias200ResponseInner.md)
 
 ### Authorization
 
@@ -81,7 +81,7 @@ Name | Type | Description  | Notes
 
 ## CreateTransportMaps
 
-> CreateAlias200Response CreateTransportMaps(ctx).CreateTransportMapsRequest(createTransportMapsRequest).Execute()
+> CreateAlias200ResponseInner CreateTransportMaps(ctx).CreateTransportMapsRequest(createTransportMapsRequest).Execute()
 
 Create Transport Maps
 
@@ -109,7 +109,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `RoutingApi.CreateTransportMaps``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `CreateTransportMaps`: CreateAlias200Response
+    // response from `CreateTransportMaps`: CreateAlias200ResponseInner
     fmt.Fprintf(os.Stdout, "Response from `RoutingApi.CreateTransportMaps`: %v\n", resp)
 }
 ```
@@ -129,7 +129,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CreateAlias200Response**](CreateAlias200Response.md)
+[**CreateAlias200ResponseInner**](CreateAlias200ResponseInner.md)
 
 ### Authorization
 
@@ -147,7 +147,7 @@ Name | Type | Description  | Notes
 
 ## DeleteSenderDependentTransports
 
-> CreateAlias200Response DeleteSenderDependentTransports(ctx).DeleteSenderDependentTransportsRequest(deleteSenderDependentTransportsRequest).Execute()
+> CreateAlias200ResponseInner DeleteSenderDependentTransports(ctx).DeleteSenderDependentTransportsRequest(deleteSenderDependentTransportsRequest).Execute()
 
 Delete Sender-Dependent Transports
 
@@ -175,7 +175,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `RoutingApi.DeleteSenderDependentTransports``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `DeleteSenderDependentTransports`: CreateAlias200Response
+    // response from `DeleteSenderDependentTransports`: CreateAlias200ResponseInner
     fmt.Fprintf(os.Stdout, "Response from `RoutingApi.DeleteSenderDependentTransports`: %v\n", resp)
 }
 ```
@@ -195,7 +195,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CreateAlias200Response**](CreateAlias200Response.md)
+[**CreateAlias200ResponseInner**](CreateAlias200ResponseInner.md)
 
 ### Authorization
 
@@ -213,7 +213,7 @@ Name | Type | Description  | Notes
 
 ## DeleteTransportMaps
 
-> CreateAlias200Response DeleteTransportMaps(ctx).DeleteTransportMapsRequest(deleteTransportMapsRequest).Execute()
+> CreateAlias200ResponseInner DeleteTransportMaps(ctx).DeleteTransportMapsRequest(deleteTransportMapsRequest).Execute()
 
 Delete Transport Maps
 
@@ -241,7 +241,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `RoutingApi.DeleteTransportMaps``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `DeleteTransportMaps`: CreateAlias200Response
+    // response from `DeleteTransportMaps`: CreateAlias200ResponseInner
     fmt.Fprintf(os.Stdout, "Response from `RoutingApi.DeleteTransportMaps`: %v\n", resp)
 }
 ```
@@ -261,7 +261,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CreateAlias200Response**](CreateAlias200Response.md)
+[**CreateAlias200ResponseInner**](CreateAlias200ResponseInner.md)
 
 ### Authorization
 

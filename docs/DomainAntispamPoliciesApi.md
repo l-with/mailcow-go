@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 ## CreateDomainPolicy
 
-> CreateAlias200Response CreateDomainPolicy(ctx).CreateDomainPolicyRequest(createDomainPolicyRequest).Execute()
+> CreateAlias200ResponseInner CreateDomainPolicy(ctx).CreateDomainPolicyRequest(createDomainPolicyRequest).Execute()
 
 Create domain policy
 
@@ -41,7 +41,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DomainAntispamPoliciesApi.CreateDomainPolicy``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `CreateDomainPolicy`: CreateAlias200Response
+    // response from `CreateDomainPolicy`: CreateAlias200ResponseInner
     fmt.Fprintf(os.Stdout, "Response from `DomainAntispamPoliciesApi.CreateDomainPolicy`: %v\n", resp)
 }
 ```
@@ -61,7 +61,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CreateAlias200Response**](CreateAlias200Response.md)
+[**CreateAlias200ResponseInner**](CreateAlias200ResponseInner.md)
 
 ### Authorization
 
@@ -79,7 +79,7 @@ Name | Type | Description  | Notes
 
 ## DeleteDomainPolicy
 
-> CreateAlias200Response DeleteDomainPolicy(ctx).DeleteDomainPolicyRequest(deleteDomainPolicyRequest).Execute()
+> CreateAlias200ResponseInner DeleteDomainPolicy(ctx).DeleteDomainPolicyRequest(deleteDomainPolicyRequest).Execute()
 
 Delete domain policy
 
@@ -107,7 +107,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DomainAntispamPoliciesApi.DeleteDomainPolicy``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `DeleteDomainPolicy`: CreateAlias200Response
+    // response from `DeleteDomainPolicy`: CreateAlias200ResponseInner
     fmt.Fprintf(os.Stdout, "Response from `DomainAntispamPoliciesApi.DeleteDomainPolicy`: %v\n", resp)
 }
 ```
@@ -127,7 +127,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CreateAlias200Response**](CreateAlias200Response.md)
+[**CreateAlias200ResponseInner**](CreateAlias200ResponseInner.md)
 
 ### Authorization
 

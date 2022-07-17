@@ -1,4 +1,4 @@
-# CreateAlias200Response
+# CreateAlias200ResponseInner
 
 ## Properties
 
@@ -10,95 +10,95 @@ Name | Type | Description | Notes
 
 ## Methods
 
-### NewCreateAlias200Response
+### NewCreateAlias200ResponseInner
 
-`func NewCreateAlias200Response() *CreateAlias200Response`
+`func NewCreateAlias200ResponseInner() *CreateAlias200ResponseInner`
 
-NewCreateAlias200Response instantiates a new CreateAlias200Response object
+NewCreateAlias200ResponseInner instantiates a new CreateAlias200ResponseInner object
 This constructor will assign default values to properties that have it defined,
 and makes sure properties required by API are set, but the set of arguments
 will change when the set of required properties is changed
 
-### NewCreateAlias200ResponseWithDefaults
+### NewCreateAlias200ResponseInnerWithDefaults
 
-`func NewCreateAlias200ResponseWithDefaults() *CreateAlias200Response`
+`func NewCreateAlias200ResponseInnerWithDefaults() *CreateAlias200ResponseInner`
 
-NewCreateAlias200ResponseWithDefaults instantiates a new CreateAlias200Response object
+NewCreateAlias200ResponseInnerWithDefaults instantiates a new CreateAlias200ResponseInner object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
 ### GetLog
 
-`func (o *CreateAlias200Response) GetLog() []interface{}`
+`func (o *CreateAlias200ResponseInner) GetLog() []interface{}`
 
 GetLog returns the Log field if non-nil, zero value otherwise.
 
 ### GetLogOk
 
-`func (o *CreateAlias200Response) GetLogOk() (*[]interface{}, bool)`
+`func (o *CreateAlias200ResponseInner) GetLogOk() (*[]interface{}, bool)`
 
 GetLogOk returns a tuple with the Log field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetLog
 
-`func (o *CreateAlias200Response) SetLog(v []interface{})`
+`func (o *CreateAlias200ResponseInner) SetLog(v []interface{})`
 
 SetLog sets Log field to given value.
 
 ### HasLog
 
-`func (o *CreateAlias200Response) HasLog() bool`
+`func (o *CreateAlias200ResponseInner) HasLog() bool`
 
 HasLog returns a boolean if a field has been set.
 
 ### GetMsg
 
-`func (o *CreateAlias200Response) GetMsg() []interface{}`
+`func (o *CreateAlias200ResponseInner) GetMsg() []interface{}`
 
 GetMsg returns the Msg field if non-nil, zero value otherwise.
 
 ### GetMsgOk
 
-`func (o *CreateAlias200Response) GetMsgOk() (*[]interface{}, bool)`
+`func (o *CreateAlias200ResponseInner) GetMsgOk() (*[]interface{}, bool)`
 
 GetMsgOk returns a tuple with the Msg field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetMsg
 
-`func (o *CreateAlias200Response) SetMsg(v []interface{})`
+`func (o *CreateAlias200ResponseInner) SetMsg(v []interface{})`
 
 SetMsg sets Msg field to given value.
 
 ### HasMsg
 
-`func (o *CreateAlias200Response) HasMsg() bool`
+`func (o *CreateAlias200ResponseInner) HasMsg() bool`
 
 HasMsg returns a boolean if a field has been set.
 
 ### GetType
 
-`func (o *CreateAlias200Response) GetType() string`
+`func (o *CreateAlias200ResponseInner) GetType() string`
 
 GetType returns the Type field if non-nil, zero value otherwise.
 
 ### GetTypeOk
 
-`func (o *CreateAlias200Response) GetTypeOk() (*string, bool)`
+`func (o *CreateAlias200ResponseInner) GetTypeOk() (*string, bool)`
 
 GetTypeOk returns a tuple with the Type field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetType
 
-`func (o *CreateAlias200Response) SetType(v string)`
+`func (o *CreateAlias200ResponseInner) SetType(v string)`
 
 SetType sets Type field to given value.
 
 ### HasType
 
-`func (o *CreateAlias200Response) HasType() bool`
+`func (o *CreateAlias200ResponseInner) HasType() bool`
 
 HasType returns a boolean if a field has been set.
 

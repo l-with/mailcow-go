@@ -33,7 +33,7 @@ func (r ApiCreateAppPasswordRequest) CreateAppPasswordRequest(createAppPasswordR
 	return r
 }
 
-func (r ApiCreateAppPasswordRequest) Execute() (*CreateAlias200Response, *http.Response, error) {
+func (r ApiCreateAppPasswordRequest) Execute() (*CreateAlias200ResponseInner, *http.Response, error) {
 	return r.ApiService.CreateAppPasswordExecute(r)
 }
 
@@ -53,13 +53,13 @@ func (a *AppPasswordsApiService) CreateAppPassword(ctx context.Context) ApiCreat
 }
 
 // Execute executes the request
-//  @return CreateAlias200Response
-func (a *AppPasswordsApiService) CreateAppPasswordExecute(r ApiCreateAppPasswordRequest) (*CreateAlias200Response, *http.Response, error) {
+//  @return CreateAlias200ResponseInner
+func (a *AppPasswordsApiService) CreateAppPasswordExecute(r ApiCreateAppPasswordRequest) (*CreateAlias200ResponseInner, *http.Response, error) {
 	var (
 		localVarHTTPMethod  = http.MethodPost
 		localVarPostBody    interface{}
 		formFiles           []formFile
-		localVarReturnValue *CreateAlias200Response
+		localVarReturnValue *CreateAlias200ResponseInner
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "AppPasswordsApiService.CreateAppPassword")
@@ -164,7 +164,7 @@ func (r ApiDeleteAppPasswordRequest) DeleteAppPasswordRequest(deleteAppPasswordR
 	return r
 }
 
-func (r ApiDeleteAppPasswordRequest) Execute() (*CreateAlias200Response, *http.Response, error) {
+func (r ApiDeleteAppPasswordRequest) Execute() (*CreateAlias200ResponseInner, *http.Response, error) {
 	return r.ApiService.DeleteAppPasswordExecute(r)
 }
 
@@ -184,13 +184,13 @@ func (a *AppPasswordsApiService) DeleteAppPassword(ctx context.Context) ApiDelet
 }
 
 // Execute executes the request
-//  @return CreateAlias200Response
-func (a *AppPasswordsApiService) DeleteAppPasswordExecute(r ApiDeleteAppPasswordRequest) (*CreateAlias200Response, *http.Response, error) {
+//  @return CreateAlias200ResponseInner
+func (a *AppPasswordsApiService) DeleteAppPasswordExecute(r ApiDeleteAppPasswordRequest) (*CreateAlias200ResponseInner, *http.Response, error) {
 	var (
 		localVarHTTPMethod  = http.MethodPost
 		localVarPostBody    interface{}
 		formFiles           []formFile
-		localVarReturnValue *CreateAlias200Response
+		localVarReturnValue *CreateAlias200ResponseInner
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "AppPasswordsApiService.DeleteAppPassword")

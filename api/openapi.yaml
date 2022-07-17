@@ -93,7 +93,9 @@ paths:
                     - alias@domain.tld
                     type: success
               schema:
-                $ref: '#/components/schemas/Create_alias_200_response'
+                items:
+                  $ref: '#/components/schemas/Create_alias_200_response_inner'
+                type: array
           description: OK
       summary: Create alias
       tags:
@@ -134,7 +136,7 @@ paths:
                     - info@domain.tld
                     type: success
               schema:
-                $ref: '#/components/schemas/Create_alias_200_response'
+                $ref: '#/components/schemas/Create_alias_200_response_inner'
           description: OK
       summary: Create time limited alias
       tags:
@@ -180,7 +182,7 @@ paths:
                     msg: app_passwd_added
                     type: success
               schema:
-                $ref: '#/components/schemas/Create_alias_200_response'
+                $ref: '#/components/schemas/Create_alias_200_response_inner'
           description: OK
       summary: Create App Password
       tags:
@@ -219,7 +221,7 @@ paths:
                     msg: bcc_saved
                     type: success
               schema:
-                $ref: '#/components/schemas/Create_alias_200_response'
+                $ref: '#/components/schemas/Create_alias_200_response_inner'
           description: OK
       summary: Create BCC Map
       tags:
@@ -257,7 +259,7 @@ paths:
                     - hanspeterlol.de
                     type: success
               schema:
-                $ref: '#/components/schemas/Create_alias_200_response'
+                $ref: '#/components/schemas/Create_alias_200_response_inner'
           description: OK
       summary: Generate DKIM Key
       tags:
@@ -295,7 +297,7 @@ paths:
                     - awesomecow.tld
                     type: success
               schema:
-                $ref: '#/components/schemas/Create_alias_200_response'
+                $ref: '#/components/schemas/Create_alias_200_response_inner'
           description: OK
       summary: Duplicate DKIM Key
       tags:
@@ -361,7 +363,7 @@ paths:
                     type: success
               schema:
                 items:
-                  $ref: '#/components/schemas/Create_alias_200_response'
+                  $ref: '#/components/schemas/Create_alias_200_response_inner'
                 type: array
           description: OK
       summary: Create domain
@@ -403,7 +405,7 @@ paths:
                     - testadmin
                     type: success
               schema:
-                $ref: '#/components/schemas/Create_alias_200_response'
+                $ref: '#/components/schemas/Create_alias_200_response_inner'
           description: OK
       summary: Create Domain Admin user
       tags:
@@ -460,7 +462,7 @@ paths:
                     - acl_saved
                     - testadmin
               schema:
-                $ref: '#/components/schemas/Create_alias_200_response'
+                $ref: '#/components/schemas/Create_alias_200_response_inner'
           description: OK
       summary: Edit Domain Admin ACL
       tags:
@@ -546,7 +548,7 @@ paths:
                     - domain.tld
                     type: success
               schema:
-                $ref: '#/components/schemas/Create_alias_200_response'
+                $ref: '#/components/schemas/Create_alias_200_response_inner'
           description: OK
       summary: Create domain policy
       tags:
@@ -585,7 +587,7 @@ paths:
                     - "5.1.76.202, 2a00:f820:417::202"
                     type: success
               schema:
-                $ref: '#/components/schemas/Create_alias_200_response'
+                $ref: '#/components/schemas/Create_alias_200_response_inner'
           description: OK
       summary: Add Forward Host
       tags:
@@ -638,7 +640,7 @@ paths:
                     type: success
               schema:
                 items:
-                  $ref: '#/components/schemas/Create_alias_200_response'
+                  $ref: '#/components/schemas/Create_alias_200_response_inner'
                 type: array
           description: OK
       summary: Create mailbox
@@ -674,7 +676,7 @@ paths:
                     msg: Added client access
                     type: success
               schema:
-                $ref: '#/components/schemas/Create_alias_200_response'
+                $ref: '#/components/schemas/Create_alias_200_response_inner'
           description: OK
       summary: Create oAuth Client
       tags:
@@ -714,7 +716,7 @@ paths:
                     - recipient@mailcow.tld
                     type: success
               schema:
-                $ref: '#/components/schemas/Create_alias_200_response'
+                $ref: '#/components/schemas/Create_alias_200_response_inner'
           description: OK
       summary: Create Recipient Map
       tags:
@@ -752,7 +754,7 @@ paths:
                     - ""
                     type: success
               schema:
-                $ref: '#/components/schemas/Create_alias_200_response'
+                $ref: '#/components/schemas/Create_alias_200_response_inner'
           description: OK
       summary: Create Sender-Dependent Transports
       tags:
@@ -796,7 +798,7 @@ paths:
                     - mailcow.tld
                     type: success
               schema:
-                $ref: '#/components/schemas/Create_alias_200_response'
+                $ref: '#/components/schemas/Create_alias_200_response_inner'
           description: OK
       summary: Create Resources
       tags:
@@ -855,7 +857,7 @@ paths:
                     - mailbox@domain.tld
                     type: success
               schema:
-                $ref: '#/components/schemas/Create_alias_200_response'
+                $ref: '#/components/schemas/Create_alias_200_response_inner'
           description: OK
       summary: Create sync job
       tags:
@@ -895,7 +897,7 @@ paths:
                     - mailcow.tld
                     type: success
               schema:
-                $ref: '#/components/schemas/Create_alias_200_response'
+                $ref: '#/components/schemas/Create_alias_200_response_inner'
           description: OK
       summary: Create TLS Policy Map
       tags:
@@ -935,7 +937,7 @@ paths:
                     - ""
                     type: success
               schema:
-                $ref: '#/components/schemas/Create_alias_200_response'
+                $ref: '#/components/schemas/Create_alias_200_response_inner'
           description: OK
       summary: Create Transport Maps
       tags:
@@ -948,10 +950,7 @@ paths:
         content:
           application/json:
             schema:
-              items:
-                example: "6"
-                type: string
-              type: array
+              $ref: '#/components/schemas/Delete_alias_request'
       responses:
         "401":
           content:
@@ -990,7 +989,7 @@ paths:
                     - alias2@domain.tld
                     type: success
               schema:
-                $ref: '#/components/schemas/Create_alias_200_response'
+                $ref: '#/components/schemas/Create_alias_200_response_inner'
           description: OK
       summary: Delete alias
       tags:
@@ -1027,7 +1026,7 @@ paths:
                     - "2"
                     type: success
               schema:
-                $ref: '#/components/schemas/Create_alias_200_response'
+                $ref: '#/components/schemas/Create_alias_200_response_inner'
           description: OK
       summary: Delete App Password
       tags:
@@ -1066,7 +1065,7 @@ paths:
                     - "4"
                     type: success
               schema:
-                $ref: '#/components/schemas/Create_alias_200_response'
+                $ref: '#/components/schemas/Create_alias_200_response_inner'
           description: OK
       summary: Delete BCC Map
       tags:
@@ -1106,7 +1105,7 @@ paths:
                     - mailcow.tld
                     type: success
               schema:
-                $ref: '#/components/schemas/Create_alias_200_response'
+                $ref: '#/components/schemas/Create_alias_200_response_inner'
           description: OK
       summary: Delete DKIM Key
       tags:
@@ -1159,7 +1158,7 @@ paths:
                     type: success
               schema:
                 items:
-                  $ref: '#/components/schemas/Create_alias_200_response'
+                  $ref: '#/components/schemas/Create_alias_200_response_inner'
                 type: array
           description: OK
       summary: Delete domain
@@ -1197,7 +1196,7 @@ paths:
                     - testadmin
                     type: success
               schema:
-                $ref: '#/components/schemas/Create_alias_200_response'
+                $ref: '#/components/schemas/Create_alias_200_response_inner'
           description: OK
       summary: Delete Domain Admin
       tags:
@@ -1247,7 +1246,7 @@ paths:
                     - "2"
                     type: success
               schema:
-                $ref: '#/components/schemas/Create_alias_200_response'
+                $ref: '#/components/schemas/Create_alias_200_response_inner'
           description: OK
       summary: Delete domain policy
       tags:
@@ -1296,7 +1295,7 @@ paths:
                     - 2a00:f820:417::202
                     type: success
               schema:
-                $ref: '#/components/schemas/Create_alias_200_response'
+                $ref: '#/components/schemas/Create_alias_200_response_inner'
           description: OK
       summary: Delete Forward Host
       tags:
@@ -1418,7 +1417,7 @@ paths:
                     - "1"
                     type: success
               schema:
-                $ref: '#/components/schemas/Create_alias_200_response'
+                $ref: '#/components/schemas/Create_alias_200_response_inner'
           description: OK
       summary: Delete oAuth Client
       tags:
@@ -1456,7 +1455,7 @@ paths:
                     - "33"
                     type: success
               schema:
-                $ref: '#/components/schemas/Create_alias_200_response'
+                $ref: '#/components/schemas/Create_alias_200_response_inner'
           description: OK
       summary: Delete mails in Quarantine
       tags:
@@ -1495,7 +1494,7 @@ paths:
                     - "1"
                     type: success
               schema:
-                $ref: '#/components/schemas/Create_alias_200_response'
+                $ref: '#/components/schemas/Create_alias_200_response_inner'
           description: OK
       summary: Delete Recipient Map
       tags:
@@ -1533,7 +1532,7 @@ paths:
                     - "1"
                     type: success
               schema:
-                $ref: '#/components/schemas/Create_alias_200_response'
+                $ref: '#/components/schemas/Create_alias_200_response_inner'
           description: OK
       summary: Delete Sender-Dependent Transports
       tags:
@@ -1573,7 +1572,7 @@ paths:
                     - test@mailcow.tld
                     type: success
               schema:
-                $ref: '#/components/schemas/Create_alias_200_response'
+                $ref: '#/components/schemas/Create_alias_200_response_inner'
           description: OK
       summary: Delete Resources
       tags:
@@ -1609,7 +1608,7 @@ paths:
                     - entity name
                     type: success
               schema:
-                $ref: '#/components/schemas/Create_alias_200_response'
+                $ref: '#/components/schemas/Create_alias_200_response_inner'
           description: OK
       summary: Delete sync job
       tags:
@@ -1648,7 +1647,7 @@ paths:
                     - "1"
                     type: success
               schema:
-                $ref: '#/components/schemas/Create_alias_200_response'
+                $ref: '#/components/schemas/Create_alias_200_response_inner'
           description: OK
       summary: Delete TLS Policy Map
       tags:
@@ -1686,7 +1685,7 @@ paths:
                     - "1"
                     type: success
               schema:
-                $ref: '#/components/schemas/Create_alias_200_response'
+                $ref: '#/components/schemas/Create_alias_200_response_inner'
           description: OK
       summary: Delete Transport Maps
       tags:
@@ -1737,7 +1736,7 @@ paths:
                     - info@domain.tld
                     type: success
               schema:
-                $ref: '#/components/schemas/Create_alias_200_response'
+                $ref: '#/components/schemas/Create_alias_200_response_inner'
           description: OK
       summary: Delete mailbox tags
       tags:
@@ -1788,7 +1787,7 @@ paths:
                     - domain.tld
                     type: success
               schema:
-                $ref: '#/components/schemas/Create_alias_200_response'
+                $ref: '#/components/schemas/Create_alias_200_response_inner'
           description: OK
       summary: Delete domain tags
       tags:
@@ -1833,7 +1832,9 @@ paths:
                     - alias@domain.tld
                     type: success
               schema:
-                $ref: '#/components/schemas/Create_alias_200_response'
+                items:
+                  $ref: '#/components/schemas/Create_alias_200_response_inner'
+                type: array
           description: OK
       summary: Update alias
       tags:
@@ -1862,7 +1863,7 @@ paths:
             application/json:
               schema:
                 items:
-                  $ref: '#/components/schemas/Create_alias_200_response'
+                  $ref: '#/components/schemas/Create_alias_200_response_inner'
                 type: array
           description: OK
       summary: Update domain
@@ -1889,7 +1890,7 @@ paths:
           content:
             '*/*':
               schema:
-                $ref: '#/components/schemas/Create_alias_200_response'
+                $ref: '#/components/schemas/Create_alias_200_response_inner'
           description: OK
       summary: Edit Fail2Ban
       tags:
@@ -1945,7 +1946,7 @@ paths:
                     type: success
               schema:
                 items:
-                  $ref: '#/components/schemas/Create_alias_200_response'
+                  $ref: '#/components/schemas/Create_alias_200_response_inner'
                 type: array
           description: OK
       summary: Update mailbox
@@ -2021,7 +2022,7 @@ paths:
                     msg: pushover_settings_edited
                     type: success
               schema:
-                $ref: '#/components/schemas/Create_alias_200_response'
+                $ref: '#/components/schemas/Create_alias_200_response_inner'
           description: OK
       summary: Update Pushover settings
       tags:
@@ -2079,7 +2080,7 @@ paths:
                     - entity name
                     type: success
               schema:
-                $ref: '#/components/schemas/Create_alias_200_response'
+                $ref: '#/components/schemas/Create_alias_200_response_inner'
           description: OK
       summary: Update sync job
       tags:
@@ -2131,7 +2132,7 @@ paths:
                     - info@domain.tld
                     type: success
               schema:
-                $ref: '#/components/schemas/Create_alias_200_response'
+                $ref: '#/components/schemas/Create_alias_200_response_inner'
           description: OK
       summary: Update mailbox ACL
       tags:
@@ -3580,7 +3581,7 @@ paths:
                     - rl_saved
                     - info@domain.tld
               schema:
-                $ref: '#/components/schemas/Create_alias_200_response'
+                $ref: '#/components/schemas/Create_alias_200_response_inner'
           description: OK
       summary: Edit mailbox ratelimits
       tags:
@@ -3620,7 +3621,7 @@ paths:
                     - rl_saved
                     - domain.tld
               schema:
-                $ref: '#/components/schemas/Create_alias_200_response'
+                $ref: '#/components/schemas/Create_alias_200_response_inner'
           description: OK
       summary: Edit domain ratelimits
       tags:
@@ -4028,7 +4029,7 @@ paths:
                     - mailbox_modified
                     - info@domain.tld
               schema:
-                $ref: '#/components/schemas/Create_alias_200_response'
+                $ref: '#/components/schemas/Create_alias_200_response_inner'
           description: OK
       summary: Edit mailbox spam filter score
       tags:
@@ -4456,8 +4457,10 @@ components:
         attr:
           $ref: '#/components/schemas/Update_alias_request_attr'
         items:
-          description: contains list of aliases you want update
-          type: object
+          description: contains list of ids of aliases you want update
+          items:
+            type: string
+          type: array
       type: object
     Update_Pushover_settings_request_attr:
       properties:
@@ -4788,6 +4791,17 @@ components:
           description: Username
           type: string
       type: object
+    Delete_alias_request:
+      example:
+      - "6"
+      - "9"
+      properties:
+        items:
+          description: contains list of ids of aliases you want to delete
+          items:
+            type: string
+          type: array
+      type: object
     Delete_Queue_request:
       example:
         action: super_delete
@@ -4939,30 +4953,6 @@ components:
             type: string
           type: array
       type: object
-    Create_alias_200_response:
-      example:
-        msg:
-        - ""
-        - ""
-        log:
-        - ""
-        - ""
-        type: success
-      properties:
-        log:
-          description: contains request object
-          items: {}
-          type: array
-        msg:
-          items: {}
-          type: array
-        type:
-          enum:
-          - success
-          - danger
-          - error
-          type: string
-      type: object
     Update_mailbox_ACL_request_attr:
       properties:
         user_acl:
@@ -4998,6 +4988,30 @@ components:
         da_acl:
           description: contains the list of acl names that are active for this user
           type: object
+      type: object
+    Create_alias_200_response_inner:
+      example:
+        msg:
+        - ""
+        - ""
+        log:
+        - ""
+        - ""
+        type: success
+      properties:
+        log:
+          description: contains request object
+          items: {}
+          type: array
+        msg:
+          items: {}
+          type: array
+        type:
+          enum:
+          - success
+          - danger
+          - error
+          type: string
       type: object
     Delete_oAuth_Client_request:
       example:

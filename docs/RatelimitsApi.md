@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 ## EditDomainRatelimits
 
-> CreateAlias200Response EditDomainRatelimits(ctx).EditDomainRatelimitsRequest(editDomainRatelimitsRequest).Execute()
+> CreateAlias200ResponseInner EditDomainRatelimits(ctx).EditDomainRatelimitsRequest(editDomainRatelimitsRequest).Execute()
 
 Edit domain ratelimits
 
@@ -41,7 +41,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `RatelimitsApi.EditDomainRatelimits``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `EditDomainRatelimits`: CreateAlias200Response
+    // response from `EditDomainRatelimits`: CreateAlias200ResponseInner
     fmt.Fprintf(os.Stdout, "Response from `RatelimitsApi.EditDomainRatelimits`: %v\n", resp)
 }
 ```
@@ -61,7 +61,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CreateAlias200Response**](CreateAlias200Response.md)
+[**CreateAlias200ResponseInner**](CreateAlias200ResponseInner.md)
 
 ### Authorization
 
@@ -79,7 +79,7 @@ Name | Type | Description  | Notes
 
 ## EditMailboxRatelimits
 
-> CreateAlias200Response EditMailboxRatelimits(ctx).EditMailboxRatelimitsRequest(editMailboxRatelimitsRequest).Execute()
+> CreateAlias200ResponseInner EditMailboxRatelimits(ctx).EditMailboxRatelimitsRequest(editMailboxRatelimitsRequest).Execute()
 
 Edit mailbox ratelimits
 
@@ -107,7 +107,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `RatelimitsApi.EditMailboxRatelimits``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `EditMailboxRatelimits`: CreateAlias200Response
+    // response from `EditMailboxRatelimits`: CreateAlias200ResponseInner
     fmt.Fprintf(os.Stdout, "Response from `RatelimitsApi.EditMailboxRatelimits`: %v\n", resp)
 }
 ```
@@ -127,7 +127,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CreateAlias200Response**](CreateAlias200Response.md)
+[**CreateAlias200ResponseInner**](CreateAlias200ResponseInner.md)
 
 ### Authorization
 

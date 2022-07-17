@@ -32,7 +32,7 @@ func (r ApiCreateDomainAdminUserRequest) CreateDomainAdminUserRequest(createDoma
 	return r
 }
 
-func (r ApiCreateDomainAdminUserRequest) Execute() (*CreateAlias200Response, *http.Response, error) {
+func (r ApiCreateDomainAdminUserRequest) Execute() (*CreateAlias200ResponseInner, *http.Response, error) {
 	return r.ApiService.CreateDomainAdminUserExecute(r)
 }
 
@@ -52,13 +52,13 @@ func (a *DomainAdminApiService) CreateDomainAdminUser(ctx context.Context) ApiCr
 }
 
 // Execute executes the request
-//  @return CreateAlias200Response
-func (a *DomainAdminApiService) CreateDomainAdminUserExecute(r ApiCreateDomainAdminUserRequest) (*CreateAlias200Response, *http.Response, error) {
+//  @return CreateAlias200ResponseInner
+func (a *DomainAdminApiService) CreateDomainAdminUserExecute(r ApiCreateDomainAdminUserRequest) (*CreateAlias200ResponseInner, *http.Response, error) {
 	var (
 		localVarHTTPMethod  = http.MethodPost
 		localVarPostBody    interface{}
 		formFiles           []formFile
-		localVarReturnValue *CreateAlias200Response
+		localVarReturnValue *CreateAlias200ResponseInner
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DomainAdminApiService.CreateDomainAdminUser")
@@ -163,7 +163,7 @@ func (r ApiDeleteDomainAdminRequest) DeleteDomainAdminRequest(deleteDomainAdminR
 	return r
 }
 
-func (r ApiDeleteDomainAdminRequest) Execute() (*CreateAlias200Response, *http.Response, error) {
+func (r ApiDeleteDomainAdminRequest) Execute() (*CreateAlias200ResponseInner, *http.Response, error) {
 	return r.ApiService.DeleteDomainAdminExecute(r)
 }
 
@@ -183,13 +183,13 @@ func (a *DomainAdminApiService) DeleteDomainAdmin(ctx context.Context) ApiDelete
 }
 
 // Execute executes the request
-//  @return CreateAlias200Response
-func (a *DomainAdminApiService) DeleteDomainAdminExecute(r ApiDeleteDomainAdminRequest) (*CreateAlias200Response, *http.Response, error) {
+//  @return CreateAlias200ResponseInner
+func (a *DomainAdminApiService) DeleteDomainAdminExecute(r ApiDeleteDomainAdminRequest) (*CreateAlias200ResponseInner, *http.Response, error) {
 	var (
 		localVarHTTPMethod  = http.MethodPost
 		localVarPostBody    interface{}
 		formFiles           []formFile
-		localVarReturnValue *CreateAlias200Response
+		localVarReturnValue *CreateAlias200ResponseInner
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DomainAdminApiService.DeleteDomainAdmin")
@@ -294,7 +294,7 @@ func (r ApiEditDomainAdminACLRequest) EditDomainAdminACLRequest(editDomainAdminA
 	return r
 }
 
-func (r ApiEditDomainAdminACLRequest) Execute() (*CreateAlias200Response, *http.Response, error) {
+func (r ApiEditDomainAdminACLRequest) Execute() (*CreateAlias200ResponseInner, *http.Response, error) {
 	return r.ApiService.EditDomainAdminACLExecute(r)
 }
 
@@ -314,13 +314,13 @@ func (a *DomainAdminApiService) EditDomainAdminACL(ctx context.Context) ApiEditD
 }
 
 // Execute executes the request
-//  @return CreateAlias200Response
-func (a *DomainAdminApiService) EditDomainAdminACLExecute(r ApiEditDomainAdminACLRequest) (*CreateAlias200Response, *http.Response, error) {
+//  @return CreateAlias200ResponseInner
+func (a *DomainAdminApiService) EditDomainAdminACLExecute(r ApiEditDomainAdminACLRequest) (*CreateAlias200ResponseInner, *http.Response, error) {
 	var (
 		localVarHTTPMethod  = http.MethodPost
 		localVarPostBody    interface{}
 		formFiles           []formFile
-		localVarReturnValue *CreateAlias200Response
+		localVarReturnValue *CreateAlias200ResponseInner
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DomainAdminApiService.EditDomainAdminACL")

@@ -14,7 +14,7 @@ Method | HTTP request | Description
 
 ## CreateDomain
 
-> []CreateAlias200Response CreateDomain(ctx).CreateDomainRequest(createDomainRequest).Execute()
+> []CreateAlias200ResponseInner CreateDomain(ctx).CreateDomainRequest(createDomainRequest).Execute()
 
 Create domain
 
@@ -42,7 +42,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DomainsApi.CreateDomain``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `CreateDomain`: []CreateAlias200Response
+    // response from `CreateDomain`: []CreateAlias200ResponseInner
     fmt.Fprintf(os.Stdout, "Response from `DomainsApi.CreateDomain`: %v\n", resp)
 }
 ```
@@ -62,7 +62,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]CreateAlias200Response**](CreateAlias200Response.md)
+[**[]CreateAlias200ResponseInner**](CreateAlias200ResponseInner.md)
 
 ### Authorization
 
@@ -80,7 +80,7 @@ Name | Type | Description  | Notes
 
 ## DeleteDomain
 
-> []CreateAlias200Response DeleteDomain(ctx).DeleteDomainRequest(deleteDomainRequest).Execute()
+> []CreateAlias200ResponseInner DeleteDomain(ctx).DeleteDomainRequest(deleteDomainRequest).Execute()
 
 Delete domain
 
@@ -108,7 +108,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DomainsApi.DeleteDomain``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `DeleteDomain`: []CreateAlias200Response
+    // response from `DeleteDomain`: []CreateAlias200ResponseInner
     fmt.Fprintf(os.Stdout, "Response from `DomainsApi.DeleteDomain`: %v\n", resp)
 }
 ```
@@ -128,7 +128,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]CreateAlias200Response**](CreateAlias200Response.md)
+[**[]CreateAlias200ResponseInner**](CreateAlias200ResponseInner.md)
 
 ### Authorization
 
@@ -146,7 +146,7 @@ Name | Type | Description  | Notes
 
 ## DeleteDomainTags
 
-> CreateAlias200Response DeleteDomainTags(ctx, domain).DeleteDomainTagsRequest(deleteDomainTagsRequest).Execute()
+> CreateAlias200ResponseInner DeleteDomainTags(ctx, domain).DeleteDomainTagsRequest(deleteDomainTagsRequest).Execute()
 
 Delete domain tags
 
@@ -175,7 +175,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DomainsApi.DeleteDomainTags``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `DeleteDomainTags`: CreateAlias200Response
+    // response from `DeleteDomainTags`: CreateAlias200ResponseInner
     fmt.Fprintf(os.Stdout, "Response from `DomainsApi.DeleteDomainTags`: %v\n", resp)
 }
 ```
@@ -200,7 +200,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CreateAlias200Response**](CreateAlias200Response.md)
+[**CreateAlias200ResponseInner**](CreateAlias200ResponseInner.md)
 
 ### Authorization
 
@@ -290,7 +290,7 @@ Name | Type | Description  | Notes
 
 ## UpdateDomain
 
-> []CreateAlias200Response UpdateDomain(ctx).UpdateDomainRequest(updateDomainRequest).Execute()
+> []CreateAlias200ResponseInner UpdateDomain(ctx).UpdateDomainRequest(updateDomainRequest).Execute()
 
 Update domain
 
@@ -318,7 +318,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DomainsApi.UpdateDomain``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateDomain`: []CreateAlias200Response
+    // response from `UpdateDomain`: []CreateAlias200ResponseInner
     fmt.Fprintf(os.Stdout, "Response from `DomainsApi.UpdateDomain`: %v\n", resp)
 }
 ```
@@ -338,7 +338,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]CreateAlias200Response**](CreateAlias200Response.md)
+[**[]CreateAlias200ResponseInner**](CreateAlias200ResponseInner.md)
 
 ### Authorization
 

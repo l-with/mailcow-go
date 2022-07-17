@@ -33,7 +33,7 @@ func (r ApiEditDomainRatelimitsRequest) EditDomainRatelimitsRequest(editDomainRa
 	return r
 }
 
-func (r ApiEditDomainRatelimitsRequest) Execute() (*CreateAlias200Response, *http.Response, error) {
+func (r ApiEditDomainRatelimitsRequest) Execute() (*CreateAlias200ResponseInner, *http.Response, error) {
 	return r.ApiService.EditDomainRatelimitsExecute(r)
 }
 
@@ -53,13 +53,13 @@ func (a *RatelimitsApiService) EditDomainRatelimits(ctx context.Context) ApiEdit
 }
 
 // Execute executes the request
-//  @return CreateAlias200Response
-func (a *RatelimitsApiService) EditDomainRatelimitsExecute(r ApiEditDomainRatelimitsRequest) (*CreateAlias200Response, *http.Response, error) {
+//  @return CreateAlias200ResponseInner
+func (a *RatelimitsApiService) EditDomainRatelimitsExecute(r ApiEditDomainRatelimitsRequest) (*CreateAlias200ResponseInner, *http.Response, error) {
 	var (
 		localVarHTTPMethod  = http.MethodPost
 		localVarPostBody    interface{}
 		formFiles           []formFile
-		localVarReturnValue *CreateAlias200Response
+		localVarReturnValue *CreateAlias200ResponseInner
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "RatelimitsApiService.EditDomainRatelimits")
@@ -164,7 +164,7 @@ func (r ApiEditMailboxRatelimitsRequest) EditMailboxRatelimitsRequest(editMailbo
 	return r
 }
 
-func (r ApiEditMailboxRatelimitsRequest) Execute() (*CreateAlias200Response, *http.Response, error) {
+func (r ApiEditMailboxRatelimitsRequest) Execute() (*CreateAlias200ResponseInner, *http.Response, error) {
 	return r.ApiService.EditMailboxRatelimitsExecute(r)
 }
 
@@ -184,13 +184,13 @@ func (a *RatelimitsApiService) EditMailboxRatelimits(ctx context.Context) ApiEdi
 }
 
 // Execute executes the request
-//  @return CreateAlias200Response
-func (a *RatelimitsApiService) EditMailboxRatelimitsExecute(r ApiEditMailboxRatelimitsRequest) (*CreateAlias200Response, *http.Response, error) {
+//  @return CreateAlias200ResponseInner
+func (a *RatelimitsApiService) EditMailboxRatelimitsExecute(r ApiEditMailboxRatelimitsRequest) (*CreateAlias200ResponseInner, *http.Response, error) {
 	var (
 		localVarHTTPMethod  = http.MethodPost
 		localVarPostBody    interface{}
 		formFiles           []formFile
-		localVarReturnValue *CreateAlias200Response
+		localVarReturnValue *CreateAlias200ResponseInner
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "RatelimitsApiService.EditMailboxRatelimits")

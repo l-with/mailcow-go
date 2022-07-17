@@ -32,7 +32,7 @@ func (r ApiCreateSyncJobRequest) CreateSyncJobRequest(createSyncJobRequest Creat
 	return r
 }
 
-func (r ApiCreateSyncJobRequest) Execute() (*CreateAlias200Response, *http.Response, error) {
+func (r ApiCreateSyncJobRequest) Execute() (*CreateAlias200ResponseInner, *http.Response, error) {
 	return r.ApiService.CreateSyncJobExecute(r)
 }
 
@@ -52,13 +52,13 @@ func (a *SyncJobsApiService) CreateSyncJob(ctx context.Context) ApiCreateSyncJob
 }
 
 // Execute executes the request
-//  @return CreateAlias200Response
-func (a *SyncJobsApiService) CreateSyncJobExecute(r ApiCreateSyncJobRequest) (*CreateAlias200Response, *http.Response, error) {
+//  @return CreateAlias200ResponseInner
+func (a *SyncJobsApiService) CreateSyncJobExecute(r ApiCreateSyncJobRequest) (*CreateAlias200ResponseInner, *http.Response, error) {
 	var (
 		localVarHTTPMethod  = http.MethodPost
 		localVarPostBody    interface{}
 		formFiles           []formFile
-		localVarReturnValue *CreateAlias200Response
+		localVarReturnValue *CreateAlias200ResponseInner
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SyncJobsApiService.CreateSyncJob")
@@ -163,7 +163,7 @@ func (r ApiDeleteSyncJobRequest) DeleteSyncJobRequest(deleteSyncJobRequest Delet
 	return r
 }
 
-func (r ApiDeleteSyncJobRequest) Execute() (*CreateAlias200Response, *http.Response, error) {
+func (r ApiDeleteSyncJobRequest) Execute() (*CreateAlias200ResponseInner, *http.Response, error) {
 	return r.ApiService.DeleteSyncJobExecute(r)
 }
 
@@ -183,13 +183,13 @@ func (a *SyncJobsApiService) DeleteSyncJob(ctx context.Context) ApiDeleteSyncJob
 }
 
 // Execute executes the request
-//  @return CreateAlias200Response
-func (a *SyncJobsApiService) DeleteSyncJobExecute(r ApiDeleteSyncJobRequest) (*CreateAlias200Response, *http.Response, error) {
+//  @return CreateAlias200ResponseInner
+func (a *SyncJobsApiService) DeleteSyncJobExecute(r ApiDeleteSyncJobRequest) (*CreateAlias200ResponseInner, *http.Response, error) {
 	var (
 		localVarHTTPMethod  = http.MethodPost
 		localVarPostBody    interface{}
 		formFiles           []formFile
-		localVarReturnValue *CreateAlias200Response
+		localVarReturnValue *CreateAlias200ResponseInner
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SyncJobsApiService.DeleteSyncJob")
@@ -406,7 +406,7 @@ func (r ApiUpdateSyncJobRequest) UpdateSyncJobRequest(updateSyncJobRequest Updat
 	return r
 }
 
-func (r ApiUpdateSyncJobRequest) Execute() (*CreateAlias200Response, *http.Response, error) {
+func (r ApiUpdateSyncJobRequest) Execute() (*CreateAlias200ResponseInner, *http.Response, error) {
 	return r.ApiService.UpdateSyncJobExecute(r)
 }
 
@@ -426,13 +426,13 @@ func (a *SyncJobsApiService) UpdateSyncJob(ctx context.Context) ApiUpdateSyncJob
 }
 
 // Execute executes the request
-//  @return CreateAlias200Response
-func (a *SyncJobsApiService) UpdateSyncJobExecute(r ApiUpdateSyncJobRequest) (*CreateAlias200Response, *http.Response, error) {
+//  @return CreateAlias200ResponseInner
+func (a *SyncJobsApiService) UpdateSyncJobExecute(r ApiUpdateSyncJobRequest) (*CreateAlias200ResponseInner, *http.Response, error) {
 	var (
 		localVarHTTPMethod  = http.MethodPost
 		localVarPostBody    interface{}
 		formFiles           []formFile
-		localVarReturnValue *CreateAlias200Response
+		localVarReturnValue *CreateAlias200ResponseInner
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SyncJobsApiService.UpdateSyncJob")
