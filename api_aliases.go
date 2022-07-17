@@ -296,7 +296,7 @@ func (r ApiDeleteAliasRequest) DeleteAliasRequest(deleteAliasRequest DeleteAlias
 	return r
 }
 
-func (r ApiDeleteAliasRequest) Execute() (*CreateAlias200ResponseInner, *http.Response, error) {
+func (r ApiDeleteAliasRequest) Execute() ([]CreateAlias200ResponseInner, *http.Response, error) {
 	return r.ApiService.DeleteAliasExecute(r)
 }
 
@@ -316,13 +316,13 @@ func (a *AliasesApiService) DeleteAlias(ctx context.Context) ApiDeleteAliasReque
 }
 
 // Execute executes the request
-//  @return CreateAlias200ResponseInner
-func (a *AliasesApiService) DeleteAliasExecute(r ApiDeleteAliasRequest) (*CreateAlias200ResponseInner, *http.Response, error) {
+//  @return []CreateAlias200ResponseInner
+func (a *AliasesApiService) DeleteAliasExecute(r ApiDeleteAliasRequest) ([]CreateAlias200ResponseInner, *http.Response, error) {
 	var (
 		localVarHTTPMethod  = http.MethodPost
 		localVarPostBody    interface{}
 		formFiles           []formFile
-		localVarReturnValue *CreateAlias200ResponseInner
+		localVarReturnValue []CreateAlias200ResponseInner
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "AliasesApiService.DeleteAlias")

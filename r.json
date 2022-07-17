@@ -1,0 +1,20 @@
+[
+    {
+        "type": "success",
+        "log": [
+            "mailbox",
+            "delete",
+            "domain",
+            {
+                "domain": [
+                    "mailcow.tld"
+                ]
+            },
+            null
+        ],
+        "msg": [
+            "domain_removed",
+            "mailcow.tld"
+        ]
+    }
+]

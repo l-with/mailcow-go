@@ -989,7 +989,9 @@ paths:
                     - alias2@domain.tld
                     type: success
               schema:
-                $ref: '#/components/schemas/Create_alias_200_response_inner'
+                items:
+                  $ref: '#/components/schemas/Create_alias_200_response_inner'
+                type: array
           description: OK
       summary: Delete alias
       tags:

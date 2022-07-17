@@ -233,6 +233,11 @@ func (c *APIClient) prepareRequest(
 			var deleteMailboxRequest *DeleteMailboxRequest = postBody.(*DeleteMailboxRequest)
 			postBody = *&deleteMailboxRequest.Items
 		}
+		// special for DeleteAlias
+		if strings.HasSuffix(path, "/api/v1/delete/alias") {
+			var deleteAliasRequest *DeleteAliasRequest = postBody.(*DeleteAliasRequest)
+			postBody = *&deleteAliasRequest.Items
+		}
 		body, err = setBody(postBody, contentType)
 		if err != nil {
 			return nil, err
