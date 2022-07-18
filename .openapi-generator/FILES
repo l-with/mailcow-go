@@ -49,6 +49,7 @@ docs/DKIMApi.md
 docs/DeleteAliasRequest.md
 docs/DeleteAppPasswordRequest.md
 docs/DeleteBCCMapRequest.md
+docs/DeleteDKIMKeyRequest.md
 docs/DeleteDomainAdminRequest.md
 docs/DeleteDomainPolicyRequest.md
 docs/DeleteDomainRequest.md
@@ -132,6 +133,7 @@ model_create_transport_maps_request.go
 model_delete_alias_request.go
 model_delete_app_password_request.go
 model_delete_bcc_map_request.go
+model_delete_dkim_key_request.go
 model_delete_domain_admin_request.go
 model_delete_domain_policy_request.go
 model_delete_domain_request.go

@@ -238,6 +238,11 @@ func (c *APIClient) prepareRequest(
 			var deleteAliasRequest *DeleteAliasRequest = postBody.(*DeleteAliasRequest)
 			postBody = *&deleteAliasRequest.Items
 		}
+		// special for DeleteDkim
+		if strings.HasSuffix(path, "/api/v1/delete/dkim") {
+			var deleteDkimRequest *DeleteDKIMKeyRequest = postBody.(*DeleteDKIMKeyRequest)
+			postBody = *&deleteDkimRequest.Items
+		}
 		body, err = setBody(postBody, contentType)
 		if err != nil {
 			return nil, err

@@ -23,17 +23,17 @@ import (
 type DKIMApiService service
 
 type ApiDeleteDKIMKeyRequest struct {
-	ctx         context.Context
-	ApiService  *DKIMApiService
-	requestBody *[]string
+	ctx                  context.Context
+	ApiService           *DKIMApiService
+	deleteDKIMKeyRequest *DeleteDKIMKeyRequest
 }
 
-func (r ApiDeleteDKIMKeyRequest) RequestBody(requestBody []string) ApiDeleteDKIMKeyRequest {
-	r.requestBody = &requestBody
+func (r ApiDeleteDKIMKeyRequest) DeleteDKIMKeyRequest(deleteDKIMKeyRequest DeleteDKIMKeyRequest) ApiDeleteDKIMKeyRequest {
+	r.deleteDKIMKeyRequest = &deleteDKIMKeyRequest
 	return r
 }
 
-func (r ApiDeleteDKIMKeyRequest) Execute() (*CreateAlias200ResponseInner, *http.Response, error) {
+func (r ApiDeleteDKIMKeyRequest) Execute() ([]CreateAlias200ResponseInner, *http.Response, error) {
 	return r.ApiService.DeleteDKIMKeyExecute(r)
 }
 
@@ -53,13 +53,13 @@ func (a *DKIMApiService) DeleteDKIMKey(ctx context.Context) ApiDeleteDKIMKeyRequ
 }
 
 // Execute executes the request
-//  @return CreateAlias200ResponseInner
-func (a *DKIMApiService) DeleteDKIMKeyExecute(r ApiDeleteDKIMKeyRequest) (*CreateAlias200ResponseInner, *http.Response, error) {
+//  @return []CreateAlias200ResponseInner
+func (a *DKIMApiService) DeleteDKIMKeyExecute(r ApiDeleteDKIMKeyRequest) ([]CreateAlias200ResponseInner, *http.Response, error) {
 	var (
 		localVarHTTPMethod  = http.MethodPost
 		localVarPostBody    interface{}
 		formFiles           []formFile
-		localVarReturnValue *CreateAlias200ResponseInner
+		localVarReturnValue []CreateAlias200ResponseInner
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DKIMApiService.DeleteDKIMKey")
@@ -91,7 +91,7 @@ func (a *DKIMApiService) DeleteDKIMKeyExecute(r ApiDeleteDKIMKeyRequest) (*Creat
 		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
 	}
 	// body params
-	localVarPostBody = r.requestBody
+	localVarPostBody = r.deleteDKIMKeyRequest
 	if r.ctx != nil {
 		// API Key Authentication
 		if auth, ok := r.ctx.Value(ContextAPIKeys).(map[string]APIKey); ok {
@@ -295,7 +295,7 @@ func (r ApiGenerateDKIMKeyRequest) GenerateDKIMKeyRequest(generateDKIMKeyRequest
 	return r
 }
 
-func (r ApiGenerateDKIMKeyRequest) Execute() (*CreateAlias200ResponseInner, *http.Response, error) {
+func (r ApiGenerateDKIMKeyRequest) Execute() ([]CreateAlias200ResponseInner, *http.Response, error) {
 	return r.ApiService.GenerateDKIMKeyExecute(r)
 }
 
@@ -315,13 +315,13 @@ func (a *DKIMApiService) GenerateDKIMKey(ctx context.Context) ApiGenerateDKIMKey
 }
 
 // Execute executes the request
-//  @return CreateAlias200ResponseInner
-func (a *DKIMApiService) GenerateDKIMKeyExecute(r ApiGenerateDKIMKeyRequest) (*CreateAlias200ResponseInner, *http.Response, error) {
+//  @return []CreateAlias200ResponseInner
+func (a *DKIMApiService) GenerateDKIMKeyExecute(r ApiGenerateDKIMKeyRequest) ([]CreateAlias200ResponseInner, *http.Response, error) {
 	var (
 		localVarHTTPMethod  = http.MethodPost
 		localVarPostBody    interface{}
 		formFiles           []formFile
-		localVarReturnValue *CreateAlias200ResponseInner
+		localVarReturnValue []CreateAlias200ResponseInner
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DKIMApiService.GenerateDKIMKey")

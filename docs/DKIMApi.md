@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 ## DeleteDKIMKey
 
-> CreateAlias200ResponseInner DeleteDKIMKey(ctx).RequestBody(requestBody).Execute()
+> []CreateAlias200ResponseInner DeleteDKIMKey(ctx).DeleteDKIMKeyRequest(deleteDKIMKeyRequest).Execute()
 
 Delete DKIM Key
 
@@ -32,16 +32,16 @@ import (
 )
 
 func main() {
-    requestBody := []string{"["mailcow.tld"]"} // []string |  (optional)
+    deleteDKIMKeyRequest := *openapiclient.NewDeleteDKIMKeyRequest() // DeleteDKIMKeyRequest |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
-    resp, r, err := apiClient.DKIMApi.DeleteDKIMKey(context.Background()).RequestBody(requestBody).Execute()
+    resp, r, err := apiClient.DKIMApi.DeleteDKIMKey(context.Background()).DeleteDKIMKeyRequest(deleteDKIMKeyRequest).Execute()
     if err != nil {
         fmt.Fprintf(os.Stderr, "Error when calling `DKIMApi.DeleteDKIMKey``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `DeleteDKIMKey`: CreateAlias200ResponseInner
+    // response from `DeleteDKIMKey`: []CreateAlias200ResponseInner
     fmt.Fprintf(os.Stdout, "Response from `DKIMApi.DeleteDKIMKey`: %v\n", resp)
 }
 ```
@@ -57,11 +57,11 @@ Other parameters are passed through a pointer to a apiDeleteDKIMKeyRequest struc
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **requestBody** | **[]string** |  | 
+ **deleteDKIMKeyRequest** | [**DeleteDKIMKeyRequest**](DeleteDKIMKeyRequest.md) |  | 
 
 ### Return type
 
-[**CreateAlias200ResponseInner**](CreateAlias200ResponseInner.md)
+[**[]CreateAlias200ResponseInner**](CreateAlias200ResponseInner.md)
 
 ### Authorization
 
@@ -145,7 +145,7 @@ Name | Type | Description  | Notes
 
 ## GenerateDKIMKey
 
-> CreateAlias200ResponseInner GenerateDKIMKey(ctx).GenerateDKIMKeyRequest(generateDKIMKeyRequest).Execute()
+> []CreateAlias200ResponseInner GenerateDKIMKey(ctx).GenerateDKIMKeyRequest(generateDKIMKeyRequest).Execute()
 
 Generate DKIM Key
 
@@ -173,7 +173,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DKIMApi.GenerateDKIMKey``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GenerateDKIMKey`: CreateAlias200ResponseInner
+    // response from `GenerateDKIMKey`: []CreateAlias200ResponseInner
     fmt.Fprintf(os.Stdout, "Response from `DKIMApi.GenerateDKIMKey`: %v\n", resp)
 }
 ```
@@ -193,7 +193,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CreateAlias200ResponseInner**](CreateAlias200ResponseInner.md)
+[**[]CreateAlias200ResponseInner**](CreateAlias200ResponseInner.md)
 
 ### Authorization
 

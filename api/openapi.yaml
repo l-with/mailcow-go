@@ -259,7 +259,9 @@ paths:
                     - hanspeterlol.de
                     type: success
               schema:
-                $ref: '#/components/schemas/Create_alias_200_response_inner'
+                items:
+                  $ref: '#/components/schemas/Create_alias_200_response_inner'
+                type: array
           description: OK
       summary: Generate DKIM Key
       tags:
@@ -1080,10 +1082,7 @@ paths:
         content:
           application/json:
             schema:
-              items:
-                example: "[\"mailcow.tld\"]"
-                type: string
-              type: array
+              $ref: '#/components/schemas/Delete_DKIM_Key_request'
       responses:
         "401":
           content:
@@ -1107,7 +1106,9 @@ paths:
                     - mailcow.tld
                     type: success
               schema:
-                $ref: '#/components/schemas/Create_alias_200_response_inner'
+                items:
+                  $ref: '#/components/schemas/Create_alias_200_response_inner'
+                type: array
           description: OK
       summary: Delete DKIM Key
       tags:
@@ -4838,6 +4839,17 @@ components:
         items:
           description: contains list of Resources you want to delete
           type: object
+      type: object
+    Delete_DKIM_Key_request:
+      example:
+      - mailcow.tld
+      properties:
+        items:
+          description: contains list of ids of domains you want to delete DKIM keys
+            for
+          items:
+            type: string
+          type: array
       type: object
     Quarantine_Notifications_request_attr:
       properties:

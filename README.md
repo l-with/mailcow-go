@@ -153,6 +153,7 @@ Class | Method | HTTP request | Description
  - [DeleteAliasRequest](docs/DeleteAliasRequest.md)
  - [DeleteAppPasswordRequest](docs/DeleteAppPasswordRequest.md)
  - [DeleteBCCMapRequest](docs/DeleteBCCMapRequest.md)
+ - [DeleteDKIMKeyRequest](docs/DeleteDKIMKeyRequest.md)
  - [DeleteDomainAdminRequest](docs/DeleteDomainAdminRequest.md)
  - [DeleteDomainPolicyRequest](docs/DeleteDomainPolicyRequest.md)
  - [DeleteDomainRequest](docs/DeleteDomainRequest.md)
