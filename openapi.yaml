@@ -1953,11 +1953,15 @@ paths:
         content:
           application/json:
             schema:
-              items:
-                example:
-                  - mailcow.tld
-                type: string
-              type: array
+              example:
+                - mailcow.tld
+              properties:
+                items:
+                  description: contains list of ids of domains you want to delete DKIM keys for
+                  type: array
+                  items:
+                    type: string
+              type: object
       summary: Delete DKIM Key
   /api/v1/delete/domain:
     post:
