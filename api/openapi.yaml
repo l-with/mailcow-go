@@ -992,7 +992,7 @@ paths:
                     type: success
               schema:
                 items:
-                  $ref: '#/components/schemas/Create_alias_200_response_inner'
+                  type: object
                 type: array
           description: OK
       summary: Delete alias

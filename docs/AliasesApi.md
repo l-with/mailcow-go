@@ -147,7 +147,7 @@ Name | Type | Description  | Notes
 
 ## DeleteAlias
 
-> []CreateAlias200ResponseInner DeleteAlias(ctx).DeleteAliasRequest(deleteAliasRequest).Execute()
+> []map[string]interface{} DeleteAlias(ctx).DeleteAliasRequest(deleteAliasRequest).Execute()
 
 Delete alias
 
@@ -175,7 +175,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `AliasesApi.DeleteAlias``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `DeleteAlias`: []CreateAlias200ResponseInner
+    // response from `DeleteAlias`: []map[string]interface{}
     fmt.Fprintf(os.Stdout, "Response from `AliasesApi.DeleteAlias`: %v\n", resp)
 }
 ```
@@ -195,7 +195,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]CreateAlias200ResponseInner**](CreateAlias200ResponseInner.md)
+**[]map[string]interface{}**
 
 ### Authorization
 
