@@ -679,7 +679,7 @@ func (r ApiUpdateAliasRequest) UpdateAliasRequest(updateAliasRequest UpdateAlias
 	return r
 }
 
-func (r ApiUpdateAliasRequest) Execute() ([]CreateTimeLimitedAlias200Response, *http.Response, error) {
+func (r ApiUpdateAliasRequest) Execute() ([]map[string]interface{}, *http.Response, error) {
 	return r.ApiService.UpdateAliasExecute(r)
 }
 
@@ -699,13 +699,13 @@ func (a *AliasesApiService) UpdateAlias(ctx context.Context) ApiUpdateAliasReque
 }
 
 // Execute executes the request
-//  @return []CreateTimeLimitedAlias200Response
-func (a *AliasesApiService) UpdateAliasExecute(r ApiUpdateAliasRequest) ([]CreateTimeLimitedAlias200Response, *http.Response, error) {
+//  @return []map[string]interface{}
+func (a *AliasesApiService) UpdateAliasExecute(r ApiUpdateAliasRequest) ([]map[string]interface{}, *http.Response, error) {
 	var (
 		localVarHTTPMethod  = http.MethodPost
 		localVarPostBody    interface{}
 		formFiles           []formFile
-		localVarReturnValue []CreateTimeLimitedAlias200Response
+		localVarReturnValue []map[string]interface{}
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "AliasesApiService.UpdateAlias")

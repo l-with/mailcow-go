@@ -145,7 +145,7 @@ Name | Type | Description  | Notes
 
 ## GenerateDKIMKey
 
-> []CreateTimeLimitedAlias200Response GenerateDKIMKey(ctx).GenerateDKIMKeyRequest(generateDKIMKeyRequest).Execute()
+> []map[string]interface{} GenerateDKIMKey(ctx).GenerateDKIMKeyRequest(generateDKIMKeyRequest).Execute()
 
 Generate DKIM Key
 
@@ -173,7 +173,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DKIMApi.GenerateDKIMKey``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GenerateDKIMKey`: []CreateTimeLimitedAlias200Response
+    // response from `GenerateDKIMKey`: []map[string]interface{}
     fmt.Fprintf(os.Stdout, "Response from `DKIMApi.GenerateDKIMKey`: %v\n", resp)
 }
 ```
@@ -193,7 +193,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]CreateTimeLimitedAlias200Response**](CreateTimeLimitedAlias200Response.md)
+**[]map[string]interface{}**
 
 ### Authorization
 

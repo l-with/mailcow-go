@@ -295,7 +295,7 @@ func (r ApiGenerateDKIMKeyRequest) GenerateDKIMKeyRequest(generateDKIMKeyRequest
 	return r
 }
 
-func (r ApiGenerateDKIMKeyRequest) Execute() ([]CreateTimeLimitedAlias200Response, *http.Response, error) {
+func (r ApiGenerateDKIMKeyRequest) Execute() ([]map[string]interface{}, *http.Response, error) {
 	return r.ApiService.GenerateDKIMKeyExecute(r)
 }
 
@@ -315,13 +315,13 @@ func (a *DKIMApiService) GenerateDKIMKey(ctx context.Context) ApiGenerateDKIMKey
 }
 
 // Execute executes the request
-//  @return []CreateTimeLimitedAlias200Response
-func (a *DKIMApiService) GenerateDKIMKeyExecute(r ApiGenerateDKIMKeyRequest) ([]CreateTimeLimitedAlias200Response, *http.Response, error) {
+//  @return []map[string]interface{}
+func (a *DKIMApiService) GenerateDKIMKeyExecute(r ApiGenerateDKIMKeyRequest) ([]map[string]interface{}, *http.Response, error) {
 	var (
 		localVarHTTPMethod  = http.MethodPost
 		localVarPostBody    interface{}
 		formFiles           []formFile
-		localVarReturnValue []CreateTimeLimitedAlias200Response
+		localVarReturnValue []map[string]interface{}
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DKIMApiService.GenerateDKIMKey")

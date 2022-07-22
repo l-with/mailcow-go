@@ -353,7 +353,7 @@ Name | Type | Description  | Notes
 
 ## UpdateAlias
 
-> []CreateTimeLimitedAlias200Response UpdateAlias(ctx).UpdateAliasRequest(updateAliasRequest).Execute()
+> []map[string]interface{} UpdateAlias(ctx).UpdateAliasRequest(updateAliasRequest).Execute()
 
 Update alias
 
@@ -381,7 +381,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `AliasesApi.UpdateAlias``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateAlias`: []CreateTimeLimitedAlias200Response
+    // response from `UpdateAlias`: []map[string]interface{}
     fmt.Fprintf(os.Stdout, "Response from `AliasesApi.UpdateAlias`: %v\n", resp)
 }
 ```
@@ -401,7 +401,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]CreateTimeLimitedAlias200Response**](CreateTimeLimitedAlias200Response.md)
+**[]map[string]interface{}**
 
 ### Authorization
 
