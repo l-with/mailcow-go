@@ -32,7 +32,7 @@ func (r ApiDeleteMailsInQuarantineRequest) DeleteMailsInQuarantineRequest(delete
 	return r
 }
 
-func (r ApiDeleteMailsInQuarantineRequest) Execute() (*CreateAlias200ResponseInner, *http.Response, error) {
+func (r ApiDeleteMailsInQuarantineRequest) Execute() (*CreateTimeLimitedAlias200Response, *http.Response, error) {
 	return r.ApiService.DeleteMailsInQuarantineExecute(r)
 }
 
@@ -52,13 +52,13 @@ func (a *QuarantineApiService) DeleteMailsInQuarantine(ctx context.Context) ApiD
 }
 
 // Execute executes the request
-//  @return CreateAlias200ResponseInner
-func (a *QuarantineApiService) DeleteMailsInQuarantineExecute(r ApiDeleteMailsInQuarantineRequest) (*CreateAlias200ResponseInner, *http.Response, error) {
+//  @return CreateTimeLimitedAlias200Response
+func (a *QuarantineApiService) DeleteMailsInQuarantineExecute(r ApiDeleteMailsInQuarantineRequest) (*CreateTimeLimitedAlias200Response, *http.Response, error) {
 	var (
 		localVarHTTPMethod  = http.MethodPost
 		localVarPostBody    interface{}
 		formFiles           []formFile
-		localVarReturnValue *CreateAlias200ResponseInner
+		localVarReturnValue *CreateTimeLimitedAlias200Response
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "QuarantineApiService.DeleteMailsInQuarantine")

@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 ## CreateTLSPolicyMap
 
-> CreateAlias200ResponseInner CreateTLSPolicyMap(ctx).CreateTLSPolicyMapRequest(createTLSPolicyMapRequest).Execute()
+> CreateTimeLimitedAlias200Response CreateTLSPolicyMap(ctx).CreateTLSPolicyMapRequest(createTLSPolicyMapRequest).Execute()
 
 Create TLS Policy Map
 
@@ -40,7 +40,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `OutgoingTLSPolicyMapOverridesApi.CreateTLSPolicyMap``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `CreateTLSPolicyMap`: CreateAlias200ResponseInner
+    // response from `CreateTLSPolicyMap`: CreateTimeLimitedAlias200Response
     fmt.Fprintf(os.Stdout, "Response from `OutgoingTLSPolicyMapOverridesApi.CreateTLSPolicyMap`: %v\n", resp)
 }
 ```
@@ -60,7 +60,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CreateAlias200ResponseInner**](CreateAlias200ResponseInner.md)
+[**CreateTimeLimitedAlias200Response**](CreateTimeLimitedAlias200Response.md)
 
 ### Authorization
 
@@ -78,7 +78,7 @@ Name | Type | Description  | Notes
 
 ## DeleteTLSPolicyMap
 
-> CreateAlias200ResponseInner DeleteTLSPolicyMap(ctx).DeleteTLSPolicyMapRequest(deleteTLSPolicyMapRequest).Execute()
+> CreateTimeLimitedAlias200Response DeleteTLSPolicyMap(ctx).DeleteTLSPolicyMapRequest(deleteTLSPolicyMapRequest).Execute()
 
 Delete TLS Policy Map
 
@@ -106,7 +106,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `OutgoingTLSPolicyMapOverridesApi.DeleteTLSPolicyMap``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `DeleteTLSPolicyMap`: CreateAlias200ResponseInner
+    // response from `DeleteTLSPolicyMap`: CreateTimeLimitedAlias200Response
     fmt.Fprintf(os.Stdout, "Response from `OutgoingTLSPolicyMapOverridesApi.DeleteTLSPolicyMap`: %v\n", resp)
 }
 ```
@@ -126,7 +126,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CreateAlias200ResponseInner**](CreateAlias200ResponseInner.md)
+[**CreateTimeLimitedAlias200Response**](CreateTimeLimitedAlias200Response.md)
 
 ### Authorization
 

@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 ## DeleteDKIMKey
 
-> []CreateAlias200ResponseInner DeleteDKIMKey(ctx).DeleteDKIMKeyRequest(deleteDKIMKeyRequest).Execute()
+> []CreateTimeLimitedAlias200Response DeleteDKIMKey(ctx).DeleteDKIMKeyRequest(deleteDKIMKeyRequest).Execute()
 
 Delete DKIM Key
 
@@ -41,7 +41,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DKIMApi.DeleteDKIMKey``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `DeleteDKIMKey`: []CreateAlias200ResponseInner
+    // response from `DeleteDKIMKey`: []CreateTimeLimitedAlias200Response
     fmt.Fprintf(os.Stdout, "Response from `DKIMApi.DeleteDKIMKey`: %v\n", resp)
 }
 ```
@@ -61,7 +61,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]CreateAlias200ResponseInner**](CreateAlias200ResponseInner.md)
+[**[]CreateTimeLimitedAlias200Response**](CreateTimeLimitedAlias200Response.md)
 
 ### Authorization
 
@@ -79,7 +79,7 @@ Name | Type | Description  | Notes
 
 ## DuplicateDKIMKey
 
-> CreateAlias200ResponseInner DuplicateDKIMKey(ctx).DuplicateDKIMKeyRequest(duplicateDKIMKeyRequest).Execute()
+> CreateTimeLimitedAlias200Response DuplicateDKIMKey(ctx).DuplicateDKIMKeyRequest(duplicateDKIMKeyRequest).Execute()
 
 Duplicate DKIM Key
 
@@ -107,7 +107,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DKIMApi.DuplicateDKIMKey``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `DuplicateDKIMKey`: CreateAlias200ResponseInner
+    // response from `DuplicateDKIMKey`: CreateTimeLimitedAlias200Response
     fmt.Fprintf(os.Stdout, "Response from `DKIMApi.DuplicateDKIMKey`: %v\n", resp)
 }
 ```
@@ -127,7 +127,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CreateAlias200ResponseInner**](CreateAlias200ResponseInner.md)
+[**CreateTimeLimitedAlias200Response**](CreateTimeLimitedAlias200Response.md)
 
 ### Authorization
 
@@ -145,7 +145,7 @@ Name | Type | Description  | Notes
 
 ## GenerateDKIMKey
 
-> []CreateAlias200ResponseInner GenerateDKIMKey(ctx).GenerateDKIMKeyRequest(generateDKIMKeyRequest).Execute()
+> []CreateTimeLimitedAlias200Response GenerateDKIMKey(ctx).GenerateDKIMKeyRequest(generateDKIMKeyRequest).Execute()
 
 Generate DKIM Key
 
@@ -173,7 +173,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DKIMApi.GenerateDKIMKey``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GenerateDKIMKey`: []CreateAlias200ResponseInner
+    // response from `GenerateDKIMKey`: []CreateTimeLimitedAlias200Response
     fmt.Fprintf(os.Stdout, "Response from `DKIMApi.GenerateDKIMKey`: %v\n", resp)
 }
 ```
@@ -193,7 +193,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]CreateAlias200ResponseInner**](CreateAlias200ResponseInner.md)
+[**[]CreateTimeLimitedAlias200Response**](CreateTimeLimitedAlias200Response.md)
 
 ### Authorization
 

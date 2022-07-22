@@ -15,7 +15,7 @@ Method | HTTP request | Description
 
 ## CreateBCCMap
 
-> CreateAlias200ResponseInner CreateBCCMap(ctx).CreateBCCMapRequest(createBCCMapRequest).Execute()
+> CreateTimeLimitedAlias200Response CreateBCCMap(ctx).CreateBCCMapRequest(createBCCMapRequest).Execute()
 
 Create BCC Map
 
@@ -43,7 +43,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `AddressRewritingApi.CreateBCCMap``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `CreateBCCMap`: CreateAlias200ResponseInner
+    // response from `CreateBCCMap`: CreateTimeLimitedAlias200Response
     fmt.Fprintf(os.Stdout, "Response from `AddressRewritingApi.CreateBCCMap`: %v\n", resp)
 }
 ```
@@ -63,7 +63,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CreateAlias200ResponseInner**](CreateAlias200ResponseInner.md)
+[**CreateTimeLimitedAlias200Response**](CreateTimeLimitedAlias200Response.md)
 
 ### Authorization
 
@@ -81,7 +81,7 @@ Name | Type | Description  | Notes
 
 ## CreateRecipientMap
 
-> CreateAlias200ResponseInner CreateRecipientMap(ctx).CreateRecipientMapRequest(createRecipientMapRequest).Execute()
+> CreateTimeLimitedAlias200Response CreateRecipientMap(ctx).CreateRecipientMapRequest(createRecipientMapRequest).Execute()
 
 Create Recipient Map
 
@@ -109,7 +109,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `AddressRewritingApi.CreateRecipientMap``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `CreateRecipientMap`: CreateAlias200ResponseInner
+    // response from `CreateRecipientMap`: CreateTimeLimitedAlias200Response
     fmt.Fprintf(os.Stdout, "Response from `AddressRewritingApi.CreateRecipientMap`: %v\n", resp)
 }
 ```
@@ -129,7 +129,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CreateAlias200ResponseInner**](CreateAlias200ResponseInner.md)
+[**CreateTimeLimitedAlias200Response**](CreateTimeLimitedAlias200Response.md)
 
 ### Authorization
 
@@ -147,7 +147,7 @@ Name | Type | Description  | Notes
 
 ## DeleteBCCMap
 
-> CreateAlias200ResponseInner DeleteBCCMap(ctx).DeleteBCCMapRequest(deleteBCCMapRequest).Execute()
+> CreateTimeLimitedAlias200Response DeleteBCCMap(ctx).DeleteBCCMapRequest(deleteBCCMapRequest).Execute()
 
 Delete BCC Map
 
@@ -175,7 +175,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `AddressRewritingApi.DeleteBCCMap``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `DeleteBCCMap`: CreateAlias200ResponseInner
+    // response from `DeleteBCCMap`: CreateTimeLimitedAlias200Response
     fmt.Fprintf(os.Stdout, "Response from `AddressRewritingApi.DeleteBCCMap`: %v\n", resp)
 }
 ```
@@ -195,7 +195,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CreateAlias200ResponseInner**](CreateAlias200ResponseInner.md)
+[**CreateTimeLimitedAlias200Response**](CreateTimeLimitedAlias200Response.md)
 
 ### Authorization
 
@@ -213,7 +213,7 @@ Name | Type | Description  | Notes
 
 ## DeleteRecipientMap
 
-> CreateAlias200ResponseInner DeleteRecipientMap(ctx).DeleteRecipientMapRequest(deleteRecipientMapRequest).Execute()
+> CreateTimeLimitedAlias200Response DeleteRecipientMap(ctx).DeleteRecipientMapRequest(deleteRecipientMapRequest).Execute()
 
 Delete Recipient Map
 
@@ -241,7 +241,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `AddressRewritingApi.DeleteRecipientMap``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `DeleteRecipientMap`: CreateAlias200ResponseInner
+    // response from `DeleteRecipientMap`: CreateTimeLimitedAlias200Response
     fmt.Fprintf(os.Stdout, "Response from `AddressRewritingApi.DeleteRecipientMap`: %v\n", resp)
 }
 ```
@@ -261,7 +261,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CreateAlias200ResponseInner**](CreateAlias200ResponseInner.md)
+[**CreateTimeLimitedAlias200Response**](CreateTimeLimitedAlias200Response.md)
 
 ### Authorization
 

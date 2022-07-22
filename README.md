@@ -133,7 +133,6 @@ Class | Method | HTTP request | Description
 ## Documentation For Models
 
  - [AddForwardHostRequest](docs/AddForwardHostRequest.md)
- - [CreateAlias200ResponseInner](docs/CreateAlias200ResponseInner.md)
  - [CreateAlias401Response](docs/CreateAlias401Response.md)
  - [CreateAliasRequest](docs/CreateAliasRequest.md)
  - [CreateAppPasswordRequest](docs/CreateAppPasswordRequest.md)
@@ -148,6 +147,7 @@ Class | Method | HTTP request | Description
  - [CreateSenderDependentTransportsRequest](docs/CreateSenderDependentTransportsRequest.md)
  - [CreateSyncJobRequest](docs/CreateSyncJobRequest.md)
  - [CreateTLSPolicyMapRequest](docs/CreateTLSPolicyMapRequest.md)
+ - [CreateTimeLimitedAlias200Response](docs/CreateTimeLimitedAlias200Response.md)
  - [CreateTimeLimitedAliasRequest](docs/CreateTimeLimitedAliasRequest.md)
  - [CreateTransportMapsRequest](docs/CreateTransportMapsRequest.md)
  - [DeleteAliasRequest](docs/DeleteAliasRequest.md)

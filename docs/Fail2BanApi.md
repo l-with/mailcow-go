@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 ## EditFail2Ban
 
-> CreateAlias200ResponseInner EditFail2Ban(ctx).EditFail2BanRequest(editFail2BanRequest).Execute()
+> CreateTimeLimitedAlias200Response EditFail2Ban(ctx).EditFail2BanRequest(editFail2BanRequest).Execute()
 
 Edit Fail2Ban
 
@@ -39,7 +39,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `Fail2BanApi.EditFail2Ban``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `EditFail2Ban`: CreateAlias200ResponseInner
+    // response from `EditFail2Ban`: CreateTimeLimitedAlias200Response
     fmt.Fprintf(os.Stdout, "Response from `Fail2BanApi.EditFail2Ban`: %v\n", resp)
 }
 ```
@@ -59,7 +59,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CreateAlias200ResponseInner**](CreateAlias200ResponseInner.md)
+[**CreateTimeLimitedAlias200Response**](CreateTimeLimitedAlias200Response.md)
 
 ### Authorization
 

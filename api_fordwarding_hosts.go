@@ -32,7 +32,7 @@ func (r ApiAddForwardHostRequest) AddForwardHostRequest(addForwardHostRequest Ad
 	return r
 }
 
-func (r ApiAddForwardHostRequest) Execute() (*CreateAlias200ResponseInner, *http.Response, error) {
+func (r ApiAddForwardHostRequest) Execute() (*CreateTimeLimitedAlias200Response, *http.Response, error) {
 	return r.ApiService.AddForwardHostExecute(r)
 }
 
@@ -52,13 +52,13 @@ func (a *FordwardingHostsApiService) AddForwardHost(ctx context.Context) ApiAddF
 }
 
 // Execute executes the request
-//  @return CreateAlias200ResponseInner
-func (a *FordwardingHostsApiService) AddForwardHostExecute(r ApiAddForwardHostRequest) (*CreateAlias200ResponseInner, *http.Response, error) {
+//  @return CreateTimeLimitedAlias200Response
+func (a *FordwardingHostsApiService) AddForwardHostExecute(r ApiAddForwardHostRequest) (*CreateTimeLimitedAlias200Response, *http.Response, error) {
 	var (
 		localVarHTTPMethod  = http.MethodPost
 		localVarPostBody    interface{}
 		formFiles           []formFile
-		localVarReturnValue *CreateAlias200ResponseInner
+		localVarReturnValue *CreateTimeLimitedAlias200Response
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "FordwardingHostsApiService.AddForwardHost")
@@ -163,7 +163,7 @@ func (r ApiDeleteForwardHostRequest) DeleteForwardHostRequest(deleteForwardHostR
 	return r
 }
 
-func (r ApiDeleteForwardHostRequest) Execute() (*CreateAlias200ResponseInner, *http.Response, error) {
+func (r ApiDeleteForwardHostRequest) Execute() (*CreateTimeLimitedAlias200Response, *http.Response, error) {
 	return r.ApiService.DeleteForwardHostExecute(r)
 }
 
@@ -183,13 +183,13 @@ func (a *FordwardingHostsApiService) DeleteForwardHost(ctx context.Context) ApiD
 }
 
 // Execute executes the request
-//  @return CreateAlias200ResponseInner
-func (a *FordwardingHostsApiService) DeleteForwardHostExecute(r ApiDeleteForwardHostRequest) (*CreateAlias200ResponseInner, *http.Response, error) {
+//  @return CreateTimeLimitedAlias200Response
+func (a *FordwardingHostsApiService) DeleteForwardHostExecute(r ApiDeleteForwardHostRequest) (*CreateTimeLimitedAlias200Response, *http.Response, error) {
 	var (
 		localVarHTTPMethod  = http.MethodPost
 		localVarPostBody    interface{}
 		formFiles           []formFile
-		localVarReturnValue *CreateAlias200ResponseInner
+		localVarReturnValue *CreateTimeLimitedAlias200Response
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "FordwardingHostsApiService.DeleteForwardHost")

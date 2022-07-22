@@ -10,7 +10,7 @@ clean:
 	rm -rf docs/
 
 wget:
-	wget -N https://raw.githubusercontent.com/l-with/mailcow-dockerized/improve-dkim-api-schem/data/web/api/openapi.yaml
+	wget -N https://raw.githubusercontent.com/l-with/mailcow-dockerized/untype-reponses/data/web/api/openapi.yaml
 
 openapi.yml:
 

@@ -32,7 +32,7 @@ func (r ApiEditFail2BanRequest) EditFail2BanRequest(editFail2BanRequest EditFail
 	return r
 }
 
-func (r ApiEditFail2BanRequest) Execute() (*CreateAlias200ResponseInner, *http.Response, error) {
+func (r ApiEditFail2BanRequest) Execute() (*CreateTimeLimitedAlias200Response, *http.Response, error) {
 	return r.ApiService.EditFail2BanExecute(r)
 }
 
@@ -52,13 +52,13 @@ func (a *Fail2BanApiService) EditFail2Ban(ctx context.Context) ApiEditFail2BanRe
 }
 
 // Execute executes the request
-//  @return CreateAlias200ResponseInner
-func (a *Fail2BanApiService) EditFail2BanExecute(r ApiEditFail2BanRequest) (*CreateAlias200ResponseInner, *http.Response, error) {
+//  @return CreateTimeLimitedAlias200Response
+func (a *Fail2BanApiService) EditFail2BanExecute(r ApiEditFail2BanRequest) (*CreateTimeLimitedAlias200Response, *http.Response, error) {
 	var (
 		localVarHTTPMethod  = http.MethodPost
 		localVarPostBody    interface{}
 		formFiles           []formFile
-		localVarReturnValue *CreateAlias200ResponseInner
+		localVarReturnValue *CreateTimeLimitedAlias200Response
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "Fail2BanApiService.EditFail2Ban")

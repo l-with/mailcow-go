@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 ## AddForwardHost
 
-> CreateAlias200ResponseInner AddForwardHost(ctx).AddForwardHostRequest(addForwardHostRequest).Execute()
+> CreateTimeLimitedAlias200Response AddForwardHost(ctx).AddForwardHostRequest(addForwardHostRequest).Execute()
 
 Add Forward Host
 
@@ -40,7 +40,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `FordwardingHostsApi.AddForwardHost``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `AddForwardHost`: CreateAlias200ResponseInner
+    // response from `AddForwardHost`: CreateTimeLimitedAlias200Response
     fmt.Fprintf(os.Stdout, "Response from `FordwardingHostsApi.AddForwardHost`: %v\n", resp)
 }
 ```
@@ -60,7 +60,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CreateAlias200ResponseInner**](CreateAlias200ResponseInner.md)
+[**CreateTimeLimitedAlias200Response**](CreateTimeLimitedAlias200Response.md)
 
 ### Authorization
 
@@ -78,7 +78,7 @@ Name | Type | Description  | Notes
 
 ## DeleteForwardHost
 
-> CreateAlias200ResponseInner DeleteForwardHost(ctx).DeleteForwardHostRequest(deleteForwardHostRequest).Execute()
+> CreateTimeLimitedAlias200Response DeleteForwardHost(ctx).DeleteForwardHostRequest(deleteForwardHostRequest).Execute()
 
 Delete Forward Host
 
@@ -106,7 +106,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `FordwardingHostsApi.DeleteForwardHost``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `DeleteForwardHost`: CreateAlias200ResponseInner
+    // response from `DeleteForwardHost`: CreateTimeLimitedAlias200Response
     fmt.Fprintf(os.Stdout, "Response from `FordwardingHostsApi.DeleteForwardHost`: %v\n", resp)
 }
 ```
@@ -126,7 +126,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CreateAlias200ResponseInner**](CreateAlias200ResponseInner.md)
+[**CreateTimeLimitedAlias200Response**](CreateTimeLimitedAlias200Response.md)
 
 ### Authorization
 

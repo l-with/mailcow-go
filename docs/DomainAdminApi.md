@@ -14,7 +14,7 @@ Method | HTTP request | Description
 
 ## CreateDomainAdminUser
 
-> CreateAlias200ResponseInner CreateDomainAdminUser(ctx).CreateDomainAdminUserRequest(createDomainAdminUserRequest).Execute()
+> CreateTimeLimitedAlias200Response CreateDomainAdminUser(ctx).CreateDomainAdminUserRequest(createDomainAdminUserRequest).Execute()
 
 Create Domain Admin user
 
@@ -42,7 +42,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DomainAdminApi.CreateDomainAdminUser``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `CreateDomainAdminUser`: CreateAlias200ResponseInner
+    // response from `CreateDomainAdminUser`: CreateTimeLimitedAlias200Response
     fmt.Fprintf(os.Stdout, "Response from `DomainAdminApi.CreateDomainAdminUser`: %v\n", resp)
 }
 ```
@@ -62,7 +62,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CreateAlias200ResponseInner**](CreateAlias200ResponseInner.md)
+[**CreateTimeLimitedAlias200Response**](CreateTimeLimitedAlias200Response.md)
 
 ### Authorization
 
@@ -80,7 +80,7 @@ Name | Type | Description  | Notes
 
 ## DeleteDomainAdmin
 
-> CreateAlias200ResponseInner DeleteDomainAdmin(ctx).DeleteDomainAdminRequest(deleteDomainAdminRequest).Execute()
+> CreateTimeLimitedAlias200Response DeleteDomainAdmin(ctx).DeleteDomainAdminRequest(deleteDomainAdminRequest).Execute()
 
 Delete Domain Admin
 
@@ -108,7 +108,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DomainAdminApi.DeleteDomainAdmin``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `DeleteDomainAdmin`: CreateAlias200ResponseInner
+    // response from `DeleteDomainAdmin`: CreateTimeLimitedAlias200Response
     fmt.Fprintf(os.Stdout, "Response from `DomainAdminApi.DeleteDomainAdmin`: %v\n", resp)
 }
 ```
@@ -128,7 +128,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CreateAlias200ResponseInner**](CreateAlias200ResponseInner.md)
+[**CreateTimeLimitedAlias200Response**](CreateTimeLimitedAlias200Response.md)
 
 ### Authorization
 
@@ -146,7 +146,7 @@ Name | Type | Description  | Notes
 
 ## EditDomainAdminACL
 
-> CreateAlias200ResponseInner EditDomainAdminACL(ctx).EditDomainAdminACLRequest(editDomainAdminACLRequest).Execute()
+> CreateTimeLimitedAlias200Response EditDomainAdminACL(ctx).EditDomainAdminACLRequest(editDomainAdminACLRequest).Execute()
 
 Edit Domain Admin ACL
 
@@ -174,7 +174,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DomainAdminApi.EditDomainAdminACL``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `EditDomainAdminACL`: CreateAlias200ResponseInner
+    // response from `EditDomainAdminACL`: CreateTimeLimitedAlias200Response
     fmt.Fprintf(os.Stdout, "Response from `DomainAdminApi.EditDomainAdminACL`: %v\n", resp)
 }
 ```
@@ -194,7 +194,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CreateAlias200ResponseInner**](CreateAlias200ResponseInner.md)
+[**CreateTimeLimitedAlias200Response**](CreateTimeLimitedAlias200Response.md)
 
 ### Authorization
 

@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 ## DeleteMailsInQuarantine
 
-> CreateAlias200ResponseInner DeleteMailsInQuarantine(ctx).DeleteMailsInQuarantineRequest(deleteMailsInQuarantineRequest).Execute()
+> CreateTimeLimitedAlias200Response DeleteMailsInQuarantine(ctx).DeleteMailsInQuarantineRequest(deleteMailsInQuarantineRequest).Execute()
 
 Delete mails in Quarantine
 
@@ -39,7 +39,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `QuarantineApi.DeleteMailsInQuarantine``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `DeleteMailsInQuarantine`: CreateAlias200ResponseInner
+    // response from `DeleteMailsInQuarantine`: CreateTimeLimitedAlias200Response
     fmt.Fprintf(os.Stdout, "Response from `QuarantineApi.DeleteMailsInQuarantine`: %v\n", resp)
 }
 ```
@@ -59,7 +59,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CreateAlias200ResponseInner**](CreateAlias200ResponseInner.md)
+[**CreateTimeLimitedAlias200Response**](CreateTimeLimitedAlias200Response.md)
 
 ### Authorization
 

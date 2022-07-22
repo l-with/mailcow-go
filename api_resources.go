@@ -32,7 +32,7 @@ func (r ApiCreateResourcesRequest) CreateResourcesRequest(createResourcesRequest
 	return r
 }
 
-func (r ApiCreateResourcesRequest) Execute() (*CreateAlias200ResponseInner, *http.Response, error) {
+func (r ApiCreateResourcesRequest) Execute() (*CreateTimeLimitedAlias200Response, *http.Response, error) {
 	return r.ApiService.CreateResourcesExecute(r)
 }
 
@@ -52,13 +52,13 @@ func (a *ResourcesApiService) CreateResources(ctx context.Context) ApiCreateReso
 }
 
 // Execute executes the request
-//  @return CreateAlias200ResponseInner
-func (a *ResourcesApiService) CreateResourcesExecute(r ApiCreateResourcesRequest) (*CreateAlias200ResponseInner, *http.Response, error) {
+//  @return CreateTimeLimitedAlias200Response
+func (a *ResourcesApiService) CreateResourcesExecute(r ApiCreateResourcesRequest) (*CreateTimeLimitedAlias200Response, *http.Response, error) {
 	var (
 		localVarHTTPMethod  = http.MethodPost
 		localVarPostBody    interface{}
 		formFiles           []formFile
-		localVarReturnValue *CreateAlias200ResponseInner
+		localVarReturnValue *CreateTimeLimitedAlias200Response
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "ResourcesApiService.CreateResources")
@@ -163,7 +163,7 @@ func (r ApiDeleteResourcesRequest) DeleteResourcesRequest(deleteResourcesRequest
 	return r
 }
 
-func (r ApiDeleteResourcesRequest) Execute() (*CreateAlias200ResponseInner, *http.Response, error) {
+func (r ApiDeleteResourcesRequest) Execute() (*CreateTimeLimitedAlias200Response, *http.Response, error) {
 	return r.ApiService.DeleteResourcesExecute(r)
 }
 
@@ -183,13 +183,13 @@ func (a *ResourcesApiService) DeleteResources(ctx context.Context) ApiDeleteReso
 }
 
 // Execute executes the request
-//  @return CreateAlias200ResponseInner
-func (a *ResourcesApiService) DeleteResourcesExecute(r ApiDeleteResourcesRequest) (*CreateAlias200ResponseInner, *http.Response, error) {
+//  @return CreateTimeLimitedAlias200Response
+func (a *ResourcesApiService) DeleteResourcesExecute(r ApiDeleteResourcesRequest) (*CreateTimeLimitedAlias200Response, *http.Response, error) {
 	var (
 		localVarHTTPMethod  = http.MethodPost
 		localVarPostBody    interface{}
 		formFiles           []formFile
-		localVarReturnValue *CreateAlias200ResponseInner
+		localVarReturnValue *CreateTimeLimitedAlias200Response
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "ResourcesApiService.DeleteResources")

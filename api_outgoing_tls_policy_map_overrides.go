@@ -33,7 +33,7 @@ func (r ApiCreateTLSPolicyMapRequest) CreateTLSPolicyMapRequest(createTLSPolicyM
 	return r
 }
 
-func (r ApiCreateTLSPolicyMapRequest) Execute() (*CreateAlias200ResponseInner, *http.Response, error) {
+func (r ApiCreateTLSPolicyMapRequest) Execute() (*CreateTimeLimitedAlias200Response, *http.Response, error) {
 	return r.ApiService.CreateTLSPolicyMapExecute(r)
 }
 
@@ -53,13 +53,13 @@ func (a *OutgoingTLSPolicyMapOverridesApiService) CreateTLSPolicyMap(ctx context
 }
 
 // Execute executes the request
-//  @return CreateAlias200ResponseInner
-func (a *OutgoingTLSPolicyMapOverridesApiService) CreateTLSPolicyMapExecute(r ApiCreateTLSPolicyMapRequest) (*CreateAlias200ResponseInner, *http.Response, error) {
+//  @return CreateTimeLimitedAlias200Response
+func (a *OutgoingTLSPolicyMapOverridesApiService) CreateTLSPolicyMapExecute(r ApiCreateTLSPolicyMapRequest) (*CreateTimeLimitedAlias200Response, *http.Response, error) {
 	var (
 		localVarHTTPMethod  = http.MethodPost
 		localVarPostBody    interface{}
 		formFiles           []formFile
-		localVarReturnValue *CreateAlias200ResponseInner
+		localVarReturnValue *CreateTimeLimitedAlias200Response
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "OutgoingTLSPolicyMapOverridesApiService.CreateTLSPolicyMap")
@@ -164,7 +164,7 @@ func (r ApiDeleteTLSPolicyMapRequest) DeleteTLSPolicyMapRequest(deleteTLSPolicyM
 	return r
 }
 
-func (r ApiDeleteTLSPolicyMapRequest) Execute() (*CreateAlias200ResponseInner, *http.Response, error) {
+func (r ApiDeleteTLSPolicyMapRequest) Execute() (*CreateTimeLimitedAlias200Response, *http.Response, error) {
 	return r.ApiService.DeleteTLSPolicyMapExecute(r)
 }
 
@@ -184,13 +184,13 @@ func (a *OutgoingTLSPolicyMapOverridesApiService) DeleteTLSPolicyMap(ctx context
 }
 
 // Execute executes the request
-//  @return CreateAlias200ResponseInner
-func (a *OutgoingTLSPolicyMapOverridesApiService) DeleteTLSPolicyMapExecute(r ApiDeleteTLSPolicyMapRequest) (*CreateAlias200ResponseInner, *http.Response, error) {
+//  @return CreateTimeLimitedAlias200Response
+func (a *OutgoingTLSPolicyMapOverridesApiService) DeleteTLSPolicyMapExecute(r ApiDeleteTLSPolicyMapRequest) (*CreateTimeLimitedAlias200Response, *http.Response, error) {
 	var (
 		localVarHTTPMethod  = http.MethodPost
 		localVarPostBody    interface{}
 		formFiles           []formFile
-		localVarReturnValue *CreateAlias200ResponseInner
+		localVarReturnValue *CreateTimeLimitedAlias200Response
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "OutgoingTLSPolicyMapOverridesApiService.DeleteTLSPolicyMap")

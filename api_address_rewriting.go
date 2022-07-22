@@ -33,7 +33,7 @@ func (r ApiCreateBCCMapRequest) CreateBCCMapRequest(createBCCMapRequest CreateBC
 	return r
 }
 
-func (r ApiCreateBCCMapRequest) Execute() (*CreateAlias200ResponseInner, *http.Response, error) {
+func (r ApiCreateBCCMapRequest) Execute() (*CreateTimeLimitedAlias200Response, *http.Response, error) {
 	return r.ApiService.CreateBCCMapExecute(r)
 }
 
@@ -53,13 +53,13 @@ func (a *AddressRewritingApiService) CreateBCCMap(ctx context.Context) ApiCreate
 }
 
 // Execute executes the request
-//  @return CreateAlias200ResponseInner
-func (a *AddressRewritingApiService) CreateBCCMapExecute(r ApiCreateBCCMapRequest) (*CreateAlias200ResponseInner, *http.Response, error) {
+//  @return CreateTimeLimitedAlias200Response
+func (a *AddressRewritingApiService) CreateBCCMapExecute(r ApiCreateBCCMapRequest) (*CreateTimeLimitedAlias200Response, *http.Response, error) {
 	var (
 		localVarHTTPMethod  = http.MethodPost
 		localVarPostBody    interface{}
 		formFiles           []formFile
-		localVarReturnValue *CreateAlias200ResponseInner
+		localVarReturnValue *CreateTimeLimitedAlias200Response
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "AddressRewritingApiService.CreateBCCMap")
@@ -164,7 +164,7 @@ func (r ApiCreateRecipientMapRequest) CreateRecipientMapRequest(createRecipientM
 	return r
 }
 
-func (r ApiCreateRecipientMapRequest) Execute() (*CreateAlias200ResponseInner, *http.Response, error) {
+func (r ApiCreateRecipientMapRequest) Execute() (*CreateTimeLimitedAlias200Response, *http.Response, error) {
 	return r.ApiService.CreateRecipientMapExecute(r)
 }
 
@@ -184,13 +184,13 @@ func (a *AddressRewritingApiService) CreateRecipientMap(ctx context.Context) Api
 }
 
 // Execute executes the request
-//  @return CreateAlias200ResponseInner
-func (a *AddressRewritingApiService) CreateRecipientMapExecute(r ApiCreateRecipientMapRequest) (*CreateAlias200ResponseInner, *http.Response, error) {
+//  @return CreateTimeLimitedAlias200Response
+func (a *AddressRewritingApiService) CreateRecipientMapExecute(r ApiCreateRecipientMapRequest) (*CreateTimeLimitedAlias200Response, *http.Response, error) {
 	var (
 		localVarHTTPMethod  = http.MethodPost
 		localVarPostBody    interface{}
 		formFiles           []formFile
-		localVarReturnValue *CreateAlias200ResponseInner
+		localVarReturnValue *CreateTimeLimitedAlias200Response
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "AddressRewritingApiService.CreateRecipientMap")
@@ -295,7 +295,7 @@ func (r ApiDeleteBCCMapRequest) DeleteBCCMapRequest(deleteBCCMapRequest DeleteBC
 	return r
 }
 
-func (r ApiDeleteBCCMapRequest) Execute() (*CreateAlias200ResponseInner, *http.Response, error) {
+func (r ApiDeleteBCCMapRequest) Execute() (*CreateTimeLimitedAlias200Response, *http.Response, error) {
 	return r.ApiService.DeleteBCCMapExecute(r)
 }
 
@@ -315,13 +315,13 @@ func (a *AddressRewritingApiService) DeleteBCCMap(ctx context.Context) ApiDelete
 }
 
 // Execute executes the request
-//  @return CreateAlias200ResponseInner
-func (a *AddressRewritingApiService) DeleteBCCMapExecute(r ApiDeleteBCCMapRequest) (*CreateAlias200ResponseInner, *http.Response, error) {
+//  @return CreateTimeLimitedAlias200Response
+func (a *AddressRewritingApiService) DeleteBCCMapExecute(r ApiDeleteBCCMapRequest) (*CreateTimeLimitedAlias200Response, *http.Response, error) {
 	var (
 		localVarHTTPMethod  = http.MethodPost
 		localVarPostBody    interface{}
 		formFiles           []formFile
-		localVarReturnValue *CreateAlias200ResponseInner
+		localVarReturnValue *CreateTimeLimitedAlias200Response
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "AddressRewritingApiService.DeleteBCCMap")
@@ -426,7 +426,7 @@ func (r ApiDeleteRecipientMapRequest) DeleteRecipientMapRequest(deleteRecipientM
 	return r
 }
 
-func (r ApiDeleteRecipientMapRequest) Execute() (*CreateAlias200ResponseInner, *http.Response, error) {
+func (r ApiDeleteRecipientMapRequest) Execute() (*CreateTimeLimitedAlias200Response, *http.Response, error) {
 	return r.ApiService.DeleteRecipientMapExecute(r)
 }
 
@@ -446,13 +446,13 @@ func (a *AddressRewritingApiService) DeleteRecipientMap(ctx context.Context) Api
 }
 
 // Execute executes the request
-//  @return CreateAlias200ResponseInner
-func (a *AddressRewritingApiService) DeleteRecipientMapExecute(r ApiDeleteRecipientMapRequest) (*CreateAlias200ResponseInner, *http.Response, error) {
+//  @return CreateTimeLimitedAlias200Response
+func (a *AddressRewritingApiService) DeleteRecipientMapExecute(r ApiDeleteRecipientMapRequest) (*CreateTimeLimitedAlias200Response, *http.Response, error) {
 	var (
 		localVarHTTPMethod  = http.MethodPost
 		localVarPostBody    interface{}
 		formFiles           []formFile
-		localVarReturnValue *CreateAlias200ResponseInner
+		localVarReturnValue *CreateTimeLimitedAlias200Response
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "AddressRewritingApiService.DeleteRecipientMap")

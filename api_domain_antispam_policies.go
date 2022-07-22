@@ -33,7 +33,7 @@ func (r ApiCreateDomainPolicyRequest) CreateDomainPolicyRequest(createDomainPoli
 	return r
 }
 
-func (r ApiCreateDomainPolicyRequest) Execute() (*CreateAlias200ResponseInner, *http.Response, error) {
+func (r ApiCreateDomainPolicyRequest) Execute() (*CreateTimeLimitedAlias200Response, *http.Response, error) {
 	return r.ApiService.CreateDomainPolicyExecute(r)
 }
 
@@ -53,13 +53,13 @@ func (a *DomainAntispamPoliciesApiService) CreateDomainPolicy(ctx context.Contex
 }
 
 // Execute executes the request
-//  @return CreateAlias200ResponseInner
-func (a *DomainAntispamPoliciesApiService) CreateDomainPolicyExecute(r ApiCreateDomainPolicyRequest) (*CreateAlias200ResponseInner, *http.Response, error) {
+//  @return CreateTimeLimitedAlias200Response
+func (a *DomainAntispamPoliciesApiService) CreateDomainPolicyExecute(r ApiCreateDomainPolicyRequest) (*CreateTimeLimitedAlias200Response, *http.Response, error) {
 	var (
 		localVarHTTPMethod  = http.MethodPost
 		localVarPostBody    interface{}
 		formFiles           []formFile
-		localVarReturnValue *CreateAlias200ResponseInner
+		localVarReturnValue *CreateTimeLimitedAlias200Response
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DomainAntispamPoliciesApiService.CreateDomainPolicy")
@@ -164,7 +164,7 @@ func (r ApiDeleteDomainPolicyRequest) DeleteDomainPolicyRequest(deleteDomainPoli
 	return r
 }
 
-func (r ApiDeleteDomainPolicyRequest) Execute() (*CreateAlias200ResponseInner, *http.Response, error) {
+func (r ApiDeleteDomainPolicyRequest) Execute() (*CreateTimeLimitedAlias200Response, *http.Response, error) {
 	return r.ApiService.DeleteDomainPolicyExecute(r)
 }
 
@@ -184,13 +184,13 @@ func (a *DomainAntispamPoliciesApiService) DeleteDomainPolicy(ctx context.Contex
 }
 
 // Execute executes the request
-//  @return CreateAlias200ResponseInner
-func (a *DomainAntispamPoliciesApiService) DeleteDomainPolicyExecute(r ApiDeleteDomainPolicyRequest) (*CreateAlias200ResponseInner, *http.Response, error) {
+//  @return CreateTimeLimitedAlias200Response
+func (a *DomainAntispamPoliciesApiService) DeleteDomainPolicyExecute(r ApiDeleteDomainPolicyRequest) (*CreateTimeLimitedAlias200Response, *http.Response, error) {
 	var (
 		localVarHTTPMethod  = http.MethodPost
 		localVarPostBody    interface{}
 		formFiles           []formFile
-		localVarReturnValue *CreateAlias200ResponseInner
+		localVarReturnValue *CreateTimeLimitedAlias200Response
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DomainAntispamPoliciesApiService.DeleteDomainPolicy")

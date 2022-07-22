@@ -15,7 +15,7 @@ Method | HTTP request | Description
 
 ## CreateAlias
 
-> []CreateAlias200ResponseInner CreateAlias(ctx).CreateAliasRequest(createAliasRequest).Execute()
+> []map[string]interface{} CreateAlias(ctx).CreateAliasRequest(createAliasRequest).Execute()
 
 Create alias
 
@@ -43,7 +43,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `AliasesApi.CreateAlias``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `CreateAlias`: []CreateAlias200ResponseInner
+    // response from `CreateAlias`: []map[string]interface{}
     fmt.Fprintf(os.Stdout, "Response from `AliasesApi.CreateAlias`: %v\n", resp)
 }
 ```
@@ -63,7 +63,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]CreateAlias200ResponseInner**](CreateAlias200ResponseInner.md)
+**[]map[string]interface{}**
 
 ### Authorization
 
@@ -81,7 +81,7 @@ Name | Type | Description  | Notes
 
 ## CreateTimeLimitedAlias
 
-> CreateAlias200ResponseInner CreateTimeLimitedAlias(ctx).CreateTimeLimitedAliasRequest(createTimeLimitedAliasRequest).Execute()
+> CreateTimeLimitedAlias200Response CreateTimeLimitedAlias(ctx).CreateTimeLimitedAliasRequest(createTimeLimitedAliasRequest).Execute()
 
 Create time limited alias
 
@@ -109,7 +109,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `AliasesApi.CreateTimeLimitedAlias``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `CreateTimeLimitedAlias`: CreateAlias200ResponseInner
+    // response from `CreateTimeLimitedAlias`: CreateTimeLimitedAlias200Response
     fmt.Fprintf(os.Stdout, "Response from `AliasesApi.CreateTimeLimitedAlias`: %v\n", resp)
 }
 ```
@@ -129,7 +129,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CreateAlias200ResponseInner**](CreateAlias200ResponseInner.md)
+[**CreateTimeLimitedAlias200Response**](CreateTimeLimitedAlias200Response.md)
 
 ### Authorization
 
@@ -353,7 +353,7 @@ Name | Type | Description  | Notes
 
 ## UpdateAlias
 
-> []CreateAlias200ResponseInner UpdateAlias(ctx).UpdateAliasRequest(updateAliasRequest).Execute()
+> []CreateTimeLimitedAlias200Response UpdateAlias(ctx).UpdateAliasRequest(updateAliasRequest).Execute()
 
 Update alias
 
@@ -381,7 +381,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `AliasesApi.UpdateAlias``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateAlias`: []CreateAlias200ResponseInner
+    // response from `UpdateAlias`: []CreateTimeLimitedAlias200Response
     fmt.Fprintf(os.Stdout, "Response from `AliasesApi.UpdateAlias`: %v\n", resp)
 }
 ```
@@ -401,7 +401,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]CreateAlias200ResponseInner**](CreateAlias200ResponseInner.md)
+[**[]CreateTimeLimitedAlias200Response**](CreateTimeLimitedAlias200Response.md)
 
 ### Authorization
 

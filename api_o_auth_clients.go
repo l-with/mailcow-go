@@ -33,7 +33,7 @@ func (r ApiCreateOAuthClientRequest) CreateOAuthClientRequest(createOAuthClientR
 	return r
 }
 
-func (r ApiCreateOAuthClientRequest) Execute() (*CreateAlias200ResponseInner, *http.Response, error) {
+func (r ApiCreateOAuthClientRequest) Execute() (*CreateTimeLimitedAlias200Response, *http.Response, error) {
 	return r.ApiService.CreateOAuthClientExecute(r)
 }
 
@@ -53,13 +53,13 @@ func (a *OAuthClientsApiService) CreateOAuthClient(ctx context.Context) ApiCreat
 }
 
 // Execute executes the request
-//  @return CreateAlias200ResponseInner
-func (a *OAuthClientsApiService) CreateOAuthClientExecute(r ApiCreateOAuthClientRequest) (*CreateAlias200ResponseInner, *http.Response, error) {
+//  @return CreateTimeLimitedAlias200Response
+func (a *OAuthClientsApiService) CreateOAuthClientExecute(r ApiCreateOAuthClientRequest) (*CreateTimeLimitedAlias200Response, *http.Response, error) {
 	var (
 		localVarHTTPMethod  = http.MethodPost
 		localVarPostBody    interface{}
 		formFiles           []formFile
-		localVarReturnValue *CreateAlias200ResponseInner
+		localVarReturnValue *CreateTimeLimitedAlias200Response
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "OAuthClientsApiService.CreateOAuthClient")
@@ -164,7 +164,7 @@ func (r ApiDeleteOAuthClientRequest) DeleteOAuthClientRequest(deleteOAuthClientR
 	return r
 }
 
-func (r ApiDeleteOAuthClientRequest) Execute() (*CreateAlias200ResponseInner, *http.Response, error) {
+func (r ApiDeleteOAuthClientRequest) Execute() (*CreateTimeLimitedAlias200Response, *http.Response, error) {
 	return r.ApiService.DeleteOAuthClientExecute(r)
 }
 
@@ -184,13 +184,13 @@ func (a *OAuthClientsApiService) DeleteOAuthClient(ctx context.Context) ApiDelet
 }
 
 // Execute executes the request
-//  @return CreateAlias200ResponseInner
-func (a *OAuthClientsApiService) DeleteOAuthClientExecute(r ApiDeleteOAuthClientRequest) (*CreateAlias200ResponseInner, *http.Response, error) {
+//  @return CreateTimeLimitedAlias200Response
+func (a *OAuthClientsApiService) DeleteOAuthClientExecute(r ApiDeleteOAuthClientRequest) (*CreateTimeLimitedAlias200Response, *http.Response, error) {
 	var (
 		localVarHTTPMethod  = http.MethodPost
 		localVarPostBody    interface{}
 		formFiles           []formFile
-		localVarReturnValue *CreateAlias200ResponseInner
+		localVarReturnValue *CreateTimeLimitedAlias200Response
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "OAuthClientsApiService.DeleteOAuthClient")

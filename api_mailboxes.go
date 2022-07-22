@@ -33,7 +33,7 @@ func (r ApiCreateMailboxRequest) CreateMailboxRequest(createMailboxRequest Creat
 	return r
 }
 
-func (r ApiCreateMailboxRequest) Execute() ([]CreateAlias200ResponseInner, *http.Response, error) {
+func (r ApiCreateMailboxRequest) Execute() ([]map[string]interface{}, *http.Response, error) {
 	return r.ApiService.CreateMailboxExecute(r)
 }
 
@@ -53,13 +53,13 @@ func (a *MailboxesApiService) CreateMailbox(ctx context.Context) ApiCreateMailbo
 }
 
 // Execute executes the request
-//  @return []CreateAlias200ResponseInner
-func (a *MailboxesApiService) CreateMailboxExecute(r ApiCreateMailboxRequest) ([]CreateAlias200ResponseInner, *http.Response, error) {
+//  @return []map[string]interface{}
+func (a *MailboxesApiService) CreateMailboxExecute(r ApiCreateMailboxRequest) ([]map[string]interface{}, *http.Response, error) {
 	var (
 		localVarHTTPMethod  = http.MethodPost
 		localVarPostBody    interface{}
 		formFiles           []formFile
-		localVarReturnValue []CreateAlias200ResponseInner
+		localVarReturnValue []map[string]interface{}
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "MailboxesApiService.CreateMailbox")
@@ -296,7 +296,7 @@ func (r ApiDeleteMailboxTagsRequest) DeleteMailboxTagsRequest(deleteMailboxTagsR
 	return r
 }
 
-func (r ApiDeleteMailboxTagsRequest) Execute() (*CreateAlias200ResponseInner, *http.Response, error) {
+func (r ApiDeleteMailboxTagsRequest) Execute() (*CreateTimeLimitedAlias200Response, *http.Response, error) {
 	return r.ApiService.DeleteMailboxTagsExecute(r)
 }
 
@@ -318,13 +318,13 @@ func (a *MailboxesApiService) DeleteMailboxTags(ctx context.Context, mailbox str
 }
 
 // Execute executes the request
-//  @return CreateAlias200ResponseInner
-func (a *MailboxesApiService) DeleteMailboxTagsExecute(r ApiDeleteMailboxTagsRequest) (*CreateAlias200ResponseInner, *http.Response, error) {
+//  @return CreateTimeLimitedAlias200Response
+func (a *MailboxesApiService) DeleteMailboxTagsExecute(r ApiDeleteMailboxTagsRequest) (*CreateTimeLimitedAlias200Response, *http.Response, error) {
 	var (
 		localVarHTTPMethod  = http.MethodPost
 		localVarPostBody    interface{}
 		formFiles           []formFile
-		localVarReturnValue *CreateAlias200ResponseInner
+		localVarReturnValue *CreateTimeLimitedAlias200Response
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "MailboxesApiService.DeleteMailboxTags")
@@ -430,7 +430,7 @@ func (r ApiEditMailboxSpamFilterScoreRequest) Body(body interface{}) ApiEditMail
 	return r
 }
 
-func (r ApiEditMailboxSpamFilterScoreRequest) Execute() (*CreateAlias200ResponseInner, *http.Response, error) {
+func (r ApiEditMailboxSpamFilterScoreRequest) Execute() (*CreateTimeLimitedAlias200Response, *http.Response, error) {
 	return r.ApiService.EditMailboxSpamFilterScoreExecute(r)
 }
 
@@ -450,13 +450,13 @@ func (a *MailboxesApiService) EditMailboxSpamFilterScore(ctx context.Context) Ap
 }
 
 // Execute executes the request
-//  @return CreateAlias200ResponseInner
-func (a *MailboxesApiService) EditMailboxSpamFilterScoreExecute(r ApiEditMailboxSpamFilterScoreRequest) (*CreateAlias200ResponseInner, *http.Response, error) {
+//  @return CreateTimeLimitedAlias200Response
+func (a *MailboxesApiService) EditMailboxSpamFilterScoreExecute(r ApiEditMailboxSpamFilterScoreRequest) (*CreateTimeLimitedAlias200Response, *http.Response, error) {
 	var (
 		localVarHTTPMethod  = http.MethodPost
 		localVarPostBody    interface{}
 		formFiles           []formFile
-		localVarReturnValue *CreateAlias200ResponseInner
+		localVarReturnValue *CreateTimeLimitedAlias200Response
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "MailboxesApiService.EditMailboxSpamFilterScore")
@@ -817,7 +817,7 @@ func (r ApiUpdateMailboxRequest) UpdateMailboxRequest(updateMailboxRequest Updat
 	return r
 }
 
-func (r ApiUpdateMailboxRequest) Execute() ([]CreateAlias200ResponseInner, *http.Response, error) {
+func (r ApiUpdateMailboxRequest) Execute() ([]CreateTimeLimitedAlias200Response, *http.Response, error) {
 	return r.ApiService.UpdateMailboxExecute(r)
 }
 
@@ -837,13 +837,13 @@ func (a *MailboxesApiService) UpdateMailbox(ctx context.Context) ApiUpdateMailbo
 }
 
 // Execute executes the request
-//  @return []CreateAlias200ResponseInner
-func (a *MailboxesApiService) UpdateMailboxExecute(r ApiUpdateMailboxRequest) ([]CreateAlias200ResponseInner, *http.Response, error) {
+//  @return []CreateTimeLimitedAlias200Response
+func (a *MailboxesApiService) UpdateMailboxExecute(r ApiUpdateMailboxRequest) ([]CreateTimeLimitedAlias200Response, *http.Response, error) {
 	var (
 		localVarHTTPMethod  = http.MethodPost
 		localVarPostBody    interface{}
 		formFiles           []formFile
-		localVarReturnValue []CreateAlias200ResponseInner
+		localVarReturnValue []CreateTimeLimitedAlias200Response
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "MailboxesApiService.UpdateMailbox")
@@ -948,7 +948,7 @@ func (r ApiUpdateMailboxACLRequest) UpdateMailboxACLRequest(updateMailboxACLRequ
 	return r
 }
 
-func (r ApiUpdateMailboxACLRequest) Execute() (*CreateAlias200ResponseInner, *http.Response, error) {
+func (r ApiUpdateMailboxACLRequest) Execute() (*CreateTimeLimitedAlias200Response, *http.Response, error) {
 	return r.ApiService.UpdateMailboxACLExecute(r)
 }
 
@@ -968,13 +968,13 @@ func (a *MailboxesApiService) UpdateMailboxACL(ctx context.Context) ApiUpdateMai
 }
 
 // Execute executes the request
-//  @return CreateAlias200ResponseInner
-func (a *MailboxesApiService) UpdateMailboxACLExecute(r ApiUpdateMailboxACLRequest) (*CreateAlias200ResponseInner, *http.Response, error) {
+//  @return CreateTimeLimitedAlias200Response
+func (a *MailboxesApiService) UpdateMailboxACLExecute(r ApiUpdateMailboxACLRequest) (*CreateTimeLimitedAlias200Response, *http.Response, error) {
 	var (
 		localVarHTTPMethod  = http.MethodPost
 		localVarPostBody    interface{}
 		formFiles           []formFile
-		localVarReturnValue *CreateAlias200ResponseInner
+		localVarReturnValue *CreateTimeLimitedAlias200Response
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "MailboxesApiService.UpdateMailboxACL")
@@ -1079,7 +1079,7 @@ func (r ApiUpdatePushoverSettingsRequest) UpdatePushoverSettingsRequest(updatePu
 	return r
 }
 
-func (r ApiUpdatePushoverSettingsRequest) Execute() (*CreateAlias200ResponseInner, *http.Response, error) {
+func (r ApiUpdatePushoverSettingsRequest) Execute() (*CreateTimeLimitedAlias200Response, *http.Response, error) {
 	return r.ApiService.UpdatePushoverSettingsExecute(r)
 }
 
@@ -1099,13 +1099,13 @@ func (a *MailboxesApiService) UpdatePushoverSettings(ctx context.Context) ApiUpd
 }
 
 // Execute executes the request
-//  @return CreateAlias200ResponseInner
-func (a *MailboxesApiService) UpdatePushoverSettingsExecute(r ApiUpdatePushoverSettingsRequest) (*CreateAlias200ResponseInner, *http.Response, error) {
+//  @return CreateTimeLimitedAlias200Response
+func (a *MailboxesApiService) UpdatePushoverSettingsExecute(r ApiUpdatePushoverSettingsRequest) (*CreateTimeLimitedAlias200Response, *http.Response, error) {
 	var (
 		localVarHTTPMethod  = http.MethodPost
 		localVarPostBody    interface{}
 		formFiles           []formFile
-		localVarReturnValue *CreateAlias200ResponseInner
+		localVarReturnValue *CreateTimeLimitedAlias200Response
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "MailboxesApiService.UpdatePushoverSettings")

@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 ## CreateResources
 
-> CreateAlias200ResponseInner CreateResources(ctx).CreateResourcesRequest(createResourcesRequest).Execute()
+> CreateTimeLimitedAlias200Response CreateResources(ctx).CreateResourcesRequest(createResourcesRequest).Execute()
 
 Create Resources
 
@@ -40,7 +40,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ResourcesApi.CreateResources``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `CreateResources`: CreateAlias200ResponseInner
+    // response from `CreateResources`: CreateTimeLimitedAlias200Response
     fmt.Fprintf(os.Stdout, "Response from `ResourcesApi.CreateResources`: %v\n", resp)
 }
 ```
@@ -60,7 +60,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CreateAlias200ResponseInner**](CreateAlias200ResponseInner.md)
+[**CreateTimeLimitedAlias200Response**](CreateTimeLimitedAlias200Response.md)
 
 ### Authorization
 
@@ -78,7 +78,7 @@ Name | Type | Description  | Notes
 
 ## DeleteResources
 
-> CreateAlias200ResponseInner DeleteResources(ctx).DeleteResourcesRequest(deleteResourcesRequest).Execute()
+> CreateTimeLimitedAlias200Response DeleteResources(ctx).DeleteResourcesRequest(deleteResourcesRequest).Execute()
 
 Delete Resources
 
@@ -106,7 +106,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ResourcesApi.DeleteResources``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `DeleteResources`: CreateAlias200ResponseInner
+    // response from `DeleteResources`: CreateTimeLimitedAlias200Response
     fmt.Fprintf(os.Stdout, "Response from `ResourcesApi.DeleteResources`: %v\n", resp)
 }
 ```
@@ -126,7 +126,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CreateAlias200ResponseInner**](CreateAlias200ResponseInner.md)
+[**CreateTimeLimitedAlias200Response**](CreateTimeLimitedAlias200Response.md)
 
 ### Authorization
 

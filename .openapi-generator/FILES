@@ -28,7 +28,6 @@ docs/AddForwardHostRequest.md
 docs/AddressRewritingApi.md
 docs/AliasesApi.md
 docs/AppPasswordsApi.md
-docs/CreateAlias200ResponseInner.md
 docs/CreateAlias401Response.md
 docs/CreateAliasRequest.md
 docs/CreateAppPasswordRequest.md
@@ -43,6 +42,7 @@ docs/CreateResourcesRequest.md
 docs/CreateSenderDependentTransportsRequest.md
 docs/CreateSyncJobRequest.md
 docs/CreateTLSPolicyMapRequest.md
+docs/CreateTimeLimitedAlias200Response.md
 docs/CreateTimeLimitedAliasRequest.md
 docs/CreateTransportMapsRequest.md
 docs/DKIMApi.md
@@ -113,7 +113,6 @@ git_push.sh
 go.mod
 go.sum
 model_add_forward_host_request.go
-model_create_alias_200_response_inner.go
 model_create_alias_401_response.go
 model_create_alias_request.go
 model_create_app_password_request.go
@@ -127,6 +126,7 @@ model_create_recipient_map_request.go
 model_create_resources_request.go
 model_create_sender_dependent_transports_request.go
 model_create_sync_job_request.go
+model_create_time_limited_alias_200_response.go
 model_create_time_limited_alias_request.go
 model_create_tls_policy_map_request.go
 model_create_transport_maps_request.go

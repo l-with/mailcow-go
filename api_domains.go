@@ -33,7 +33,7 @@ func (r ApiCreateDomainRequest) CreateDomainRequest(createDomainRequest CreateDo
 	return r
 }
 
-func (r ApiCreateDomainRequest) Execute() ([]CreateAlias200ResponseInner, *http.Response, error) {
+func (r ApiCreateDomainRequest) Execute() ([]map[string]interface{}, *http.Response, error) {
 	return r.ApiService.CreateDomainExecute(r)
 }
 
@@ -53,13 +53,13 @@ func (a *DomainsApiService) CreateDomain(ctx context.Context) ApiCreateDomainReq
 }
 
 // Execute executes the request
-//  @return []CreateAlias200ResponseInner
-func (a *DomainsApiService) CreateDomainExecute(r ApiCreateDomainRequest) ([]CreateAlias200ResponseInner, *http.Response, error) {
+//  @return []map[string]interface{}
+func (a *DomainsApiService) CreateDomainExecute(r ApiCreateDomainRequest) ([]map[string]interface{}, *http.Response, error) {
 	var (
 		localVarHTTPMethod  = http.MethodPost
 		localVarPostBody    interface{}
 		formFiles           []formFile
-		localVarReturnValue []CreateAlias200ResponseInner
+		localVarReturnValue []map[string]interface{}
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DomainsApiService.CreateDomain")
@@ -164,7 +164,7 @@ func (r ApiDeleteDomainRequest) DeleteDomainRequest(deleteDomainRequest DeleteDo
 	return r
 }
 
-func (r ApiDeleteDomainRequest) Execute() ([]CreateAlias200ResponseInner, *http.Response, error) {
+func (r ApiDeleteDomainRequest) Execute() ([]CreateTimeLimitedAlias200Response, *http.Response, error) {
 	return r.ApiService.DeleteDomainExecute(r)
 }
 
@@ -184,13 +184,13 @@ func (a *DomainsApiService) DeleteDomain(ctx context.Context) ApiDeleteDomainReq
 }
 
 // Execute executes the request
-//  @return []CreateAlias200ResponseInner
-func (a *DomainsApiService) DeleteDomainExecute(r ApiDeleteDomainRequest) ([]CreateAlias200ResponseInner, *http.Response, error) {
+//  @return []CreateTimeLimitedAlias200Response
+func (a *DomainsApiService) DeleteDomainExecute(r ApiDeleteDomainRequest) ([]CreateTimeLimitedAlias200Response, *http.Response, error) {
 	var (
 		localVarHTTPMethod  = http.MethodPost
 		localVarPostBody    interface{}
 		formFiles           []formFile
-		localVarReturnValue []CreateAlias200ResponseInner
+		localVarReturnValue []CreateTimeLimitedAlias200Response
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DomainsApiService.DeleteDomain")
@@ -296,7 +296,7 @@ func (r ApiDeleteDomainTagsRequest) DeleteDomainTagsRequest(deleteDomainTagsRequ
 	return r
 }
 
-func (r ApiDeleteDomainTagsRequest) Execute() (*CreateAlias200ResponseInner, *http.Response, error) {
+func (r ApiDeleteDomainTagsRequest) Execute() (*CreateTimeLimitedAlias200Response, *http.Response, error) {
 	return r.ApiService.DeleteDomainTagsExecute(r)
 }
 
@@ -318,13 +318,13 @@ func (a *DomainsApiService) DeleteDomainTags(ctx context.Context, domain string)
 }
 
 // Execute executes the request
-//  @return CreateAlias200ResponseInner
-func (a *DomainsApiService) DeleteDomainTagsExecute(r ApiDeleteDomainTagsRequest) (*CreateAlias200ResponseInner, *http.Response, error) {
+//  @return CreateTimeLimitedAlias200Response
+func (a *DomainsApiService) DeleteDomainTagsExecute(r ApiDeleteDomainTagsRequest) (*CreateTimeLimitedAlias200Response, *http.Response, error) {
 	var (
 		localVarHTTPMethod  = http.MethodPost
 		localVarPostBody    interface{}
 		formFiles           []formFile
-		localVarReturnValue *CreateAlias200ResponseInner
+		localVarReturnValue *CreateTimeLimitedAlias200Response
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DomainsApiService.DeleteDomainTags")
@@ -566,7 +566,7 @@ func (r ApiUpdateDomainRequest) UpdateDomainRequest(updateDomainRequest UpdateDo
 	return r
 }
 
-func (r ApiUpdateDomainRequest) Execute() ([]CreateAlias200ResponseInner, *http.Response, error) {
+func (r ApiUpdateDomainRequest) Execute() ([]CreateTimeLimitedAlias200Response, *http.Response, error) {
 	return r.ApiService.UpdateDomainExecute(r)
 }
 
@@ -587,13 +587,13 @@ func (a *DomainsApiService) UpdateDomain(ctx context.Context) ApiUpdateDomainReq
 }
 
 // Execute executes the request
-//  @return []CreateAlias200ResponseInner
-func (a *DomainsApiService) UpdateDomainExecute(r ApiUpdateDomainRequest) ([]CreateAlias200ResponseInner, *http.Response, error) {
+//  @return []CreateTimeLimitedAlias200Response
+func (a *DomainsApiService) UpdateDomainExecute(r ApiUpdateDomainRequest) ([]CreateTimeLimitedAlias200Response, *http.Response, error) {
 	var (
 		localVarHTTPMethod  = http.MethodPost
 		localVarPostBody    interface{}
 		formFiles           []formFile
-		localVarReturnValue []CreateAlias200ResponseInner
+		localVarReturnValue []CreateTimeLimitedAlias200Response
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DomainsApiService.UpdateDomain")
