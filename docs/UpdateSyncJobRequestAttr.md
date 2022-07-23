@@ -17,7 +17,7 @@ Name | Type | Description | Notes
 **Maxbytespersecond** | Pointer to **float32** | Max. bytes per second (0 &#x3D; unlimited) | [optional] 
 **MinsInterval** | Pointer to **float32** | Interval (min) | [optional] 
 **Password1** | Pointer to **string** | Password | [optional] 
-**Port1** | Pointer to **string** | Port | [optional] 
+**Port1** | Pointer to **float32** | Port | [optional] 
 **Skipcrossduplicates** | Pointer to **bool** | Skip duplicate messages across folders (first come, first serve) | [optional] 
 **Subfolder2** | Pointer to **string** | Sync into subfolder on destination (empty &#x3D; do not use subfolder) | [optional] 
 **Subscribeall** | Pointer to **bool** | Subscribe all folders | [optional] 
@@ -371,20 +371,20 @@ HasPassword1 returns a boolean if a field has been set.
 
 ### GetPort1
 
-`func (o *UpdateSyncJobRequestAttr) GetPort1() string`
+`func (o *UpdateSyncJobRequestAttr) GetPort1() float32`
 
 GetPort1 returns the Port1 field if non-nil, zero value otherwise.
 
 ### GetPort1Ok
 
-`func (o *UpdateSyncJobRequestAttr) GetPort1Ok() (*string, bool)`
+`func (o *UpdateSyncJobRequestAttr) GetPort1Ok() (*float32, bool)`
 
 GetPort1Ok returns a tuple with the Port1 field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetPort1
 
-`func (o *UpdateSyncJobRequestAttr) SetPort1(v string)`
+`func (o *UpdateSyncJobRequestAttr) SetPort1(v float32)`
 
 SetPort1 sets Port1 field to given value.
 

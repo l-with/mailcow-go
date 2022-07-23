@@ -411,7 +411,7 @@ func (r ApiUpdateSyncJobRequest) UpdateSyncJobRequest(updateSyncJobRequest Updat
 	return r
 }
 
-func (r ApiUpdateSyncJobRequest) Execute() (*CreateTimeLimitedAlias200Response, *http.Response, error) {
+func (r ApiUpdateSyncJobRequest) Execute() ([]CreateTimeLimitedAlias200Response, *http.Response, error) {
 	return r.ApiService.UpdateSyncJobExecute(r)
 }
 
@@ -431,13 +431,13 @@ func (a *SyncJobsApiService) UpdateSyncJob(ctx context.Context) ApiUpdateSyncJob
 }
 
 // Execute executes the request
-//  @return CreateTimeLimitedAlias200Response
-func (a *SyncJobsApiService) UpdateSyncJobExecute(r ApiUpdateSyncJobRequest) (*CreateTimeLimitedAlias200Response, *http.Response, error) {
+//  @return []CreateTimeLimitedAlias200Response
+func (a *SyncJobsApiService) UpdateSyncJobExecute(r ApiUpdateSyncJobRequest) ([]CreateTimeLimitedAlias200Response, *http.Response, error) {
 	var (
 		localVarHTTPMethod  = http.MethodPost
 		localVarPostBody    interface{}
 		formFiles           []formFile
-		localVarReturnValue *CreateTimeLimitedAlias200Response
+		localVarReturnValue []CreateTimeLimitedAlias200Response
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SyncJobsApiService.UpdateSyncJob")

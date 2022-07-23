@@ -3555,21 +3555,23 @@ paths:
                       - entity name
                     type: success
               schema:
-                properties:
-                  log:
-                    description: contains request object
-                    items: {}
-                    type: array
-                  msg:
-                    items: {}
-                    type: array
-                  type:
-                    enum:
-                      - success
-                      - danger
-                      - error
-                    type: string
-                type: object
+                type: array
+                items:
+                  type: object
+                  properties:
+                    log:
+                      description: contains request object
+                      items: {}
+                      type: array
+                    msg:
+                      items: {}
+                      type: array
+                    type:
+                      enum:
+                        - success
+                        - danger
+                        - error
+                      type: string
           description: OK
           headers: {}
       tags:
@@ -3657,7 +3659,7 @@ paths:
                       type: string
                     port1:
                       description: Port
-                      type: string
+                      type: number
                     skipcrossduplicates:
                       description: >-
                         Skip duplicate messages across folders (first come,
@@ -3683,7 +3685,9 @@ paths:
                   type: object
                 items:
                   description: contains list of aliases you want update
-                  type: object
+                  type: array
+                  items:
+                    type: string
               type: object
       summary: Update sync job
   /api/v1/edit/user-acl:

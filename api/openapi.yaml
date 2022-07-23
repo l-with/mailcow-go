@@ -2087,7 +2087,9 @@ paths:
                     - entity name
                     type: success
               schema:
-                $ref: '#/components/schemas/Create_time_limited_alias_200_response'
+                items:
+                  $ref: '#/components/schemas/Create_time_limited_alias_200_response'
+                type: array
           description: OK
       summary: Update sync job
       tags:
@@ -4818,7 +4820,7 @@ components:
           type: string
         port1:
           description: Port
-          type: string
+          type: number
         skipcrossduplicates:
           description: "Skip duplicate messages across folders (first come, first\
             \ serve)"
@@ -5140,7 +5142,9 @@ components:
           $ref: '#/components/schemas/Update_sync_job_request_attr'
         items:
           description: contains list of aliases you want update
-          type: object
+          items:
+            type: string
+          type: array
       type: object
     Edit_Domain_Admin_user_200_response:
       example:

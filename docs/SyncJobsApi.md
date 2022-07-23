@@ -213,7 +213,7 @@ Name | Type | Description  | Notes
 
 ## UpdateSyncJob
 
-> CreateTimeLimitedAlias200Response UpdateSyncJob(ctx).UpdateSyncJobRequest(updateSyncJobRequest).Execute()
+> []CreateTimeLimitedAlias200Response UpdateSyncJob(ctx).UpdateSyncJobRequest(updateSyncJobRequest).Execute()
 
 Update sync job
 
@@ -241,7 +241,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `SyncJobsApi.UpdateSyncJob``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateSyncJob`: CreateTimeLimitedAlias200Response
+    // response from `UpdateSyncJob`: []CreateTimeLimitedAlias200Response
     fmt.Fprintf(os.Stdout, "Response from `SyncJobsApi.UpdateSyncJob`: %v\n", resp)
 }
 ```
@@ -261,7 +261,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CreateTimeLimitedAlias200Response**](CreateTimeLimitedAlias200Response.md)
+[**[]CreateTimeLimitedAlias200Response**](CreateTimeLimitedAlias200Response.md)
 
 ### Authorization
 

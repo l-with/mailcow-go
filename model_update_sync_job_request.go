@@ -18,7 +18,7 @@ import (
 type UpdateSyncJobRequest struct {
 	Attr *UpdateSyncJobRequestAttr `json:"attr,omitempty"`
 	// contains list of aliases you want update
-	Items map[string]interface{} `json:"items,omitempty"`
+	Items []string `json:"items,omitempty"`
 }
 
 // NewUpdateSyncJobRequest instantiates a new UpdateSyncJobRequest object
@@ -71,9 +71,9 @@ func (o *UpdateSyncJobRequest) SetAttr(v UpdateSyncJobRequestAttr) {
 }
 
 // GetItems returns the Items field value if set, zero value otherwise.
-func (o *UpdateSyncJobRequest) GetItems() map[string]interface{} {
+func (o *UpdateSyncJobRequest) GetItems() []string {
 	if o == nil || o.Items == nil {
-		var ret map[string]interface{}
+		var ret []string
 		return ret
 	}
 	return o.Items
@@ -81,7 +81,7 @@ func (o *UpdateSyncJobRequest) GetItems() map[string]interface{} {
 
 // GetItemsOk returns a tuple with the Items field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *UpdateSyncJobRequest) GetItemsOk() (map[string]interface{}, bool) {
+func (o *UpdateSyncJobRequest) GetItemsOk() ([]string, bool) {
 	if o == nil || o.Items == nil {
 		return nil, false
 	}
@@ -97,8 +97,8 @@ func (o *UpdateSyncJobRequest) HasItems() bool {
 	return false
 }
 
-// SetItems gets a reference to the given map[string]interface{} and assigns it to the Items field.
-func (o *UpdateSyncJobRequest) SetItems(v map[string]interface{}) {
+// SetItems gets a reference to the given []string and assigns it to the Items field.
+func (o *UpdateSyncJobRequest) SetItems(v []string) {
 	o.Items = v
 }
 

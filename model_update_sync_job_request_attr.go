@@ -43,7 +43,7 @@ type UpdateSyncJobRequestAttr struct {
 	// Password
 	Password1 *string `json:"password1,omitempty"`
 	// Port
-	Port1 *string `json:"port1,omitempty"`
+	Port1 *float32 `json:"port1,omitempty"`
 	// Skip duplicate messages across folders (first come, first serve)
 	Skipcrossduplicates *bool `json:"skipcrossduplicates,omitempty"`
 	// Sync into subfolder on destination (empty = do not use subfolder)
@@ -492,9 +492,9 @@ func (o *UpdateSyncJobRequestAttr) SetPassword1(v string) {
 }
 
 // GetPort1 returns the Port1 field value if set, zero value otherwise.
-func (o *UpdateSyncJobRequestAttr) GetPort1() string {
+func (o *UpdateSyncJobRequestAttr) GetPort1() float32 {
 	if o == nil || o.Port1 == nil {
-		var ret string
+		var ret float32
 		return ret
 	}
 	return *o.Port1
@@ -502,7 +502,7 @@ func (o *UpdateSyncJobRequestAttr) GetPort1() string {
 
 // GetPort1Ok returns a tuple with the Port1 field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *UpdateSyncJobRequestAttr) GetPort1Ok() (*string, bool) {
+func (o *UpdateSyncJobRequestAttr) GetPort1Ok() (*float32, bool) {
 	if o == nil || o.Port1 == nil {
 		return nil, false
 	}
@@ -518,8 +518,8 @@ func (o *UpdateSyncJobRequestAttr) HasPort1() bool {
 	return false
 }
 
-// SetPort1 gets a reference to the given string and assigns it to the Port1 field.
-func (o *UpdateSyncJobRequestAttr) SetPort1(v string) {
+// SetPort1 gets a reference to the given float32 and assigns it to the Port1 field.
+func (o *UpdateSyncJobRequestAttr) SetPort1(v float32) {
 	o.Port1 = &v
 }
 
