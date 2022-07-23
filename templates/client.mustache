@@ -243,6 +243,11 @@ func (c *APIClient) prepareRequest(
 			var deleteDkimRequest *DeleteDKIMKeyRequest = postBody.(*DeleteDKIMKeyRequest)
 			postBody = *&deleteDkimRequest.Items
 		}
+        // special for DeleteSyncjob
+        if strings.HasSuffix(path, "/api/v1/delete/syncjob") {
+            var deleteSyncJobRequest *DeleteSyncJobRequest = postBody.(*DeleteSyncJobRequest)
+            postBody = *&deleteSyncJobRequest.Items
+        }
 		body, err = setBody(postBody, contentType)
 		if err != nil {
 			return nil, err

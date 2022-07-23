@@ -16,8 +16,8 @@ import (
 
 // DeleteSyncJobRequest struct for DeleteSyncJobRequest
 type DeleteSyncJobRequest struct {
-	// contains list of aliases you want to delete
-	Items map[string]interface{} `json:"items,omitempty"`
+	// contains list of syncjobs you want to delete
+	Items []string `json:"items,omitempty"`
 }
 
 // NewDeleteSyncJobRequest instantiates a new DeleteSyncJobRequest object
@@ -38,9 +38,9 @@ func NewDeleteSyncJobRequestWithDefaults() *DeleteSyncJobRequest {
 }
 
 // GetItems returns the Items field value if set, zero value otherwise.
-func (o *DeleteSyncJobRequest) GetItems() map[string]interface{} {
+func (o *DeleteSyncJobRequest) GetItems() []string {
 	if o == nil || o.Items == nil {
-		var ret map[string]interface{}
+		var ret []string
 		return ret
 	}
 	return o.Items
@@ -48,7 +48,7 @@ func (o *DeleteSyncJobRequest) GetItems() map[string]interface{} {
 
 // GetItemsOk returns a tuple with the Items field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *DeleteSyncJobRequest) GetItemsOk() (map[string]interface{}, bool) {
+func (o *DeleteSyncJobRequest) GetItemsOk() ([]string, bool) {
 	if o == nil || o.Items == nil {
 		return nil, false
 	}
@@ -64,8 +64,8 @@ func (o *DeleteSyncJobRequest) HasItems() bool {
 	return false
 }
 
-// SetItems gets a reference to the given map[string]interface{} and assigns it to the Items field.
-func (o *DeleteSyncJobRequest) SetItems(v map[string]interface{}) {
+// SetItems gets a reference to the given []string and assigns it to the Items field.
+func (o *DeleteSyncJobRequest) SetItems(v []string) {
 	o.Items = v
 }
 

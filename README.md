@@ -126,7 +126,7 @@ Class | Method | HTTP request | Description
 *StatusApi* | [**GetVmailStatus**](docs/StatusApi.md#getvmailstatus) | **Get** /api/v1/get/status/vmail | Get vmail status
 *SyncJobsApi* | [**CreateSyncJob**](docs/SyncJobsApi.md#createsyncjob) | **Post** /api/v1/add/syncjob | Create sync job
 *SyncJobsApi* | [**DeleteSyncJob**](docs/SyncJobsApi.md#deletesyncjob) | **Post** /api/v1/delete/syncjob | Delete sync job
-*SyncJobsApi* | [**GetSyncJobs**](docs/SyncJobsApi.md#getsyncjobs) | **Get** /api/v1/get/syncjobs/all/no_log | Get sync jobs
+*SyncJobsApi* | [**GetSyncJobs**](docs/SyncJobsApi.md#getsyncjobs) | **Get** /api/v1/get/syncjobs/{id} | Get sync jobs
 *SyncJobsApi* | [**UpdateSyncJob**](docs/SyncJobsApi.md#updatesyncjob) | **Post** /api/v1/edit/syncjob | Update sync job
 
 

@@ -1461,21 +1461,24 @@ paths:
                         - mailbox@domain.tld
                       type: success
               schema:
-                properties:
-                  log:
-                    description: contains request object
-                    items: {}
-                    type: array
-                  msg:
-                    items: {}
-                    type: array
-                  type:
-                    enum:
-                      - success
-                      - danger
-                      - error
-                    type: string
-                type: object
+                type: array
+                items:
+                  type: object
+                # properties:
+                #   log:
+                #     description: contains request object
+                #     items: {}
+                #     type: array
+                #   msg:
+                #     items: {}
+                #     type: array
+                #   type:
+                #     enum:
+                #       - success
+                #       - danger
+                #       - error
+                #     type: string
+                # type: object
           description: OK
           headers: {}
       tags:
@@ -1512,7 +1515,7 @@ paths:
                 subscribeall: "0"
                 active: "1"
               properties:
-                parameters:
+                username:
                   description: your local mailcow mailbox
                   type: string
                 host1:
@@ -1520,14 +1523,17 @@ paths:
                   type: string
                 port1:
                   description: the smtp port of the target mail server
+                  type: number
+                user1:
+                  description: user to login on remote host (--user1)
                   type: string
-                password:
+                password1:
                   description: the password of the mailbox
                   type: string
                 enc1:
                   description: the encryption method used to connect to the mailserver
                   type: string
-                mins_internal:
+                mins_interval:
                   description: the interval in which messages should be syned
                   type: number
                 subfolder2:
@@ -2645,21 +2651,24 @@ paths:
                       - entity name
                     type: success
               schema:
-                properties:
-                  log:
-                    description: contains request object
-                    items: {}
-                    type: array
-                  msg:
-                    items: {}
-                    type: array
-                  type:
-                    enum:
-                      - success
-                      - danger
-                      - error
-                    type: string
-                type: object
+                type: array
+                items:
+                  type: object
+                # properties:
+                #   log:
+                #     description: contains request object
+                #     items: {}
+                #     type: array
+                #   msg:
+                #     items: {}
+                #     type: array
+                #   type:
+                #     enum:
+                #       - success
+                #       - danger
+                #       - error
+                #     type: string
+                # type: object
           description: OK
           headers: {}
       tags:
@@ -2675,8 +2684,10 @@ paths:
                 - "9"
               properties:
                 items:
-                  description: contains list of aliases you want to delete
-                  type: object
+                  description: contains list of syncjobs you want to delete
+                  type: array
+                  items:
+                    type: string
               type: object
       summary: Delete sync job
   /api/v1/delete/tls-policy-map:
@@ -5353,8 +5364,18 @@ paths:
         instance.
       operationId: Get version status
       summary: Get version status
-  /api/v1/get/syncjobs/all/no_log:
+  /api/v1/get/syncjobs/{id}:
     get:
+      parameters:
+        - description: id of entry you want to get
+          in: path
+          name: id
+          required: true
+          schema:
+            type: string
+            enum:
+              - all
+              - user@domain.tld
       responses:
         "401":
           $ref: "#/components/responses/Unauthorized"

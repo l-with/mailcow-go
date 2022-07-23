@@ -6,14 +6,14 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**CreateSyncJob**](SyncJobsApi.md#CreateSyncJob) | **Post** /api/v1/add/syncjob | Create sync job
 [**DeleteSyncJob**](SyncJobsApi.md#DeleteSyncJob) | **Post** /api/v1/delete/syncjob | Delete sync job
-[**GetSyncJobs**](SyncJobsApi.md#GetSyncJobs) | **Get** /api/v1/get/syncjobs/all/no_log | Get sync jobs
+[**GetSyncJobs**](SyncJobsApi.md#GetSyncJobs) | **Get** /api/v1/get/syncjobs/{id} | Get sync jobs
 [**UpdateSyncJob**](SyncJobsApi.md#UpdateSyncJob) | **Post** /api/v1/edit/syncjob | Update sync job
 
 
 
 ## CreateSyncJob
 
-> CreateTimeLimitedAlias200Response CreateSyncJob(ctx).CreateSyncJobRequest(createSyncJobRequest).Execute()
+> []map[string]interface{} CreateSyncJob(ctx).CreateSyncJobRequest(createSyncJobRequest).Execute()
 
 Create sync job
 
@@ -41,7 +41,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `SyncJobsApi.CreateSyncJob``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `CreateSyncJob`: CreateTimeLimitedAlias200Response
+    // response from `CreateSyncJob`: []map[string]interface{}
     fmt.Fprintf(os.Stdout, "Response from `SyncJobsApi.CreateSyncJob`: %v\n", resp)
 }
 ```
@@ -61,7 +61,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CreateTimeLimitedAlias200Response**](CreateTimeLimitedAlias200Response.md)
+**[]map[string]interface{}**
 
 ### Authorization
 
@@ -79,7 +79,7 @@ Name | Type | Description  | Notes
 
 ## DeleteSyncJob
 
-> CreateTimeLimitedAlias200Response DeleteSyncJob(ctx).DeleteSyncJobRequest(deleteSyncJobRequest).Execute()
+> []map[string]interface{} DeleteSyncJob(ctx).DeleteSyncJobRequest(deleteSyncJobRequest).Execute()
 
 Delete sync job
 
@@ -107,7 +107,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `SyncJobsApi.DeleteSyncJob``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `DeleteSyncJob`: CreateTimeLimitedAlias200Response
+    // response from `DeleteSyncJob`: []map[string]interface{}
     fmt.Fprintf(os.Stdout, "Response from `SyncJobsApi.DeleteSyncJob`: %v\n", resp)
 }
 ```
@@ -127,7 +127,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CreateTimeLimitedAlias200Response**](CreateTimeLimitedAlias200Response.md)
+**[]map[string]interface{}**
 
 ### Authorization
 
@@ -145,7 +145,7 @@ Name | Type | Description  | Notes
 
 ## GetSyncJobs
 
-> GetSyncJobs(ctx).Execute()
+> GetSyncJobs(ctx, id).Execute()
 
 Get sync jobs
 
@@ -164,10 +164,11 @@ import (
 )
 
 func main() {
+    id := "id_example" // string | id of entry you want to get
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
-    resp, r, err := apiClient.SyncJobsApi.GetSyncJobs(context.Background()).Execute()
+    resp, r, err := apiClient.SyncJobsApi.GetSyncJobs(context.Background(), id).Execute()
     if err != nil {
         fmt.Fprintf(os.Stderr, "Error when calling `SyncJobsApi.GetSyncJobs``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -177,11 +178,19 @@ func main() {
 
 ### Path Parameters
 
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+**id** | **string** | id of entry you want to get | 
 
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiGetSyncJobsRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
 
 
 ### Return type

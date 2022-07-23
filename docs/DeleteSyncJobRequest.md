@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Items** | Pointer to **map[string]interface{}** | contains list of aliases you want to delete | [optional] 
+**Items** | Pointer to **[]string** | contains list of syncjobs you want to delete | [optional] 
 
 ## Methods
 
@@ -27,20 +27,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetItems
 
-`func (o *DeleteSyncJobRequest) GetItems() map[string]interface{}`
+`func (o *DeleteSyncJobRequest) GetItems() []string`
 
 GetItems returns the Items field if non-nil, zero value otherwise.
 
 ### GetItemsOk
 
-`func (o *DeleteSyncJobRequest) GetItemsOk() (*map[string]interface{}, bool)`
+`func (o *DeleteSyncJobRequest) GetItemsOk() (*[]string, bool)`
 
 GetItemsOk returns a tuple with the Items field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetItems
 
-`func (o *DeleteSyncJobRequest) SetItems(v map[string]interface{})`
+`func (o *DeleteSyncJobRequest) SetItems(v []string)`
 
 SetItems sets Items field to given value.
 

@@ -4,12 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Parameters** | Pointer to **string** | your local mailcow mailbox | [optional] 
+**Username** | Pointer to **string** | your local mailcow mailbox | [optional] 
 **Host1** | Pointer to **string** | the smtp server where mails should be synced from | [optional] 
-**Port1** | Pointer to **string** | the smtp port of the target mail server | [optional] 
-**Password** | Pointer to **string** | the password of the mailbox | [optional] 
+**Port1** | Pointer to **float32** | the smtp port of the target mail server | [optional] 
+**User1** | Pointer to **string** | user to login on remote host (--user1) | [optional] 
+**Password1** | Pointer to **string** | the password of the mailbox | [optional] 
 **Enc1** | Pointer to **string** | the encryption method used to connect to the mailserver | [optional] 
-**MinsInternal** | Pointer to **float32** | the interval in which messages should be syned | [optional] 
+**MinsInterval** | Pointer to **float32** | the interval in which messages should be syned | [optional] 
 **Subfolder2** | Pointer to **string** | sync into subfolder on destination (empty &#x3D; do not use subfolder) | [optional] 
 **Maxage** | Pointer to **float32** | only sync messages up to this age in days | [optional] 
 **Maxbytespersecond** | Pointer to **float32** | max speed transfer limit for the sync | [optional] 
@@ -44,30 +45,30 @@ NewCreateSyncJobRequestWithDefaults instantiates a new CreateSyncJobRequest obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetParameters
+### GetUsername
 
-`func (o *CreateSyncJobRequest) GetParameters() string`
+`func (o *CreateSyncJobRequest) GetUsername() string`
 
-GetParameters returns the Parameters field if non-nil, zero value otherwise.
+GetUsername returns the Username field if non-nil, zero value otherwise.
 
-### GetParametersOk
+### GetUsernameOk
 
-`func (o *CreateSyncJobRequest) GetParametersOk() (*string, bool)`
+`func (o *CreateSyncJobRequest) GetUsernameOk() (*string, bool)`
 
-GetParametersOk returns a tuple with the Parameters field if it's non-nil, zero value otherwise
+GetUsernameOk returns a tuple with the Username field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetParameters
+### SetUsername
 
-`func (o *CreateSyncJobRequest) SetParameters(v string)`
+`func (o *CreateSyncJobRequest) SetUsername(v string)`
 
-SetParameters sets Parameters field to given value.
+SetUsername sets Username field to given value.
 
-### HasParameters
+### HasUsername
 
-`func (o *CreateSyncJobRequest) HasParameters() bool`
+`func (o *CreateSyncJobRequest) HasUsername() bool`
 
-HasParameters returns a boolean if a field has been set.
+HasUsername returns a boolean if a field has been set.
 
 ### GetHost1
 
@@ -96,20 +97,20 @@ HasHost1 returns a boolean if a field has been set.
 
 ### GetPort1
 
-`func (o *CreateSyncJobRequest) GetPort1() string`
+`func (o *CreateSyncJobRequest) GetPort1() float32`
 
 GetPort1 returns the Port1 field if non-nil, zero value otherwise.
 
 ### GetPort1Ok
 
-`func (o *CreateSyncJobRequest) GetPort1Ok() (*string, bool)`
+`func (o *CreateSyncJobRequest) GetPort1Ok() (*float32, bool)`
 
 GetPort1Ok returns a tuple with the Port1 field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetPort1
 
-`func (o *CreateSyncJobRequest) SetPort1(v string)`
+`func (o *CreateSyncJobRequest) SetPort1(v float32)`
 
 SetPort1 sets Port1 field to given value.
 
@@ -119,30 +120,55 @@ SetPort1 sets Port1 field to given value.
 
 HasPort1 returns a boolean if a field has been set.
 
-### GetPassword
+### GetUser1
 
-`func (o *CreateSyncJobRequest) GetPassword() string`
+`func (o *CreateSyncJobRequest) GetUser1() string`
 
-GetPassword returns the Password field if non-nil, zero value otherwise.
+GetUser1 returns the User1 field if non-nil, zero value otherwise.
 
-### GetPasswordOk
+### GetUser1Ok
 
-`func (o *CreateSyncJobRequest) GetPasswordOk() (*string, bool)`
+`func (o *CreateSyncJobRequest) GetUser1Ok() (*string, bool)`
 
-GetPasswordOk returns a tuple with the Password field if it's non-nil, zero value otherwise
+GetUser1Ok returns a tuple with the User1 field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPassword
+### SetUser1
 
-`func (o *CreateSyncJobRequest) SetPassword(v string)`
+`func (o *CreateSyncJobRequest) SetUser1(v string)`
 
-SetPassword sets Password field to given value.
+SetUser1 sets User1 field to given value.
 
-### HasPassword
+### HasUser1
 
-`func (o *CreateSyncJobRequest) HasPassword() bool`
+`func (o *CreateSyncJobRequest) HasUser1() bool`
 
-HasPassword returns a boolean if a field has been set.
+HasUser1 returns a boolean if a field has been set.
+
+### GetPassword1
+
+`func (o *CreateSyncJobRequest) GetPassword1() string`
+
+GetPassword1 returns the Password1 field if non-nil, zero value otherwise.
+
+### GetPassword1Ok
+
+`func (o *CreateSyncJobRequest) GetPassword1Ok() (*string, bool)`
+
+GetPassword1Ok returns a tuple with the Password1 field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetPassword1
+
+`func (o *CreateSyncJobRequest) SetPassword1(v string)`
+
+SetPassword1 sets Password1 field to given value.
+
+### HasPassword1
+
+`func (o *CreateSyncJobRequest) HasPassword1() bool`
+
+HasPassword1 returns a boolean if a field has been set.
 
 ### GetEnc1
 
@@ -169,30 +195,30 @@ SetEnc1 sets Enc1 field to given value.
 
 HasEnc1 returns a boolean if a field has been set.
 
-### GetMinsInternal
+### GetMinsInterval
 
-`func (o *CreateSyncJobRequest) GetMinsInternal() float32`
+`func (o *CreateSyncJobRequest) GetMinsInterval() float32`
 
-GetMinsInternal returns the MinsInternal field if non-nil, zero value otherwise.
+GetMinsInterval returns the MinsInterval field if non-nil, zero value otherwise.
 
-### GetMinsInternalOk
+### GetMinsIntervalOk
 
-`func (o *CreateSyncJobRequest) GetMinsInternalOk() (*float32, bool)`
+`func (o *CreateSyncJobRequest) GetMinsIntervalOk() (*float32, bool)`
 
-GetMinsInternalOk returns a tuple with the MinsInternal field if it's non-nil, zero value otherwise
+GetMinsIntervalOk returns a tuple with the MinsInterval field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMinsInternal
+### SetMinsInterval
 
-`func (o *CreateSyncJobRequest) SetMinsInternal(v float32)`
+`func (o *CreateSyncJobRequest) SetMinsInterval(v float32)`
 
-SetMinsInternal sets MinsInternal field to given value.
+SetMinsInterval sets MinsInterval field to given value.
 
-### HasMinsInternal
+### HasMinsInterval
 
-`func (o *CreateSyncJobRequest) HasMinsInternal() bool`
+`func (o *CreateSyncJobRequest) HasMinsInterval() bool`
 
-HasMinsInternal returns a boolean if a field has been set.
+HasMinsInterval returns a boolean if a field has been set.
 
 ### GetSubfolder2
 

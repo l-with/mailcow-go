@@ -16,6 +16,7 @@ import (
 	"io/ioutil"
 	"net/http"
 	"net/url"
+	"strings"
 )
 
 // SyncJobsApiService SyncJobsApi service
@@ -32,7 +33,7 @@ func (r ApiCreateSyncJobRequest) CreateSyncJobRequest(createSyncJobRequest Creat
 	return r
 }
 
-func (r ApiCreateSyncJobRequest) Execute() (*CreateTimeLimitedAlias200Response, *http.Response, error) {
+func (r ApiCreateSyncJobRequest) Execute() ([]map[string]interface{}, *http.Response, error) {
 	return r.ApiService.CreateSyncJobExecute(r)
 }
 
@@ -52,13 +53,13 @@ func (a *SyncJobsApiService) CreateSyncJob(ctx context.Context) ApiCreateSyncJob
 }
 
 // Execute executes the request
-//  @return CreateTimeLimitedAlias200Response
-func (a *SyncJobsApiService) CreateSyncJobExecute(r ApiCreateSyncJobRequest) (*CreateTimeLimitedAlias200Response, *http.Response, error) {
+//  @return []map[string]interface{}
+func (a *SyncJobsApiService) CreateSyncJobExecute(r ApiCreateSyncJobRequest) ([]map[string]interface{}, *http.Response, error) {
 	var (
 		localVarHTTPMethod  = http.MethodPost
 		localVarPostBody    interface{}
 		formFiles           []formFile
-		localVarReturnValue *CreateTimeLimitedAlias200Response
+		localVarReturnValue []map[string]interface{}
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SyncJobsApiService.CreateSyncJob")
@@ -163,7 +164,7 @@ func (r ApiDeleteSyncJobRequest) DeleteSyncJobRequest(deleteSyncJobRequest Delet
 	return r
 }
 
-func (r ApiDeleteSyncJobRequest) Execute() (*CreateTimeLimitedAlias200Response, *http.Response, error) {
+func (r ApiDeleteSyncJobRequest) Execute() ([]map[string]interface{}, *http.Response, error) {
 	return r.ApiService.DeleteSyncJobExecute(r)
 }
 
@@ -183,13 +184,13 @@ func (a *SyncJobsApiService) DeleteSyncJob(ctx context.Context) ApiDeleteSyncJob
 }
 
 // Execute executes the request
-//  @return CreateTimeLimitedAlias200Response
-func (a *SyncJobsApiService) DeleteSyncJobExecute(r ApiDeleteSyncJobRequest) (*CreateTimeLimitedAlias200Response, *http.Response, error) {
+//  @return []map[string]interface{}
+func (a *SyncJobsApiService) DeleteSyncJobExecute(r ApiDeleteSyncJobRequest) ([]map[string]interface{}, *http.Response, error) {
 	var (
 		localVarHTTPMethod  = http.MethodPost
 		localVarPostBody    interface{}
 		formFiles           []formFile
-		localVarReturnValue *CreateTimeLimitedAlias200Response
+		localVarReturnValue []map[string]interface{}
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SyncJobsApiService.DeleteSyncJob")
@@ -286,6 +287,7 @@ func (a *SyncJobsApiService) DeleteSyncJobExecute(r ApiDeleteSyncJobRequest) (*C
 type ApiGetSyncJobsRequest struct {
 	ctx        context.Context
 	ApiService *SyncJobsApiService
+	id         string
 }
 
 func (r ApiGetSyncJobsRequest) Execute() (*http.Response, error) {
@@ -298,12 +300,14 @@ GetSyncJobs Get sync jobs
 You can list all syn jobs existing in system.
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @param id id of entry you want to get
  @return ApiGetSyncJobsRequest
 */
-func (a *SyncJobsApiService) GetSyncJobs(ctx context.Context) ApiGetSyncJobsRequest {
+func (a *SyncJobsApiService) GetSyncJobs(ctx context.Context, id string) ApiGetSyncJobsRequest {
 	return ApiGetSyncJobsRequest{
 		ApiService: a,
 		ctx:        ctx,
+		id:         id,
 	}
 }
 
@@ -320,7 +324,8 @@ func (a *SyncJobsApiService) GetSyncJobsExecute(r ApiGetSyncJobsRequest) (*http.
 		return nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/api/v1/get/syncjobs/all/no_log"
+	localVarPath := localBasePath + "/api/v1/get/syncjobs/{id}"
+	localVarPath = strings.Replace(localVarPath, "{"+"id"+"}", url.PathEscape(parameterToString(r.id, "")), -1)
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}

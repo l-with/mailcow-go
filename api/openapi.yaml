@@ -859,7 +859,9 @@ paths:
                     - mailbox@domain.tld
                     type: success
               schema:
-                $ref: '#/components/schemas/Create_time_limited_alias_200_response'
+                items:
+                  type: object
+                type: array
           description: OK
       summary: Create sync job
       tags:
@@ -1611,7 +1613,9 @@ paths:
                     - entity name
                     type: success
               schema:
-                $ref: '#/components/schemas/Create_time_limited_alias_200_response'
+                items:
+                  type: object
+                type: array
           description: OK
       summary: Delete sync job
       tags:
@@ -3835,10 +3839,22 @@ paths:
       summary: Get version status
       tags:
       - Status
-  /api/v1/get/syncjobs/all/no_log:
+  /api/v1/get/syncjobs/{id}:
     get:
       description: You can list all syn jobs existing in system.
       operationId: Get sync jobs
+      parameters:
+      - description: id of entry you want to get
+        explode: false
+        in: path
+        name: id
+        required: true
+        schema:
+          enum:
+          - all
+          - user@domain.tld
+          type: string
+        style: simple
       responses:
         "401":
           content:
@@ -4111,8 +4127,10 @@ components:
       - "9"
       properties:
         items:
-          description: contains list of aliases you want to delete
-          type: object
+          description: contains list of syncjobs you want to delete
+          items:
+            type: string
+          type: array
       type: object
     Edit_mailbox_ratelimits_request:
       example:
@@ -4275,7 +4293,7 @@ components:
         subscribeall: "0"
         active: "1"
       properties:
-        parameters:
+        username:
           description: your local mailcow mailbox
           type: string
         host1:
@@ -4283,14 +4301,17 @@ components:
           type: string
         port1:
           description: the smtp port of the target mail server
+          type: number
+        user1:
+          description: user to login on remote host (--user1)
           type: string
-        password:
+        password1:
           description: the password of the mailbox
           type: string
         enc1:
           description: the encryption method used to connect to the mailserver
           type: string
-        mins_internal:
+        mins_interval:
           description: the interval in which messages should be syned
           type: number
         subfolder2:

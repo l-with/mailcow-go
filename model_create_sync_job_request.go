@@ -17,17 +17,19 @@ import (
 // CreateSyncJobRequest struct for CreateSyncJobRequest
 type CreateSyncJobRequest struct {
 	// your local mailcow mailbox
-	Parameters *string `json:"parameters,omitempty"`
+	Username *string `json:"username,omitempty"`
 	// the smtp server where mails should be synced from
 	Host1 *string `json:"host1,omitempty"`
 	// the smtp port of the target mail server
-	Port1 *string `json:"port1,omitempty"`
+	Port1 *float32 `json:"port1,omitempty"`
+	// user to login on remote host (--user1)
+	User1 *string `json:"user1,omitempty"`
 	// the password of the mailbox
-	Password *string `json:"password,omitempty"`
+	Password1 *string `json:"password1,omitempty"`
 	// the encryption method used to connect to the mailserver
 	Enc1 *string `json:"enc1,omitempty"`
 	// the interval in which messages should be syned
-	MinsInternal *float32 `json:"mins_internal,omitempty"`
+	MinsInterval *float32 `json:"mins_interval,omitempty"`
 	// sync into subfolder on destination (empty = do not use subfolder)
 	Subfolder2 *string `json:"subfolder2,omitempty"`
 	// only sync messages up to this age in days
@@ -75,36 +77,36 @@ func NewCreateSyncJobRequestWithDefaults() *CreateSyncJobRequest {
 	return &this
 }
 
-// GetParameters returns the Parameters field value if set, zero value otherwise.
-func (o *CreateSyncJobRequest) GetParameters() string {
-	if o == nil || o.Parameters == nil {
+// GetUsername returns the Username field value if set, zero value otherwise.
+func (o *CreateSyncJobRequest) GetUsername() string {
+	if o == nil || o.Username == nil {
 		var ret string
 		return ret
 	}
-	return *o.Parameters
+	return *o.Username
 }
 
-// GetParametersOk returns a tuple with the Parameters field value if set, nil otherwise
+// GetUsernameOk returns a tuple with the Username field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *CreateSyncJobRequest) GetParametersOk() (*string, bool) {
-	if o == nil || o.Parameters == nil {
+func (o *CreateSyncJobRequest) GetUsernameOk() (*string, bool) {
+	if o == nil || o.Username == nil {
 		return nil, false
 	}
-	return o.Parameters, true
+	return o.Username, true
 }
 
-// HasParameters returns a boolean if a field has been set.
-func (o *CreateSyncJobRequest) HasParameters() bool {
-	if o != nil && o.Parameters != nil {
+// HasUsername returns a boolean if a field has been set.
+func (o *CreateSyncJobRequest) HasUsername() bool {
+	if o != nil && o.Username != nil {
 		return true
 	}
 
 	return false
 }
 
-// SetParameters gets a reference to the given string and assigns it to the Parameters field.
-func (o *CreateSyncJobRequest) SetParameters(v string) {
-	o.Parameters = &v
+// SetUsername gets a reference to the given string and assigns it to the Username field.
+func (o *CreateSyncJobRequest) SetUsername(v string) {
+	o.Username = &v
 }
 
 // GetHost1 returns the Host1 field value if set, zero value otherwise.
@@ -140,9 +142,9 @@ func (o *CreateSyncJobRequest) SetHost1(v string) {
 }
 
 // GetPort1 returns the Port1 field value if set, zero value otherwise.
-func (o *CreateSyncJobRequest) GetPort1() string {
+func (o *CreateSyncJobRequest) GetPort1() float32 {
 	if o == nil || o.Port1 == nil {
-		var ret string
+		var ret float32
 		return ret
 	}
 	return *o.Port1
@@ -150,7 +152,7 @@ func (o *CreateSyncJobRequest) GetPort1() string {
 
 // GetPort1Ok returns a tuple with the Port1 field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *CreateSyncJobRequest) GetPort1Ok() (*string, bool) {
+func (o *CreateSyncJobRequest) GetPort1Ok() (*float32, bool) {
 	if o == nil || o.Port1 == nil {
 		return nil, false
 	}
@@ -166,41 +168,73 @@ func (o *CreateSyncJobRequest) HasPort1() bool {
 	return false
 }
 
-// SetPort1 gets a reference to the given string and assigns it to the Port1 field.
-func (o *CreateSyncJobRequest) SetPort1(v string) {
+// SetPort1 gets a reference to the given float32 and assigns it to the Port1 field.
+func (o *CreateSyncJobRequest) SetPort1(v float32) {
 	o.Port1 = &v
 }
 
-// GetPassword returns the Password field value if set, zero value otherwise.
-func (o *CreateSyncJobRequest) GetPassword() string {
-	if o == nil || o.Password == nil {
+// GetUser1 returns the User1 field value if set, zero value otherwise.
+func (o *CreateSyncJobRequest) GetUser1() string {
+	if o == nil || o.User1 == nil {
 		var ret string
 		return ret
 	}
-	return *o.Password
+	return *o.User1
 }
 
-// GetPasswordOk returns a tuple with the Password field value if set, nil otherwise
+// GetUser1Ok returns a tuple with the User1 field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *CreateSyncJobRequest) GetPasswordOk() (*string, bool) {
-	if o == nil || o.Password == nil {
+func (o *CreateSyncJobRequest) GetUser1Ok() (*string, bool) {
+	if o == nil || o.User1 == nil {
 		return nil, false
 	}
-	return o.Password, true
+	return o.User1, true
 }
 
-// HasPassword returns a boolean if a field has been set.
-func (o *CreateSyncJobRequest) HasPassword() bool {
-	if o != nil && o.Password != nil {
+// HasUser1 returns a boolean if a field has been set.
+func (o *CreateSyncJobRequest) HasUser1() bool {
+	if o != nil && o.User1 != nil {
 		return true
 	}
 
 	return false
 }
 
-// SetPassword gets a reference to the given string and assigns it to the Password field.
-func (o *CreateSyncJobRequest) SetPassword(v string) {
-	o.Password = &v
+// SetUser1 gets a reference to the given string and assigns it to the User1 field.
+func (o *CreateSyncJobRequest) SetUser1(v string) {
+	o.User1 = &v
+}
+
+// GetPassword1 returns the Password1 field value if set, zero value otherwise.
+func (o *CreateSyncJobRequest) GetPassword1() string {
+	if o == nil || o.Password1 == nil {
+		var ret string
+		return ret
+	}
+	return *o.Password1
+}
+
+// GetPassword1Ok returns a tuple with the Password1 field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *CreateSyncJobRequest) GetPassword1Ok() (*string, bool) {
+	if o == nil || o.Password1 == nil {
+		return nil, false
+	}
+	return o.Password1, true
+}
+
+// HasPassword1 returns a boolean if a field has been set.
+func (o *CreateSyncJobRequest) HasPassword1() bool {
+	if o != nil && o.Password1 != nil {
+		return true
+	}
+
+	return false
+}
+
+// SetPassword1 gets a reference to the given string and assigns it to the Password1 field.
+func (o *CreateSyncJobRequest) SetPassword1(v string) {
+	o.Password1 = &v
 }
 
 // GetEnc1 returns the Enc1 field value if set, zero value otherwise.
@@ -235,36 +269,36 @@ func (o *CreateSyncJobRequest) SetEnc1(v string) {
 	o.Enc1 = &v
 }
 
-// GetMinsInternal returns the MinsInternal field value if set, zero value otherwise.
-func (o *CreateSyncJobRequest) GetMinsInternal() float32 {
-	if o == nil || o.MinsInternal == nil {
+// GetMinsInterval returns the MinsInterval field value if set, zero value otherwise.
+func (o *CreateSyncJobRequest) GetMinsInterval() float32 {
+	if o == nil || o.MinsInterval == nil {
 		var ret float32
 		return ret
 	}
-	return *o.MinsInternal
+	return *o.MinsInterval
 }
 
-// GetMinsInternalOk returns a tuple with the MinsInternal field value if set, nil otherwise
+// GetMinsIntervalOk returns a tuple with the MinsInterval field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *CreateSyncJobRequest) GetMinsInternalOk() (*float32, bool) {
-	if o == nil || o.MinsInternal == nil {
+func (o *CreateSyncJobRequest) GetMinsIntervalOk() (*float32, bool) {
+	if o == nil || o.MinsInterval == nil {
 		return nil, false
 	}
-	return o.MinsInternal, true
+	return o.MinsInterval, true
 }
 
-// HasMinsInternal returns a boolean if a field has been set.
-func (o *CreateSyncJobRequest) HasMinsInternal() bool {
-	if o != nil && o.MinsInternal != nil {
+// HasMinsInterval returns a boolean if a field has been set.
+func (o *CreateSyncJobRequest) HasMinsInterval() bool {
+	if o != nil && o.MinsInterval != nil {
 		return true
 	}
 
 	return false
 }
 
-// SetMinsInternal gets a reference to the given float32 and assigns it to the MinsInternal field.
-func (o *CreateSyncJobRequest) SetMinsInternal(v float32) {
-	o.MinsInternal = &v
+// SetMinsInterval gets a reference to the given float32 and assigns it to the MinsInterval field.
+func (o *CreateSyncJobRequest) SetMinsInterval(v float32) {
+	o.MinsInterval = &v
 }
 
 // GetSubfolder2 returns the Subfolder2 field value if set, zero value otherwise.
@@ -717,8 +751,8 @@ func (o *CreateSyncJobRequest) SetActive(v bool) {
 
 func (o CreateSyncJobRequest) MarshalJSON() ([]byte, error) {
 	toSerialize := map[string]interface{}{}
-	if o.Parameters != nil {
-		toSerialize["parameters"] = o.Parameters
+	if o.Username != nil {
+		toSerialize["username"] = o.Username
 	}
 	if o.Host1 != nil {
 		toSerialize["host1"] = o.Host1
@@ -726,14 +760,17 @@ func (o CreateSyncJobRequest) MarshalJSON() ([]byte, error) {
 	if o.Port1 != nil {
 		toSerialize["port1"] = o.Port1
 	}
-	if o.Password != nil {
-		toSerialize["password"] = o.Password
+	if o.User1 != nil {
+		toSerialize["user1"] = o.User1
+	}
+	if o.Password1 != nil {
+		toSerialize["password1"] = o.Password1
 	}
 	if o.Enc1 != nil {
 		toSerialize["enc1"] = o.Enc1
 	}
-	if o.MinsInternal != nil {
-		toSerialize["mins_internal"] = o.MinsInternal
+	if o.MinsInterval != nil {
+		toSerialize["mins_interval"] = o.MinsInterval
 	}
 	if o.Subfolder2 != nil {
 		toSerialize["subfolder2"] = o.Subfolder2
